@@ -134,6 +134,10 @@ const config: Config = {
               label: 'Mailing list',
               href: 'https://lists.apache.org/list.html?dev@graphar.apache.org',
             },
+            {
+              label: 'Slack',
+              href: 'https://join.slack.com/t/grapharworkspace/shared_invite/zt-1wh5vo828-yxs0MlXYBPBBNvjOGhL4kQ',
+            },
           ],
         },
         {
