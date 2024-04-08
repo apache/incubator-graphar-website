@@ -137,8 +137,20 @@ const config: Config = {
           ],
         },
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
+            {
+              label: 'Overview',
+              to: '/docs/overview',
+            },
+            {
+              label: 'Specification',
+              to: '/docs/specification/format',
+            },
+            {
+              label: 'Contributing',
+              to: '/docs/developers',
+            },
           ],
         },
         {
