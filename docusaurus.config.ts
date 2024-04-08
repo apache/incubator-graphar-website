@@ -148,7 +148,7 @@ const config: Config = {
               to: '/docs/overview',
             },
             {
-              label: 'Specification',
+              label: 'Format',
               to: '/docs/specification/format',
             },
             {
