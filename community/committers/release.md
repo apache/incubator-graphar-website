@@ -134,11 +134,6 @@ Please note that this version is the exact version of the release, not the relea
 
 ### Update docs
 
-- Make sure every released bindings' `upgrade.md` has been updated.
-    - java: `bindings/java/upgrade.md`
-    - node.js: `bindings/nodejs/upgrade.md`
-    - python: `bindings/python/upgrade.md`
-
 ### Push release candidate tag
 
 After bump version PR gets merged, we can create a GitHub release for the release candidate:
