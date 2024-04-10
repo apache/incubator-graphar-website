@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapache_website_template=self.webpackChunkapache_website_template||[]).push([[678],{7497:e=>{e.exports=JSON.parse('{"title":"Committers","slug":"/category/committers","permalink":"/community/category/committers","navigation":{"next":{"title":"Create a release (Work in Progress)","permalink":"/community/committers/release"}}}')}}]);
