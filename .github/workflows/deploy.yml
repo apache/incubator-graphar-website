@@ -46,6 +46,7 @@ jobs:
 
       - name: Syncing the docs folder and remove incubator-graphar
         run: |
+          # Note: DO NOT omit the trailing slash in the source directory
           rsync -av incubator-graphar/docs/ docs/
           rm -rf incubator-graphar
 

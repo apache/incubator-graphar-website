@@ -17,6 +17,8 @@ or
 $ cp -r incubator-graphar/docs/ docs/
 ```
 
+Note: **DO NOT omit the trailing slash in the source directory.**
+
 ## Local Development
 
 ```

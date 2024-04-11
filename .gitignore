@@ -4,6 +4,10 @@
 # Production
 /build
 
+# Everythin in docs folder except sidebars.ts
+/docs/*
+!/docs/sidebars.ts
+
 # Generated files
 .docusaurus
 .cache-loader
