@@ -46,14 +46,14 @@ jobs:
 
       - name: Syncing the docs folder and remove incubator-graphar
         run: |
-          rsync -av --progress incubator-graphar/docs/ docs/
+          rsync -av incubator-graphar/docs/ docs/
           rm -rf incubator-graphar
 
       - name: Install dependencies
         run: pnpm install
   
       - name: Build
-        run: | 
+        run: |
           pnpm run build
           cp .asf.yaml build/.asf.yaml
 
