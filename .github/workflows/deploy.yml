@@ -108,7 +108,7 @@ jobs:
           name: spark-docs
           path: ./spark/graphar/target/site/scaladocs
 
-  build-spark-docs:
+  build-pyspark-docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
