@@ -23,7 +23,6 @@ on:
   pull_request:
 
 jobs:
-jobs:
   build-cpp-doc:
     runs-on: ubuntu-latest
     steps:
