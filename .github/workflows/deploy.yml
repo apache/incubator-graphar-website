@@ -30,7 +30,6 @@ jobs:
         with:
           repository: apache/incubator-graphar
           ref: main
-          depth: 1
 
       - name: Install dependencies
         run: sudo apt-get install -y doxygen 
@@ -56,7 +55,6 @@ jobs:
         with:
           repository: apache/incubator-graphar
           ref: main
-          depth: 1
 
       - name: Install dependencies
         run: |
@@ -92,7 +90,6 @@ jobs:
         with:
           repository: apache/incubator-graphar
           ref: main
-          depth: 1
 
       - name: Build Spark Docs
         working-directory: spark
@@ -115,7 +112,6 @@ jobs:
         with:
           repository: apache/incubator-graphar
           ref: main
-          depth: 1
 
       - name: Install Poetry
         working-directory: pyspark
@@ -159,7 +155,6 @@ jobs:
           repository: apache/incubator-graphar
           path: incubator-graphar
           ref: main
-          depth: 1
 
       - name: Syncing the docs folder and remove incubator-graphar
         run: |
@@ -172,12 +167,6 @@ jobs:
         with:
           name: cpp-docs
           path: ./static/docs/cpp
-
-      - name: Download java docs
-        uses: actions/download-artifact@v3
-        with:
-          name: java-docs
-          path: ./static/docs/java
 
       - name: Download spark docs
         uses: actions/download-artifact@v3
