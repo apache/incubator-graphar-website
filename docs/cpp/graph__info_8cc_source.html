@@ -91,7 +91,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;yaml/Yaml.hpp&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;mini-yaml/yaml/Yaml.hpp&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;gar/graph_info.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;gar/util/adj_list_type.h&quot;</span></div>
@@ -1440,8 +1440,8 @@ $(function() {
 <div class="ttc" id="aclassgraphar_1_1_property_group_html_a9a1d4401d81fb2576ae3f3de21eb9e25"><div class="ttname"><a href="classgraphar_1_1_property_group.html#a9a1d4401d81fb2576ae3f3de21eb9e25">graphar::PropertyGroup::IsValidated</a></div><div class="ttdeci">bool IsValidated() const</div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00116">graph_info.cc:116</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_property_group_html_abb84d3d9d16e5efc52c96089a977c60d"><div class="ttname"><a href="classgraphar_1_1_property_group.html#abb84d3d9d16e5efc52c96089a977c60d">graphar::PropertyGroup::PropertyGroup</a></div><div class="ttdeci">PropertyGroup(const std::vector&lt; Property &gt; &amp;properties, FileType file_type, const std::string &amp;prefix=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00092">graph_info.cc:92</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_property_group_html_af090f1d74049ce0222148ad02b26f81a"><div class="ttname"><a href="classgraphar_1_1_property_group.html#af090f1d74049ce0222148ad02b26f81a">graphar::PropertyGroup::GetProperties</a></div><div class="ttdeci">const std::vector&lt; Property &gt; &amp; GetProperties() const</div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00103">graph_info.cc:103</a></div></div>
-<div class="ttc" id="aclassgraphar_1_1_status_html"><div class="ttname"><a href="classgraphar_1_1_status.html">graphar::Status</a></div><div class="ttdoc">Status outcome object (success or error)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00125">status.h:125</a></div></div>
-<div class="ttc" id="aclassgraphar_1_1_status_html_a9ca4be37aae8dfea7e6ef54920e0073f"><div class="ttname"><a href="classgraphar_1_1_status.html#a9ca4be37aae8dfea7e6ef54920e0073f">graphar::Status::Invalid</a></div><div class="ttdeci">static Status Invalid(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00190">status.h:190</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_status_html"><div class="ttname"><a href="classgraphar_1_1_status.html">graphar::Status</a></div><div class="ttdoc">Status outcome object (success or error)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00124">status.h:124</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_status_html_a9ca4be37aae8dfea7e6ef54920e0073f"><div class="ttname"><a href="classgraphar_1_1_status.html#a9ca4be37aae8dfea7e6ef54920e0073f">graphar::Status::Invalid</a></div><div class="ttdeci">static Status Invalid(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00189">status.h:189</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_vertex_info_1_1_impl_html"><div class="ttname"><a href="classgraphar_1_1_vertex_info_1_1_impl.html">graphar::VertexInfo::Impl</a></div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00190">graph_info.cc:190</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_vertex_info_html_a2a4cc44b7db8784bdb0e9691c7ad0fba"><div class="ttname"><a href="classgraphar_1_1_vertex_info.html#a2a4cc44b7db8784bdb0e9691c7ad0fba">graphar::VertexInfo::GetPropertyGroup</a></div><div class="ttdeci">std::shared_ptr&lt; PropertyGroup &gt; GetPropertyGroup(const std::string &amp;property_name) const</div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00296">graph_info.cc:296</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_vertex_info_html_a3214a62ac41be6cb53c22894d2926710"><div class="ttname"><a href="classgraphar_1_1_vertex_info.html#a3214a62ac41be6cb53c22894d2926710">graphar::VertexInfo::GetPathPrefix</a></div><div class="ttdeci">Result&lt; std::string &gt; GetPathPrefix(std::shared_ptr&lt; PropertyGroup &gt; property_group) const</div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00280">graph_info.cc:280</a></div></div>
@@ -1467,9 +1467,31 @@ $(function() {
 <div class="ttc" id="aclassgraphar_1_1_vertex_info_html_aff9aadd406180802facb14d6a4b5e72e"><div class="ttname"><a href="classgraphar_1_1_vertex_info.html#aff9aadd406180802facb14d6a4b5e72e">graphar::VertexInfo::GetPropertyGroups</a></div><div class="ttdeci">const PropertyGroupVector &amp; GetPropertyGroups() const</div><div class="ttdef"><b>Definition:</b> <a href="graph__info_8cc_source.html#l00310">graph_info.cc:310</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_yaml_html_a2fff6ba5eaf3e59b489d015f10013179"><div class="ttname"><a href="classgraphar_1_1_yaml.html#a2fff6ba5eaf3e59b489d015f10013179">graphar::Yaml::Load</a></div><div class="ttdeci">static Result&lt; std::shared_ptr&lt; Yaml &gt; &gt; Load(const std::string &amp;input)</div><div class="ttdef"><b>Definition:</b> <a href="yaml_8cc_source.html#l00034">yaml.cc:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
-</body>
-</html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!-- disclaimer_footer.html -->
+<footer style="text-align: center; font-size: 12px;">
+    <div>
+        <p>
+            Apache GraphAr is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
+        </p>
+        <p>
+            Copyright © 2024 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. <br/>
+            Apache, the names of Apache projects, and the feather logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+        </p>
+    </div>
+</footer>

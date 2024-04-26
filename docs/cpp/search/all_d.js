@@ -2,8 +2,8 @@ var searchData=
 [
   ['obdedgescollection_140',['OBDEdgesCollection',['../classgraphar_1_1_o_b_d_edges_collection.html',1,'graphar::OBDEdgesCollection'],['../classgraphar_1_1_o_b_d_edges_collection.html#ad2792d9ed115a0201cdb0d42c9644191',1,'graphar::OBDEdgesCollection::OBDEdgesCollection()']]],
   ['obsedgecollection_141',['OBSEdgeCollection',['../classgraphar_1_1_o_b_s_edge_collection.html',1,'graphar::OBSEdgeCollection'],['../classgraphar_1_1_o_b_s_edge_collection.html#a1900914bc9725cc2bdcaaa080df3311b',1,'graphar::OBSEdgeCollection::OBSEdgeCollection()']]],
-  ['ok_142',['ok',['../classgraphar_1_1_status.html#a401ecb877b8439e3006552f46869e6f0',1,'graphar::Status']]],
-  ['ok_143',['OK',['../classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881',1,'graphar::Status']]],
+  ['ok_142',['OK',['../classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881',1,'graphar::Status']]],
+  ['ok_143',['ok',['../classgraphar_1_1_status.html#a401ecb877b8439e3006552f46869e6f0',1,'graphar::Status']]],
   ['operator_21_3d_144',['operator!=',['../classgraphar_1_1_vertex_iter.html#abd27c3767cba502e517ae714d9a7d2f3',1,'graphar::VertexIter::operator!=()'],['../classgraphar_1_1_edge_iter.html#a2303e681b0e2b313f987f9e043a17108',1,'graphar::EdgeIter::operator!=()']]],
   ['operator_2a_145',['operator*',['../classgraphar_1_1_vertex_iter.html#a323f4fb318715bbc2c2b36f1c396942f',1,'graphar::VertexIter::operator*()'],['../classgraphar_1_1_edge_iter.html#a24e9941ae0a452eb999f033646d99bb3',1,'graphar::EdgeIter::operator*()']]],
   ['operator_2b_146',['operator+',['../classgraphar_1_1_vertex_iter.html#a9543939eb727f6f2e338db3c929b1977',1,'graphar::VertexIter']]],
