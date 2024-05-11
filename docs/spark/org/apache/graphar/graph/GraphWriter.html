@@ -705,7 +705,7 @@
         <span class="name">write</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;graph&quot;</span></span>, <span name="vertex_chunk_size">vertex_chunk_size: <span class="extype" name="scala.Long">Long</span> = <span class="defval" name='<span class="name"><a href="../../../index.html">GeneralParams.defaultVertexChunkSize</a></span>'>...</span></span>, <span name="edge_chunk_size">edge_chunk_size: <span class="extype" name="scala.Long">Long</span> = <span class="symbol"><span class="name"><a href="../../../index.html">GeneralParams.defaultEdgeChunkSize</a></span></span></span>, <span name="file_type">file_type: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../../index.html">GeneralParams.defaultFileType</a></span></span></span>, <span name="version">version: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../../index.html">GeneralParams.defaultVersion</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Write graph data in graphar format.</p><div class="fullcomment"><div class="comment cmt"><p>Write graph data in graphar format.
+      <p class="shortcomment cmt">Write graph data in GraphAr format.</p><div class="fullcomment"><div class="comment cmt"><p>Write graph data in GraphAr format.
 </p></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>
   the directory to write.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
   the spark session for the writing.</p></dd><dt class="param">name</dt><dd class="cmt"><p>
@@ -714,7 +714,7 @@
   the chunk size for edges, default is 2^22</p></dd><dt class="param">file_type</dt><dd class="cmt"><p>
   the file type for data payload file, support [parquet, orc, csv], default
   is parquet.</p></dd><dt class="param">version</dt><dd class="cmt"><p>
-  version of graphar format, default is v1.</p></dd></dl></div>
+  version of GraphAr format, default is v1.</p></dd></dl></div>
     </li><li name="org.apache.graphar.graph.GraphWriter#write" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="write(graphInfoPath:String,spark:org.apache.spark.sql.SparkSession):Unit"></a><a id="write(String,SparkSession):Unit"></a>
       <span class="permalink">
@@ -730,7 +730,7 @@
         <span class="name">write</span><span class="params">(<span name="graphInfoPath">graphInfoPath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Write the graph data in graphar format with path of the graph info yaml.</p><div class="fullcomment"><div class="comment cmt"><p>Write the graph data in graphar format with path of the graph info yaml.</p></div><dl class="paramcmts block"><dt class="param">graphInfoPath</dt><dd class="cmt"><p>
+      <p class="shortcomment cmt">Write the graph data in GraphAr format with path of the graph info yaml.</p><div class="fullcomment"><div class="comment cmt"><p>Write the graph data in GraphAr format with path of the graph info yaml.</p></div><dl class="paramcmts block"><dt class="param">graphInfoPath</dt><dd class="cmt"><p>
   the path of the graph info yaml.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
   the spark session for the writing.</p></dd></dl></div>
     </li><li name="org.apache.graphar.graph.GraphWriter#write" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -748,7 +748,7 @@
         <span class="name">write</span><span class="params">(<span name="graphInfo">graphInfo: <a href="../GraphInfo.html" class="extype" name="org.apache.graphar.GraphInfo">GraphInfo</a></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Write the graph data in graphar format with graph info.</p><div class="fullcomment"><div class="comment cmt"><p>Write the graph data in graphar format with graph info.</p></div><dl class="paramcmts block"><dt class="param">graphInfo</dt><dd class="cmt"><p>
+      <p class="shortcomment cmt">Write the graph data in GraphAr format with graph info.</p><div class="fullcomment"><div class="comment cmt"><p>Write the graph data in GraphAr format with graph info.</p></div><dl class="paramcmts block"><dt class="param">graphInfo</dt><dd class="cmt"><p>
   the graph info object for the graph.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
   the spark session for the writing.</p></dd></dl></div>
     </li>

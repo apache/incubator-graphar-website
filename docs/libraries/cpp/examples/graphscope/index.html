@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">Integrate into GraphScope | Apache GraphAr</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://graphar.apache.org/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://graphar.apache.org/img/social-card.png"><meta data-rh="true" property="og:url" content="https://graphar.apache.org/docs/libraries/cpp/examples/graphscope"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Integrate into GraphScope | Apache GraphAr"><meta data-rh="true" name="description" content="GraphScope is a unified distributed graph"><meta data-rh="true" property="og:description" content="GraphScope is a unified distributed graph"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://graphar.apache.org/docs/libraries/cpp/examples/graphscope"><link data-rh="true" rel="alternate" href="https://graphar.apache.org/docs/libraries/cpp/examples/graphscope" hreflang="en"><link data-rh="true" rel="alternate" href="https://graphar.apache.org/docs/libraries/cpp/examples/graphscope" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Apache GraphAr RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Apache GraphAr Atom Feed"><link rel="stylesheet" href="/assets/css/styles.dfe66a1a.css">
-<script src="/assets/js/runtime~main.141ca7c4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b0b5fb3d.js" defer="defer"></script>
 <script src="/assets/js/main.33b3907c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,16 +24,16 @@ answers in parallel. And then each worker may exchange partial results
 with other processors via synchronous message passing.</p>
 <p>To integrate GraphAr into GraphScope, we implemented
 <em>ArrowFragmentBuilder</em> and <em>ArrowFragmentWriter</em>. <em>ArrowFragmentBuilder</em>
-establishes the fragments for workers of GraphScope through reading GAR
-files in parallel. Conversely, <em>ArrowFragmentWriter</em> can take the
-GraphScope fragments and save them as GAR files. If you&#x27;re interested in
+establishes the fragments for workers of GraphScope through reading GraphAr
+format data in parallel. Conversely, <em>ArrowFragmentWriter</em> can take the
+GraphScope fragments and save them as GraphAr format files. If you&#x27;re interested in
 knowing more about the implementation, please refer to the <a href="https://github.com/v6d-io/v6d/commit/0eda2067e45fbb4ac46892398af0edc84fe1c27b" target="_blank" rel="noopener noreferrer">source
 code</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_qibj" id="performance-report">Performance Report<a href="#performance-report" class="hash-link" aria-label="Direct link to Performance Report" title="Direct link to Performance Report">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_qibj" id="parameter-settings">Parameter settings<a href="#parameter-settings" class="hash-link" aria-label="Direct link to Parameter settings" title="Direct link to Parameter settings">​</a></h3>
 <p>The time performance of <em>ArrowFragmentBuilder</em> and <em>ArrowFragmentWriter</em>
 in GraphScope is heavily dependent on the partitioning of the graph into
-GAR files, that is, the <em>vertex chunk size</em> and <em>edge chunk size</em>, which
+GraphAr format files, that is, the <em>vertex chunk size</em> and <em>edge chunk size</em>, which
 are specified in the vertex information file and in the edge information
 file, respectively.</p>
 <p>Generally speaking, fewer chunks are created if the file size is large.
@@ -42,7 +42,7 @@ parallelism, prolonging disk I/O time. On the other hand, having too
 many small files increases the overhead associated with the file system
 and the file parser.</p>
 <p>We have conducted micro benchmarks to compare the time performance for
-reading/writing GAR files by
+reading/writing GraphAr format files by
 <em>ArrowFragmentBuilder</em>/<em>ArrowFragmentWriter</em>, across different <em>vertex
 chunk size</em> and <em>edge chunk size</em> configurations. The settings we
 recommend for <em>vertex chunk size</em> and <em>edge chunk size</em> are <strong>2^18</strong> and

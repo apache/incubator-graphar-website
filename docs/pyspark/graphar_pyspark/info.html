@@ -1043,7 +1043,7 @@
 </span><span id="L-551"><a href="#L-551"><span class="linenos"> 551</span></a><span class="sd">        :chunk_size: chunk size</span>
 </span><span id="L-552"><a href="#L-552"><span class="linenos"> 552</span></a><span class="sd">        :prefix: vertex prefix</span>
 </span><span id="L-553"><a href="#L-553"><span class="linenos"> 553</span></a><span class="sd">        :property_groups: list of property groups</span>
-</span><span id="L-554"><a href="#L-554"><span class="linenos"> 554</span></a><span class="sd">        :version: version of GAR</span>
+</span><span id="L-554"><a href="#L-554"><span class="linenos"> 554</span></a><span class="sd">        :version: version of GraphAr format</span>
 </span><span id="L-555"><a href="#L-555"><span class="linenos"> 555</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-556"><a href="#L-556"><span class="linenos"> 556</span></a>        <span class="k">return</span> <span class="n">VertexInfo</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">property_groups</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </span><span id="L-557"><a href="#L-557"><span class="linenos"> 557</span></a>
@@ -1388,16 +1388,16 @@
 </span><span id="L-896"><a href="#L-896"><span class="linenos"> 896</span></a>        <span class="p">)</span>
 </span><span id="L-897"><a href="#L-897"><span class="linenos"> 897</span></a>
 </span><span id="L-898"><a href="#L-898"><span class="linenos"> 898</span></a>    <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="L-899"><a href="#L-899"><span class="linenos"> 899</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GAR version from the corresponding JVM object.</span>
+</span><span id="L-899"><a href="#L-899"><span class="linenos"> 899</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GraphAr format version from the corresponding JVM object.</span>
 </span><span id="L-900"><a href="#L-900"><span class="linenos"> 900</span></a>
-</span><span id="L-901"><a href="#L-901"><span class="linenos"> 901</span></a><span class="sd">        :returns: GAR version</span>
+</span><span id="L-901"><a href="#L-901"><span class="linenos"> 901</span></a><span class="sd">        :returns: GraphAr format version</span>
 </span><span id="L-902"><a href="#L-902"><span class="linenos"> 902</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-903"><a href="#L-903"><span class="linenos"> 903</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_edge_info_obj</span><span class="o">.</span><span class="n">getVersion</span><span class="p">()</span>
 </span><span id="L-904"><a href="#L-904"><span class="linenos"> 904</span></a>
 </span><span id="L-905"><a href="#L-905"><span class="linenos"> 905</span></a>    <span class="k">def</span> <span class="nf">set_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="L-906"><a href="#L-906"><span class="linenos"> 906</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Mutate the corresponding JVM object.</span>
 </span><span id="L-907"><a href="#L-907"><span class="linenos"> 907</span></a>
-</span><span id="L-908"><a href="#L-908"><span class="linenos"> 908</span></a><span class="sd">        :param version: the new GAR version</span>
+</span><span id="L-908"><a href="#L-908"><span class="linenos"> 908</span></a><span class="sd">        :param version: the new GraphAr format version</span>
 </span><span id="L-909"><a href="#L-909"><span class="linenos"> 909</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-910"><a href="#L-910"><span class="linenos"> 910</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_edge_info_obj</span><span class="o">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </span><span id="L-911"><a href="#L-911"><span class="linenos"> 911</span></a>
@@ -1457,7 +1457,7 @@
 </span><span id="L-965"><a href="#L-965"><span class="linenos"> 965</span></a><span class="sd">        :param prefix: path prefix</span>
 </span><span id="L-966"><a href="#L-966"><span class="linenos"> 966</span></a><span class="sd">        :param adj_lists: sequence of AdjList objects</span>
 </span><span id="L-967"><a href="#L-967"><span class="linenos"> 967</span></a><span class="sd">        :property_groups: sequence of of PropertyGroup objects</span>
-</span><span id="L-968"><a href="#L-968"><span class="linenos"> 968</span></a><span class="sd">        :param version: version of GAR format</span>
+</span><span id="L-968"><a href="#L-968"><span class="linenos"> 968</span></a><span class="sd">        :param version: version of GraphAr format</span>
 </span><span id="L-969"><a href="#L-969"><span class="linenos"> 969</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-970"><a href="#L-970"><span class="linenos"> 970</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">):</span>
 </span><span id="L-971"><a href="#L-971"><span class="linenos"> 971</span></a>            <span class="n">prefix</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
@@ -1866,7 +1866,7 @@
 </span><span id="L-1374"><a href="#L-1374"><span class="linenos">1374</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_info_obj</span><span class="o">.</span><span class="n">setEdges</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span>
 </span><span id="L-1375"><a href="#L-1375"><span class="linenos">1375</span></a>
 </span><span id="L-1376"><a href="#L-1376"><span class="linenos">1376</span></a>    <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="L-1377"><a href="#L-1377"><span class="linenos">1377</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GAR version from the corresponding JVM object.</span>
+</span><span id="L-1377"><a href="#L-1377"><span class="linenos">1377</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GraphAr format version from the corresponding JVM object.</span>
 </span><span id="L-1378"><a href="#L-1378"><span class="linenos">1378</span></a>
 </span><span id="L-1379"><a href="#L-1379"><span class="linenos">1379</span></a><span class="sd">        :returns: version</span>
 </span><span id="L-1380"><a href="#L-1380"><span class="linenos">1380</span></a><span class="sd">        &quot;&quot;&quot;</span>
@@ -1875,7 +1875,7 @@
 </span><span id="L-1383"><a href="#L-1383"><span class="linenos">1383</span></a>    <span class="k">def</span> <span class="nf">set_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="L-1384"><a href="#L-1384"><span class="linenos">1384</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Mutate the corresponding JVM object.</span>
 </span><span id="L-1385"><a href="#L-1385"><span class="linenos">1385</span></a>
-</span><span id="L-1386"><a href="#L-1386"><span class="linenos">1386</span></a><span class="sd">        :param version: new version of GAR</span>
+</span><span id="L-1386"><a href="#L-1386"><span class="linenos">1386</span></a><span class="sd">        :param version: new version of GraphAr format</span>
 </span><span id="L-1387"><a href="#L-1387"><span class="linenos">1387</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-1388"><a href="#L-1388"><span class="linenos">1388</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_info_obj</span><span class="o">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </span><span id="L-1389"><a href="#L-1389"><span class="linenos">1389</span></a>
@@ -1909,7 +1909,7 @@
 </span><span id="L-1417"><a href="#L-1417"><span class="linenos">1417</span></a><span class="sd">        :param prefix: path prefix</span>
 </span><span id="L-1418"><a href="#L-1418"><span class="linenos">1418</span></a><span class="sd">        :param vertices: list of vertices</span>
 </span><span id="L-1419"><a href="#L-1419"><span class="linenos">1419</span></a><span class="sd">        :param edges: list of edges</span>
-</span><span id="L-1420"><a href="#L-1420"><span class="linenos">1420</span></a><span class="sd">        :param version: version of GAR format</span>
+</span><span id="L-1420"><a href="#L-1420"><span class="linenos">1420</span></a><span class="sd">        :param version: version of GraphAr format</span>
 </span><span id="L-1421"><a href="#L-1421"><span class="linenos">1421</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-1422"><a href="#L-1422"><span class="linenos">1422</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">):</span>
 </span><span id="L-1423"><a href="#L-1423"><span class="linenos">1423</span></a>            <span class="n">prefix</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
@@ -3258,7 +3258,7 @@
 </span><span id="VertexInfo-552"><a href="#VertexInfo-552"><span class="linenos">552</span></a><span class="sd">        :chunk_size: chunk size</span>
 </span><span id="VertexInfo-553"><a href="#VertexInfo-553"><span class="linenos">553</span></a><span class="sd">        :prefix: vertex prefix</span>
 </span><span id="VertexInfo-554"><a href="#VertexInfo-554"><span class="linenos">554</span></a><span class="sd">        :property_groups: list of property groups</span>
-</span><span id="VertexInfo-555"><a href="#VertexInfo-555"><span class="linenos">555</span></a><span class="sd">        :version: version of GAR</span>
+</span><span id="VertexInfo-555"><a href="#VertexInfo-555"><span class="linenos">555</span></a><span class="sd">        :version: version of GraphAr format</span>
 </span><span id="VertexInfo-556"><a href="#VertexInfo-556"><span class="linenos">556</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="VertexInfo-557"><a href="#VertexInfo-557"><span class="linenos">557</span></a>        <span class="k">return</span> <span class="n">VertexInfo</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">property_groups</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </span></pre></div>
@@ -4130,7 +4130,7 @@
 </span><span id="VertexInfo.from_python-552"><a href="#VertexInfo.from_python-552"><span class="linenos">552</span></a><span class="sd">        :chunk_size: chunk size</span>
 </span><span id="VertexInfo.from_python-553"><a href="#VertexInfo.from_python-553"><span class="linenos">553</span></a><span class="sd">        :prefix: vertex prefix</span>
 </span><span id="VertexInfo.from_python-554"><a href="#VertexInfo.from_python-554"><span class="linenos">554</span></a><span class="sd">        :property_groups: list of property groups</span>
-</span><span id="VertexInfo.from_python-555"><a href="#VertexInfo.from_python-555"><span class="linenos">555</span></a><span class="sd">        :version: version of GAR</span>
+</span><span id="VertexInfo.from_python-555"><a href="#VertexInfo.from_python-555"><span class="linenos">555</span></a><span class="sd">        :version: version of GraphAr format</span>
 </span><span id="VertexInfo.from_python-556"><a href="#VertexInfo.from_python-556"><span class="linenos">556</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="VertexInfo.from_python-557"><a href="#VertexInfo.from_python-557"><span class="linenos">557</span></a>        <span class="k">return</span> <span class="n">VertexInfo</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">property_groups</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </span></pre></div>
@@ -4145,7 +4145,7 @@
 :chunk_size: chunk size
 :prefix: vertex prefix
 :property_groups: list of property groups
-:version: version of GAR</li>
+:version: version of GraphAr format</li>
 </ul>
 </div>
 
@@ -4922,16 +4922,16 @@
 </span><span id="EdgeInfo-897"><a href="#EdgeInfo-897"><span class="linenos"> 897</span></a>        <span class="p">)</span>
 </span><span id="EdgeInfo-898"><a href="#EdgeInfo-898"><span class="linenos"> 898</span></a>
 </span><span id="EdgeInfo-899"><a href="#EdgeInfo-899"><span class="linenos"> 899</span></a>    <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="EdgeInfo-900"><a href="#EdgeInfo-900"><span class="linenos"> 900</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GAR version from the corresponding JVM object.</span>
+</span><span id="EdgeInfo-900"><a href="#EdgeInfo-900"><span class="linenos"> 900</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GraphAr format version from the corresponding JVM object.</span>
 </span><span id="EdgeInfo-901"><a href="#EdgeInfo-901"><span class="linenos"> 901</span></a>
-</span><span id="EdgeInfo-902"><a href="#EdgeInfo-902"><span class="linenos"> 902</span></a><span class="sd">        :returns: GAR version</span>
+</span><span id="EdgeInfo-902"><a href="#EdgeInfo-902"><span class="linenos"> 902</span></a><span class="sd">        :returns: GraphAr format version</span>
 </span><span id="EdgeInfo-903"><a href="#EdgeInfo-903"><span class="linenos"> 903</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="EdgeInfo-904"><a href="#EdgeInfo-904"><span class="linenos"> 904</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_edge_info_obj</span><span class="o">.</span><span class="n">getVersion</span><span class="p">()</span>
 </span><span id="EdgeInfo-905"><a href="#EdgeInfo-905"><span class="linenos"> 905</span></a>
 </span><span id="EdgeInfo-906"><a href="#EdgeInfo-906"><span class="linenos"> 906</span></a>    <span class="k">def</span> <span class="nf">set_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="EdgeInfo-907"><a href="#EdgeInfo-907"><span class="linenos"> 907</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Mutate the corresponding JVM object.</span>
 </span><span id="EdgeInfo-908"><a href="#EdgeInfo-908"><span class="linenos"> 908</span></a>
-</span><span id="EdgeInfo-909"><a href="#EdgeInfo-909"><span class="linenos"> 909</span></a><span class="sd">        :param version: the new GAR version</span>
+</span><span id="EdgeInfo-909"><a href="#EdgeInfo-909"><span class="linenos"> 909</span></a><span class="sd">        :param version: the new GraphAr format version</span>
 </span><span id="EdgeInfo-910"><a href="#EdgeInfo-910"><span class="linenos"> 910</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="EdgeInfo-911"><a href="#EdgeInfo-911"><span class="linenos"> 911</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_edge_info_obj</span><span class="o">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </span><span id="EdgeInfo-912"><a href="#EdgeInfo-912"><span class="linenos"> 912</span></a>
@@ -4991,7 +4991,7 @@
 </span><span id="EdgeInfo-966"><a href="#EdgeInfo-966"><span class="linenos"> 966</span></a><span class="sd">        :param prefix: path prefix</span>
 </span><span id="EdgeInfo-967"><a href="#EdgeInfo-967"><span class="linenos"> 967</span></a><span class="sd">        :param adj_lists: sequence of AdjList objects</span>
 </span><span id="EdgeInfo-968"><a href="#EdgeInfo-968"><span class="linenos"> 968</span></a><span class="sd">        :property_groups: sequence of of PropertyGroup objects</span>
-</span><span id="EdgeInfo-969"><a href="#EdgeInfo-969"><span class="linenos"> 969</span></a><span class="sd">        :param version: version of GAR format</span>
+</span><span id="EdgeInfo-969"><a href="#EdgeInfo-969"><span class="linenos"> 969</span></a><span class="sd">        :param version: version of GraphAr format</span>
 </span><span id="EdgeInfo-970"><a href="#EdgeInfo-970"><span class="linenos"> 970</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="EdgeInfo-971"><a href="#EdgeInfo-971"><span class="linenos"> 971</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">):</span>
 </span><span id="EdgeInfo-972"><a href="#EdgeInfo-972"><span class="linenos"> 972</span></a>            <span class="n">prefix</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
@@ -5984,17 +5984,17 @@
     </div>
     <a class="headerlink" href="#EdgeInfo.get_version"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="EdgeInfo.get_version-899"><a href="#EdgeInfo.get_version-899"><span class="linenos">899</span></a>    <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="EdgeInfo.get_version-900"><a href="#EdgeInfo.get_version-900"><span class="linenos">900</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GAR version from the corresponding JVM object.</span>
+</span><span id="EdgeInfo.get_version-900"><a href="#EdgeInfo.get_version-900"><span class="linenos">900</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GraphAr format version from the corresponding JVM object.</span>
 </span><span id="EdgeInfo.get_version-901"><a href="#EdgeInfo.get_version-901"><span class="linenos">901</span></a>
-</span><span id="EdgeInfo.get_version-902"><a href="#EdgeInfo.get_version-902"><span class="linenos">902</span></a><span class="sd">        :returns: GAR version</span>
+</span><span id="EdgeInfo.get_version-902"><a href="#EdgeInfo.get_version-902"><span class="linenos">902</span></a><span class="sd">        :returns: GraphAr format version</span>
 </span><span id="EdgeInfo.get_version-903"><a href="#EdgeInfo.get_version-903"><span class="linenos">903</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="EdgeInfo.get_version-904"><a href="#EdgeInfo.get_version-904"><span class="linenos">904</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_edge_info_obj</span><span class="o">.</span><span class="n">getVersion</span><span class="p">()</span>
 </span></pre></div>
 
 
-            <div class="docstring"><p>Get GAR version from the corresponding JVM object.</p>
+            <div class="docstring"><p>Get GraphAr format version from the corresponding JVM object.</p>
 
-<p>:returns: GAR version</p>
+<p>:returns: GraphAr format version</p>
 </div>
 
 
@@ -6013,7 +6013,7 @@
             <div class="pdoc-code codehilite"><pre><span></span><span id="EdgeInfo.set_version-906"><a href="#EdgeInfo.set_version-906"><span class="linenos">906</span></a>    <span class="k">def</span> <span class="nf">set_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="EdgeInfo.set_version-907"><a href="#EdgeInfo.set_version-907"><span class="linenos">907</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Mutate the corresponding JVM object.</span>
 </span><span id="EdgeInfo.set_version-908"><a href="#EdgeInfo.set_version-908"><span class="linenos">908</span></a>
-</span><span id="EdgeInfo.set_version-909"><a href="#EdgeInfo.set_version-909"><span class="linenos">909</span></a><span class="sd">        :param version: the new GAR version</span>
+</span><span id="EdgeInfo.set_version-909"><a href="#EdgeInfo.set_version-909"><span class="linenos">909</span></a><span class="sd">        :param version: the new GraphAr format version</span>
 </span><span id="EdgeInfo.set_version-910"><a href="#EdgeInfo.set_version-910"><span class="linenos">910</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="EdgeInfo.set_version-911"><a href="#EdgeInfo.set_version-911"><span class="linenos">911</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_edge_info_obj</span><span class="o">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </span></pre></div>
@@ -6024,7 +6024,7 @@
 <h6 id="parameters">Parameters</h6>
 
 <ul>
-<li><strong>version</strong>:  the new GAR version</li>
+<li><strong>version</strong>:  the new GraphAr format version</li>
 </ul>
 </div>
 
@@ -6144,7 +6144,7 @@
 </span><span id="EdgeInfo.from_python-966"><a href="#EdgeInfo.from_python-966"><span class="linenos">966</span></a><span class="sd">        :param prefix: path prefix</span>
 </span><span id="EdgeInfo.from_python-967"><a href="#EdgeInfo.from_python-967"><span class="linenos">967</span></a><span class="sd">        :param adj_lists: sequence of AdjList objects</span>
 </span><span id="EdgeInfo.from_python-968"><a href="#EdgeInfo.from_python-968"><span class="linenos">968</span></a><span class="sd">        :property_groups: sequence of of PropertyGroup objects</span>
-</span><span id="EdgeInfo.from_python-969"><a href="#EdgeInfo.from_python-969"><span class="linenos">969</span></a><span class="sd">        :param version: version of GAR format</span>
+</span><span id="EdgeInfo.from_python-969"><a href="#EdgeInfo.from_python-969"><span class="linenos">969</span></a><span class="sd">        :param version: version of GraphAr format</span>
 </span><span id="EdgeInfo.from_python-970"><a href="#EdgeInfo.from_python-970"><span class="linenos">970</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="EdgeInfo.from_python-971"><a href="#EdgeInfo.from_python-971"><span class="linenos">971</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">):</span>
 </span><span id="EdgeInfo.from_python-972"><a href="#EdgeInfo.from_python-972"><span class="linenos">972</span></a>            <span class="n">prefix</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
@@ -6181,7 +6181,7 @@
 <li><strong>prefix</strong>:  path prefix</li>
 <li><strong>adj_lists</strong>:  sequence of AdjList objects
 :property_groups: sequence of of PropertyGroup objects</li>
-<li><strong>version</strong>:  version of GAR format</li>
+<li><strong>version</strong>:  version of GraphAr format</li>
 </ul>
 </div>
 
@@ -7186,7 +7186,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 </span><span id="GraphInfo-1375"><a href="#GraphInfo-1375"><span class="linenos">1375</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_info_obj</span><span class="o">.</span><span class="n">setEdges</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span>
 </span><span id="GraphInfo-1376"><a href="#GraphInfo-1376"><span class="linenos">1376</span></a>
 </span><span id="GraphInfo-1377"><a href="#GraphInfo-1377"><span class="linenos">1377</span></a>    <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="GraphInfo-1378"><a href="#GraphInfo-1378"><span class="linenos">1378</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GAR version from the corresponding JVM object.</span>
+</span><span id="GraphInfo-1378"><a href="#GraphInfo-1378"><span class="linenos">1378</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GraphAr format version from the corresponding JVM object.</span>
 </span><span id="GraphInfo-1379"><a href="#GraphInfo-1379"><span class="linenos">1379</span></a>
 </span><span id="GraphInfo-1380"><a href="#GraphInfo-1380"><span class="linenos">1380</span></a><span class="sd">        :returns: version</span>
 </span><span id="GraphInfo-1381"><a href="#GraphInfo-1381"><span class="linenos">1381</span></a><span class="sd">        &quot;&quot;&quot;</span>
@@ -7195,7 +7195,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 </span><span id="GraphInfo-1384"><a href="#GraphInfo-1384"><span class="linenos">1384</span></a>    <span class="k">def</span> <span class="nf">set_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="GraphInfo-1385"><a href="#GraphInfo-1385"><span class="linenos">1385</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Mutate the corresponding JVM object.</span>
 </span><span id="GraphInfo-1386"><a href="#GraphInfo-1386"><span class="linenos">1386</span></a>
-</span><span id="GraphInfo-1387"><a href="#GraphInfo-1387"><span class="linenos">1387</span></a><span class="sd">        :param version: new version of GAR</span>
+</span><span id="GraphInfo-1387"><a href="#GraphInfo-1387"><span class="linenos">1387</span></a><span class="sd">        :param version: new version of GraphAr format</span>
 </span><span id="GraphInfo-1388"><a href="#GraphInfo-1388"><span class="linenos">1388</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphInfo-1389"><a href="#GraphInfo-1389"><span class="linenos">1389</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_info_obj</span><span class="o">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </span><span id="GraphInfo-1390"><a href="#GraphInfo-1390"><span class="linenos">1390</span></a>
@@ -7229,7 +7229,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 </span><span id="GraphInfo-1418"><a href="#GraphInfo-1418"><span class="linenos">1418</span></a><span class="sd">        :param prefix: path prefix</span>
 </span><span id="GraphInfo-1419"><a href="#GraphInfo-1419"><span class="linenos">1419</span></a><span class="sd">        :param vertices: list of vertices</span>
 </span><span id="GraphInfo-1420"><a href="#GraphInfo-1420"><span class="linenos">1420</span></a><span class="sd">        :param edges: list of edges</span>
-</span><span id="GraphInfo-1421"><a href="#GraphInfo-1421"><span class="linenos">1421</span></a><span class="sd">        :param version: version of GAR format</span>
+</span><span id="GraphInfo-1421"><a href="#GraphInfo-1421"><span class="linenos">1421</span></a><span class="sd">        :param version: version of GraphAr format</span>
 </span><span id="GraphInfo-1422"><a href="#GraphInfo-1422"><span class="linenos">1422</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphInfo-1423"><a href="#GraphInfo-1423"><span class="linenos">1423</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">):</span>
 </span><span id="GraphInfo-1424"><a href="#GraphInfo-1424"><span class="linenos">1424</span></a>            <span class="n">prefix</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
@@ -7610,7 +7610,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
     </div>
     <a class="headerlink" href="#GraphInfo.get_version"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="GraphInfo.get_version-1377"><a href="#GraphInfo.get_version-1377"><span class="linenos">1377</span></a>    <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="GraphInfo.get_version-1378"><a href="#GraphInfo.get_version-1378"><span class="linenos">1378</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GAR version from the corresponding JVM object.</span>
+</span><span id="GraphInfo.get_version-1378"><a href="#GraphInfo.get_version-1378"><span class="linenos">1378</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GraphAr format version from the corresponding JVM object.</span>
 </span><span id="GraphInfo.get_version-1379"><a href="#GraphInfo.get_version-1379"><span class="linenos">1379</span></a>
 </span><span id="GraphInfo.get_version-1380"><a href="#GraphInfo.get_version-1380"><span class="linenos">1380</span></a><span class="sd">        :returns: version</span>
 </span><span id="GraphInfo.get_version-1381"><a href="#GraphInfo.get_version-1381"><span class="linenos">1381</span></a><span class="sd">        &quot;&quot;&quot;</span>
@@ -7618,7 +7618,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 </span></pre></div>
 
 
-            <div class="docstring"><p>Get GAR version from the corresponding JVM object.</p>
+            <div class="docstring"><p>Get GraphAr format version from the corresponding JVM object.</p>
 
 <p>:returns: version</p>
 </div>
@@ -7639,7 +7639,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
             <div class="pdoc-code codehilite"><pre><span></span><span id="GraphInfo.set_version-1384"><a href="#GraphInfo.set_version-1384"><span class="linenos">1384</span></a>    <span class="k">def</span> <span class="nf">set_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="GraphInfo.set_version-1385"><a href="#GraphInfo.set_version-1385"><span class="linenos">1385</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Mutate the corresponding JVM object.</span>
 </span><span id="GraphInfo.set_version-1386"><a href="#GraphInfo.set_version-1386"><span class="linenos">1386</span></a>
-</span><span id="GraphInfo.set_version-1387"><a href="#GraphInfo.set_version-1387"><span class="linenos">1387</span></a><span class="sd">        :param version: new version of GAR</span>
+</span><span id="GraphInfo.set_version-1387"><a href="#GraphInfo.set_version-1387"><span class="linenos">1387</span></a><span class="sd">        :param version: new version of GraphAr format</span>
 </span><span id="GraphInfo.set_version-1388"><a href="#GraphInfo.set_version-1388"><span class="linenos">1388</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphInfo.set_version-1389"><a href="#GraphInfo.set_version-1389"><span class="linenos">1389</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_info_obj</span><span class="o">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </span></pre></div>
@@ -7650,7 +7650,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 <h6 id="parameters">Parameters</h6>
 
 <ul>
-<li><strong>version</strong>:  new version of GAR</li>
+<li><strong>version</strong>:  new version of GraphAr format</li>
 </ul>
 </div>
 
@@ -7744,7 +7744,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 </span><span id="GraphInfo.from_python-1418"><a href="#GraphInfo.from_python-1418"><span class="linenos">1418</span></a><span class="sd">        :param prefix: path prefix</span>
 </span><span id="GraphInfo.from_python-1419"><a href="#GraphInfo.from_python-1419"><span class="linenos">1419</span></a><span class="sd">        :param vertices: list of vertices</span>
 </span><span id="GraphInfo.from_python-1420"><a href="#GraphInfo.from_python-1420"><span class="linenos">1420</span></a><span class="sd">        :param edges: list of edges</span>
-</span><span id="GraphInfo.from_python-1421"><a href="#GraphInfo.from_python-1421"><span class="linenos">1421</span></a><span class="sd">        :param version: version of GAR format</span>
+</span><span id="GraphInfo.from_python-1421"><a href="#GraphInfo.from_python-1421"><span class="linenos">1421</span></a><span class="sd">        :param version: version of GraphAr format</span>
 </span><span id="GraphInfo.from_python-1422"><a href="#GraphInfo.from_python-1422"><span class="linenos">1422</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphInfo.from_python-1423"><a href="#GraphInfo.from_python-1423"><span class="linenos">1423</span></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">):</span>
 </span><span id="GraphInfo.from_python-1424"><a href="#GraphInfo.from_python-1424"><span class="linenos">1424</span></a>            <span class="n">prefix</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
@@ -7761,7 +7761,7 @@ chunk. If edge info not contains the property group, raise an IllegalArgumentExc
 <li><strong>prefix</strong>:  path prefix</li>
 <li><strong>vertices</strong>:  list of vertices</li>
 <li><strong>edges</strong>:  list of edges</li>
-<li><strong>version</strong>:  version of GAR format</li>
+<li><strong>version</strong>:  version of GraphAr format</li>
 </ul>
 </div>
 
