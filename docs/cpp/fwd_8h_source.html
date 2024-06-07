@@ -173,15 +173,14 @@ $(function() {
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;const std::shared_ptr&lt;DataType&gt;&amp; date();</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;const std::shared_ptr&lt;DataType&gt;&amp; timestamp();</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;std::shared_ptr&lt;DataType&gt; list(const std::shared_ptr&lt;DataType&gt;&amp; value_type);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;namespace util {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">struct </span>FilterOptions;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">using</span> Filter = std::shared_ptr&lt;Expression&gt;;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">using</span> ColumnNames =</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    std::optional&lt;std::reference_wrapper&lt;std::vector&lt;std::string&gt;&gt;&gt;;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}  <span class="comment">// namespace util</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}  <span class="comment">// namespace graphar</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}  <span class="comment">// namespace graphar</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;namespace graphar::util {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">struct </span>FilterOptions;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">using</span> Filter = std::shared_ptr&lt;Expression&gt;;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">using</span> ColumnNames =</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    std::optional&lt;std::reference_wrapper&lt;std::vector&lt;std::string&gt;&gt;&gt;;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}  <span class="comment">// namespace graphar::util</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
