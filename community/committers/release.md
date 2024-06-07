@@ -193,7 +193,7 @@ svn status
 svn commit -m "Prepare for ${release_version}"
 ```
 
-Visit <https://dist.apache.org/repos/dist/dev/incubator/graphar/> to make sure the artifacts are uploaded correctly.
+Visit https://dist.apache.org/repos/dist/dev/incubator/graphar/ to make sure the artifacts are uploaded correctly.
 
 ### Rescue
 
