@@ -320,7 +320,7 @@ We should make sure the binding votes are from the people who have the right to 
 
 ### Incubator Community Vote
 
-Incubator Community Vote should send email to: <general@incubator.apache.org>:
+Incubator Community Vote should send email to: [general@incubator.apache.org](mailto:general@incubator.apache.org):
 
 Title:
 
