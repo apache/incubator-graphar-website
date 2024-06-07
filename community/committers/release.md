@@ -208,7 +208,7 @@ GraphAr requires votes from both the GraphAr Community and the Incubator Communi
 
 ### GraphAr Community Vote
 
-GraphAr Community Vote should send email to: <dev@graphar.apache.org>:
+GraphAr Community Vote should send email to: [dev@graphar.apache.org](mailto:dev@graphar.apache.org)
 
 Title:
 
