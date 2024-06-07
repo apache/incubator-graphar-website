@@ -164,7 +164,7 @@ SVN is required for this step.
 
 :::
 
-The svn repository of the dev branch is: <https://dist.apache.org/repos/dist/dev/incubator/graphar>
+The svn repository of the dev branch is: https://dist.apache.org/repos/dist/dev/incubator/graphar
 
 First, checkout GraphAr to local directory:
 
@@ -279,7 +279,7 @@ ${name}
 
 > Tips: The 72 hours is the minimum time for voting, so we can ensure that community members from various time zones can participate in the verification process.
 
-After at least 3 `+1` binding vote ([from GraphAr Podling PMC member](https://people.apache.org/phonebook.html?project=graphar)) and no veto, claim the vote result:
+After at least 3 `+1` binding vote ([from GraphAr Podling PMC member](https://people.apache.org/phonebook.html?podling=graphar)) and no veto, claim the vote result:
 
 Title:
 
@@ -395,8 +395,6 @@ Thanks
 ${name}
 ```
 
-Example: <https://lists.apache.org/thread/sjdzs89p2x4tlb813ow7lhdhdfcvhysx>
-
 After at least 72 hours with at least 3 +1 binding vote (from Incubator PMC member) and no veto, claim the vote result:
 
 Title:
@@ -430,8 +428,6 @@ Thanks for reviewing and voting for our release candidate.
 We will proceed with publishing the approved artifacts and sending out the announcement soon.
 ```
 
-Example: <https://lists.apache.org/thread/h3x9pq1djpg76q3ojpqmdr3d0o03fld1>
-
 ## Official Release
 
 ### Push the release git tag
@@ -450,19 +446,6 @@ git push origin ${graphar_version}
 ```shell
 svn mv https://dist.apache.org/repos/dist/dev/incubator/graphar/${release_version} https://dist.apache.org/repos/dist/release/incubator/graphar/${opendal_version} -m "Release ${opendal_version}"
 ```
-
-### Release Maven artifacts
-
-1. Open https://repository.apache.org/#stagingRepositories.
-2. Find the artifact `orgapacheopendal-${maven_artifact_number}`, click the "Release" button.
-
-It will take some time to sync the Maven artifacts to the Maven Central.
-
-:::caution
-
-If the vote failed, click "Drop" to drop the staging Maven artifacts.
-
-:::
 
 ### Create a GitHub Release
 
