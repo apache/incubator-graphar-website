@@ -106,6 +106,7 @@ System setup</h2>
 <div class="line">sudo apt-get update</div>
 <div class="line">sudo apt-get install -y libarrow-dev libarrow-dataset-dev libarrow-acero-dev libparquet-dev</div>
 </div><!-- fragment --><p>On macOS, you can use <a href="https://brew.sh">Homebrew</a> to install the required packages:</p>
+<p>Note: Currently, the Arrow C++ library is <a href="https://github.com/Homebrew/homebrew-core/blob/4588359b7248b07379094de5310ee7ff89afa17e/Formula/a/apache-arrow.rb#L53">disable ARROW_ORC</a> in the brew formula, so you need to install the Arrow C++ library manually.</p>
 <div class="fragment"><div class="line">git clone https:://github.com/apache/graphar.git</div>
 <div class="line">cd graphar</div>
 <div class="line">brew update &amp;&amp; brew bundle --file=cpp/Brewfile</div>
@@ -113,9 +114,7 @@ System setup</h2>
 Building</h2>
 <p>All the instructions below assume that you have cloned the GraphAr git repository and navigated to the <code>cpp</code> subdirectory with:</p>
 <div class="fragment"><div class="line">$ git clone https://github.com/apache/graphar.git</div>
-<div class="line">$ cd graphar</div>
-<div class="line">$ git submodule update --init</div>
-<div class="line">$ cd cpp</div>
+<div class="line">$ cd graphar/cpp</div>
 </div><!-- fragment --><p>Release build:</p>
 <div class="fragment"><div class="line">$ mkdir build-release</div>
 <div class="line">$ cd build-release</div>
