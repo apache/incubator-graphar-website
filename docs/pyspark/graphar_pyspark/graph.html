@@ -336,7 +336,7 @@
 </span><span id="L-195"><a href="#L-195"><span class="linenos">195</span></a><span class="sd">        :param name: the name of graph, default is &#39;grpah&#39;</span>
 </span><span id="L-196"><a href="#L-196"><span class="linenos">196</span></a><span class="sd">        :param vertex_chunk_size: the chunk size for vertices, default is 2^18</span>
 </span><span id="L-197"><a href="#L-197"><span class="linenos">197</span></a><span class="sd">        :param edge_chunk_size: the chunk size for edges, default is 2^22</span>
-</span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a><span class="sd">        :param file_type: the file type for data payload file, support [parquet, orc, csv], default is parquet.</span>
+</span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a><span class="sd">        :param file_type: the file type for data payload file, support [parquet, orc, csv, json], default is parquet.</span>
 </span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a><span class="sd">        :param version: version of GraphAr format, default is v1.</span>
 </span><span id="L-200"><a href="#L-200"><span class="linenos">200</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-201"><a href="#L-201"><span class="linenos">201</span></a>        <span class="k">if</span> <span class="n">vertex_chunk_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -828,7 +828,7 @@
 </span><span id="GraphWriter-196"><a href="#GraphWriter-196"><span class="linenos">196</span></a><span class="sd">        :param name: the name of graph, default is &#39;grpah&#39;</span>
 </span><span id="GraphWriter-197"><a href="#GraphWriter-197"><span class="linenos">197</span></a><span class="sd">        :param vertex_chunk_size: the chunk size for vertices, default is 2^18</span>
 </span><span id="GraphWriter-198"><a href="#GraphWriter-198"><span class="linenos">198</span></a><span class="sd">        :param edge_chunk_size: the chunk size for edges, default is 2^22</span>
-</span><span id="GraphWriter-199"><a href="#GraphWriter-199"><span class="linenos">199</span></a><span class="sd">        :param file_type: the file type for data payload file, support [parquet, orc, csv], default is parquet.</span>
+</span><span id="GraphWriter-199"><a href="#GraphWriter-199"><span class="linenos">199</span></a><span class="sd">        :param file_type: the file type for data payload file, support [parquet, orc, csv, json], default is parquet.</span>
 </span><span id="GraphWriter-200"><a href="#GraphWriter-200"><span class="linenos">200</span></a><span class="sd">        :param version: version of GraphAr format, default is v1.</span>
 </span><span id="GraphWriter-201"><a href="#GraphWriter-201"><span class="linenos">201</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphWriter-202"><a href="#GraphWriter-202"><span class="linenos">202</span></a>        <span class="k">if</span> <span class="n">vertex_chunk_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1110,7 +1110,7 @@
 </span><span id="GraphWriter.write-196"><a href="#GraphWriter.write-196"><span class="linenos">196</span></a><span class="sd">        :param name: the name of graph, default is &#39;grpah&#39;</span>
 </span><span id="GraphWriter.write-197"><a href="#GraphWriter.write-197"><span class="linenos">197</span></a><span class="sd">        :param vertex_chunk_size: the chunk size for vertices, default is 2^18</span>
 </span><span id="GraphWriter.write-198"><a href="#GraphWriter.write-198"><span class="linenos">198</span></a><span class="sd">        :param edge_chunk_size: the chunk size for edges, default is 2^22</span>
-</span><span id="GraphWriter.write-199"><a href="#GraphWriter.write-199"><span class="linenos">199</span></a><span class="sd">        :param file_type: the file type for data payload file, support [parquet, orc, csv], default is parquet.</span>
+</span><span id="GraphWriter.write-199"><a href="#GraphWriter.write-199"><span class="linenos">199</span></a><span class="sd">        :param file_type: the file type for data payload file, support [parquet, orc, csv, json], default is parquet.</span>
 </span><span id="GraphWriter.write-200"><a href="#GraphWriter.write-200"><span class="linenos">200</span></a><span class="sd">        :param version: version of GraphAr format, default is v1.</span>
 </span><span id="GraphWriter.write-201"><a href="#GraphWriter.write-201"><span class="linenos">201</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphWriter.write-202"><a href="#GraphWriter.write-202"><span class="linenos">202</span></a>        <span class="k">if</span> <span class="n">vertex_chunk_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1154,7 +1154,7 @@ For this method None for any of arguments means that the default value will be u
 <li><strong>name</strong>:  the name of graph, default is 'grpah'</li>
 <li><strong>vertex_chunk_size</strong>:  the chunk size for vertices, default is 2^18</li>
 <li><strong>edge_chunk_size</strong>:  the chunk size for edges, default is 2^22</li>
-<li><strong>file_type</strong>:  the file type for data payload file, support [parquet, orc, csv], default is parquet.</li>
+<li><strong>file_type</strong>:  the file type for data payload file, support [parquet, orc, csv, json], default is parquet.</li>
 <li><strong>version</strong>:  version of GraphAr format, default is v1.</li>
 </ul>
 </div>

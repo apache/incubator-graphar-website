@@ -72,6 +72,9 @@
                                 <a class="variable" href="#FileType.CSV">CSV</a>
                         </li>
                         <li>
+                                <a class="variable" href="#FileType.JSON">JSON</a>
+                        </li>
+                        <li>
                                 <a class="variable" href="#FileType.PARQUET">PARQUET</a>
                         </li>
                         <li>
@@ -193,55 +196,56 @@
 </span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Type of  file format.&quot;&quot;&quot;</span>
 </span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a>
 </span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a>    <span class="n">CSV</span> <span class="o">=</span> <span class="s2">&quot;csv&quot;</span>
-</span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a>    <span class="n">PARQUET</span> <span class="o">=</span> <span class="s2">&quot;parquet&quot;</span>
-</span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a>    <span class="n">ORC</span> <span class="o">=</span> <span class="s2">&quot;orc&quot;</span>
-</span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a>
-</span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>    <span class="nd">@staticmethod</span>
-</span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FileType&quot;</span><span class="p">:</span>
-</span><span id="L-66"><a href="#L-66"><span class="linenos"> 66</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
-</span><span id="L-67"><a href="#L-67"><span class="linenos"> 67</span></a>
-</span><span id="L-68"><a href="#L-68"><span class="linenos"> 68</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
-</span><span id="L-69"><a href="#L-69"><span class="linenos"> 69</span></a><span class="sd">        :returns: instance of Python Class.</span>
-</span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="L-71"><a href="#L-71"><span class="linenos"> 71</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="L-72"><a href="#L-72"><span class="linenos"> 72</span></a>        <span class="k">return</span> <span class="n">FileType</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">FileTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">))</span>
-</span><span id="L-73"><a href="#L-73"><span class="linenos"> 73</span></a>
-</span><span id="L-74"><a href="#L-74"><span class="linenos"> 74</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
-</span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
-</span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a>
-</span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a><span class="sd">        :returns: JavaObject</span>
-</span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="L-80"><a href="#L-80"><span class="linenos"> 80</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">StringToFileType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</span><span id="L-81"><a href="#L-81"><span class="linenos"> 81</span></a>
+</span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a>    <span class="n">JSON</span> <span class="o">=</span> <span class="s2">&quot;json&quot;</span>
+</span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a>    <span class="n">PARQUET</span> <span class="o">=</span> <span class="s2">&quot;parquet&quot;</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a>    <span class="n">ORC</span> <span class="o">=</span> <span class="s2">&quot;orc&quot;</span>
+</span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>
+</span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a>    <span class="nd">@staticmethod</span>
+</span><span id="L-66"><a href="#L-66"><span class="linenos"> 66</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FileType&quot;</span><span class="p">:</span>
+</span><span id="L-67"><a href="#L-67"><span class="linenos"> 67</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
+</span><span id="L-68"><a href="#L-68"><span class="linenos"> 68</span></a>
+</span><span id="L-69"><a href="#L-69"><span class="linenos"> 69</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
+</span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a><span class="sd">        :returns: instance of Python Class.</span>
+</span><span id="L-71"><a href="#L-71"><span class="linenos"> 71</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="L-72"><a href="#L-72"><span class="linenos"> 72</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="L-73"><a href="#L-73"><span class="linenos"> 73</span></a>        <span class="k">return</span> <span class="n">FileType</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">FileTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">))</span>
+</span><span id="L-74"><a href="#L-74"><span class="linenos"> 74</span></a>
+</span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
+</span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
+</span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a>
+</span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a><span class="sd">        :returns: JavaObject</span>
+</span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="L-80"><a href="#L-80"><span class="linenos"> 80</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="L-81"><a href="#L-81"><span class="linenos"> 81</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">StringToFileType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a>
-</span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a><span class="k">class</span> <span class="nc">AdjListType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-</span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Adj list type enumeration for adjacency list of graph.&quot;&quot;&quot;</span>
-</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a>
-</span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a>    <span class="n">UNORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_source&quot;</span>
-</span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a>    <span class="n">UNORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_dest&quot;</span>
-</span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>    <span class="n">ORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_source&quot;</span>
-</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>    <span class="n">ORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_dest&quot;</span>
-</span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>
-</span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>    <span class="nd">@staticmethod</span>
-</span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;AdjListType&quot;</span><span class="p">:</span>
-</span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
-</span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a>
-</span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
-</span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a><span class="sd">        :returns: instance of Python Class.</span>
-</span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>        <span class="k">return</span> <span class="n">AdjListType</span><span class="p">(</span>
-</span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>            <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">AdjListTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">),</span>
-</span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>        <span class="p">)</span>
-</span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a>
-</span><span id="L-103"><a href="#L-103"><span class="linenos">103</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
-</span><span id="L-104"><a href="#L-104"><span class="linenos">104</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
-</span><span id="L-105"><a href="#L-105"><span class="linenos">105</span></a>
-</span><span id="L-106"><a href="#L-106"><span class="linenos">106</span></a><span class="sd">        :returns: JavaObject</span>
-</span><span id="L-107"><a href="#L-107"><span class="linenos">107</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">StringToAdjListType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a>
+</span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a><span class="k">class</span> <span class="nc">AdjListType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Adj list type enumeration for adjacency list of graph.&quot;&quot;&quot;</span>
+</span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a>
+</span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a>    <span class="n">UNORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_source&quot;</span>
+</span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>    <span class="n">UNORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_dest&quot;</span>
+</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>    <span class="n">ORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_source&quot;</span>
+</span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>    <span class="n">ORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_dest&quot;</span>
+</span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>
+</span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a>    <span class="nd">@staticmethod</span>
+</span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;AdjListType&quot;</span><span class="p">:</span>
+</span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
+</span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a>
+</span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
+</span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a><span class="sd">        :returns: instance of Python Class.</span>
+</span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>        <span class="k">return</span> <span class="n">AdjListType</span><span class="p">(</span>
+</span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>            <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">AdjListTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">),</span>
+</span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a>        <span class="p">)</span>
+</span><span id="L-103"><a href="#L-103"><span class="linenos">103</span></a>
+</span><span id="L-104"><a href="#L-104"><span class="linenos">104</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
+</span><span id="L-105"><a href="#L-105"><span class="linenos">105</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
+</span><span id="L-106"><a href="#L-106"><span class="linenos">106</span></a>
+</span><span id="L-107"><a href="#L-107"><span class="linenos">107</span></a><span class="sd">        :returns: JavaObject</span>
+</span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="L-110"><a href="#L-110"><span class="linenos">110</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">StringToAdjListType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -466,26 +470,27 @@
 </span><span id="FileType-59"><a href="#FileType-59"><span class="linenos">59</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Type of  file format.&quot;&quot;&quot;</span>
 </span><span id="FileType-60"><a href="#FileType-60"><span class="linenos">60</span></a>
 </span><span id="FileType-61"><a href="#FileType-61"><span class="linenos">61</span></a>    <span class="n">CSV</span> <span class="o">=</span> <span class="s2">&quot;csv&quot;</span>
-</span><span id="FileType-62"><a href="#FileType-62"><span class="linenos">62</span></a>    <span class="n">PARQUET</span> <span class="o">=</span> <span class="s2">&quot;parquet&quot;</span>
-</span><span id="FileType-63"><a href="#FileType-63"><span class="linenos">63</span></a>    <span class="n">ORC</span> <span class="o">=</span> <span class="s2">&quot;orc&quot;</span>
-</span><span id="FileType-64"><a href="#FileType-64"><span class="linenos">64</span></a>
-</span><span id="FileType-65"><a href="#FileType-65"><span class="linenos">65</span></a>    <span class="nd">@staticmethod</span>
-</span><span id="FileType-66"><a href="#FileType-66"><span class="linenos">66</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FileType&quot;</span><span class="p">:</span>
-</span><span id="FileType-67"><a href="#FileType-67"><span class="linenos">67</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
-</span><span id="FileType-68"><a href="#FileType-68"><span class="linenos">68</span></a>
-</span><span id="FileType-69"><a href="#FileType-69"><span class="linenos">69</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
-</span><span id="FileType-70"><a href="#FileType-70"><span class="linenos">70</span></a><span class="sd">        :returns: instance of Python Class.</span>
-</span><span id="FileType-71"><a href="#FileType-71"><span class="linenos">71</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="FileType-72"><a href="#FileType-72"><span class="linenos">72</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="FileType-73"><a href="#FileType-73"><span class="linenos">73</span></a>        <span class="k">return</span> <span class="n">FileType</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">FileTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">))</span>
-</span><span id="FileType-74"><a href="#FileType-74"><span class="linenos">74</span></a>
-</span><span id="FileType-75"><a href="#FileType-75"><span class="linenos">75</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
-</span><span id="FileType-76"><a href="#FileType-76"><span class="linenos">76</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
-</span><span id="FileType-77"><a href="#FileType-77"><span class="linenos">77</span></a>
-</span><span id="FileType-78"><a href="#FileType-78"><span class="linenos">78</span></a><span class="sd">        :returns: JavaObject</span>
-</span><span id="FileType-79"><a href="#FileType-79"><span class="linenos">79</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="FileType-80"><a href="#FileType-80"><span class="linenos">80</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="FileType-81"><a href="#FileType-81"><span class="linenos">81</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">StringToFileType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</span><span id="FileType-62"><a href="#FileType-62"><span class="linenos">62</span></a>    <span class="n">JSON</span> <span class="o">=</span> <span class="s2">&quot;json&quot;</span>
+</span><span id="FileType-63"><a href="#FileType-63"><span class="linenos">63</span></a>    <span class="n">PARQUET</span> <span class="o">=</span> <span class="s2">&quot;parquet&quot;</span>
+</span><span id="FileType-64"><a href="#FileType-64"><span class="linenos">64</span></a>    <span class="n">ORC</span> <span class="o">=</span> <span class="s2">&quot;orc&quot;</span>
+</span><span id="FileType-65"><a href="#FileType-65"><span class="linenos">65</span></a>
+</span><span id="FileType-66"><a href="#FileType-66"><span class="linenos">66</span></a>    <span class="nd">@staticmethod</span>
+</span><span id="FileType-67"><a href="#FileType-67"><span class="linenos">67</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FileType&quot;</span><span class="p">:</span>
+</span><span id="FileType-68"><a href="#FileType-68"><span class="linenos">68</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
+</span><span id="FileType-69"><a href="#FileType-69"><span class="linenos">69</span></a>
+</span><span id="FileType-70"><a href="#FileType-70"><span class="linenos">70</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
+</span><span id="FileType-71"><a href="#FileType-71"><span class="linenos">71</span></a><span class="sd">        :returns: instance of Python Class.</span>
+</span><span id="FileType-72"><a href="#FileType-72"><span class="linenos">72</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FileType-73"><a href="#FileType-73"><span class="linenos">73</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="FileType-74"><a href="#FileType-74"><span class="linenos">74</span></a>        <span class="k">return</span> <span class="n">FileType</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">FileTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">))</span>
+</span><span id="FileType-75"><a href="#FileType-75"><span class="linenos">75</span></a>
+</span><span id="FileType-76"><a href="#FileType-76"><span class="linenos">76</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
+</span><span id="FileType-77"><a href="#FileType-77"><span class="linenos">77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
+</span><span id="FileType-78"><a href="#FileType-78"><span class="linenos">78</span></a>
+</span><span id="FileType-79"><a href="#FileType-79"><span class="linenos">79</span></a><span class="sd">        :returns: JavaObject</span>
+</span><span id="FileType-80"><a href="#FileType-80"><span class="linenos">80</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FileType-81"><a href="#FileType-81"><span class="linenos">81</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="FileType-82"><a href="#FileType-82"><span class="linenos">82</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">StringToFileType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -501,6 +506,18 @@
         
     </div>
     <a class="headerlink" href="#FileType.CSV"></a>
+    
+    
+
+                            </div>
+                            <div id="FileType.JSON" class="classattr">
+                                <div class="attr variable">
+            <span class="name">JSON</span>        =
+<span class="default_value">&lt;<a href="#FileType.JSON">FileType.JSON</a>: &#39;json&#39;&gt;</span>
+
+        
+    </div>
+    <a class="headerlink" href="#FileType.JSON"></a>
     
     
 
@@ -541,15 +558,15 @@
 
     </div>
     <a class="headerlink" href="#FileType.from_scala"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FileType.from_scala-65"><a href="#FileType.from_scala-65"><span class="linenos">65</span></a>    <span class="nd">@staticmethod</span>
-</span><span id="FileType.from_scala-66"><a href="#FileType.from_scala-66"><span class="linenos">66</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FileType&quot;</span><span class="p">:</span>
-</span><span id="FileType.from_scala-67"><a href="#FileType.from_scala-67"><span class="linenos">67</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
-</span><span id="FileType.from_scala-68"><a href="#FileType.from_scala-68"><span class="linenos">68</span></a>
-</span><span id="FileType.from_scala-69"><a href="#FileType.from_scala-69"><span class="linenos">69</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
-</span><span id="FileType.from_scala-70"><a href="#FileType.from_scala-70"><span class="linenos">70</span></a><span class="sd">        :returns: instance of Python Class.</span>
-</span><span id="FileType.from_scala-71"><a href="#FileType.from_scala-71"><span class="linenos">71</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="FileType.from_scala-72"><a href="#FileType.from_scala-72"><span class="linenos">72</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="FileType.from_scala-73"><a href="#FileType.from_scala-73"><span class="linenos">73</span></a>        <span class="k">return</span> <span class="n">FileType</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">FileTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">))</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FileType.from_scala-66"><a href="#FileType.from_scala-66"><span class="linenos">66</span></a>    <span class="nd">@staticmethod</span>
+</span><span id="FileType.from_scala-67"><a href="#FileType.from_scala-67"><span class="linenos">67</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FileType&quot;</span><span class="p">:</span>
+</span><span id="FileType.from_scala-68"><a href="#FileType.from_scala-68"><span class="linenos">68</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
+</span><span id="FileType.from_scala-69"><a href="#FileType.from_scala-69"><span class="linenos">69</span></a>
+</span><span id="FileType.from_scala-70"><a href="#FileType.from_scala-70"><span class="linenos">70</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
+</span><span id="FileType.from_scala-71"><a href="#FileType.from_scala-71"><span class="linenos">71</span></a><span class="sd">        :returns: instance of Python Class.</span>
+</span><span id="FileType.from_scala-72"><a href="#FileType.from_scala-72"><span class="linenos">72</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FileType.from_scala-73"><a href="#FileType.from_scala-73"><span class="linenos">73</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="FileType.from_scala-74"><a href="#FileType.from_scala-74"><span class="linenos">74</span></a>        <span class="k">return</span> <span class="n">FileType</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">FileTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">))</span>
 </span></pre></div>
 
 
@@ -576,13 +593,13 @@
 
     </div>
     <a class="headerlink" href="#FileType.to_scala"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FileType.to_scala-75"><a href="#FileType.to_scala-75"><span class="linenos">75</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
-</span><span id="FileType.to_scala-76"><a href="#FileType.to_scala-76"><span class="linenos">76</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
-</span><span id="FileType.to_scala-77"><a href="#FileType.to_scala-77"><span class="linenos">77</span></a>
-</span><span id="FileType.to_scala-78"><a href="#FileType.to_scala-78"><span class="linenos">78</span></a><span class="sd">        :returns: JavaObject</span>
-</span><span id="FileType.to_scala-79"><a href="#FileType.to_scala-79"><span class="linenos">79</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="FileType.to_scala-80"><a href="#FileType.to_scala-80"><span class="linenos">80</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="FileType.to_scala-81"><a href="#FileType.to_scala-81"><span class="linenos">81</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">StringToFileType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FileType.to_scala-76"><a href="#FileType.to_scala-76"><span class="linenos">76</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
+</span><span id="FileType.to_scala-77"><a href="#FileType.to_scala-77"><span class="linenos">77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
+</span><span id="FileType.to_scala-78"><a href="#FileType.to_scala-78"><span class="linenos">78</span></a>
+</span><span id="FileType.to_scala-79"><a href="#FileType.to_scala-79"><span class="linenos">79</span></a><span class="sd">        :returns: JavaObject</span>
+</span><span id="FileType.to_scala-80"><a href="#FileType.to_scala-80"><span class="linenos">80</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FileType.to_scala-81"><a href="#FileType.to_scala-81"><span class="linenos">81</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="FileType.to_scala-82"><a href="#FileType.to_scala-82"><span class="linenos">82</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">FileType</span><span class="o">.</span><span class="n">StringToFileType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -615,33 +632,33 @@
 
     </div>
     <a class="headerlink" href="#AdjListType"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="AdjListType-84"><a href="#AdjListType-84"><span class="linenos"> 84</span></a><span class="k">class</span> <span class="nc">AdjListType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-</span><span id="AdjListType-85"><a href="#AdjListType-85"><span class="linenos"> 85</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Adj list type enumeration for adjacency list of graph.&quot;&quot;&quot;</span>
-</span><span id="AdjListType-86"><a href="#AdjListType-86"><span class="linenos"> 86</span></a>
-</span><span id="AdjListType-87"><a href="#AdjListType-87"><span class="linenos"> 87</span></a>    <span class="n">UNORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_source&quot;</span>
-</span><span id="AdjListType-88"><a href="#AdjListType-88"><span class="linenos"> 88</span></a>    <span class="n">UNORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_dest&quot;</span>
-</span><span id="AdjListType-89"><a href="#AdjListType-89"><span class="linenos"> 89</span></a>    <span class="n">ORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_source&quot;</span>
-</span><span id="AdjListType-90"><a href="#AdjListType-90"><span class="linenos"> 90</span></a>    <span class="n">ORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_dest&quot;</span>
-</span><span id="AdjListType-91"><a href="#AdjListType-91"><span class="linenos"> 91</span></a>
-</span><span id="AdjListType-92"><a href="#AdjListType-92"><span class="linenos"> 92</span></a>    <span class="nd">@staticmethod</span>
-</span><span id="AdjListType-93"><a href="#AdjListType-93"><span class="linenos"> 93</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;AdjListType&quot;</span><span class="p">:</span>
-</span><span id="AdjListType-94"><a href="#AdjListType-94"><span class="linenos"> 94</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
-</span><span id="AdjListType-95"><a href="#AdjListType-95"><span class="linenos"> 95</span></a>
-</span><span id="AdjListType-96"><a href="#AdjListType-96"><span class="linenos"> 96</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
-</span><span id="AdjListType-97"><a href="#AdjListType-97"><span class="linenos"> 97</span></a><span class="sd">        :returns: instance of Python Class.</span>
-</span><span id="AdjListType-98"><a href="#AdjListType-98"><span class="linenos"> 98</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="AdjListType-99"><a href="#AdjListType-99"><span class="linenos"> 99</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="AdjListType-100"><a href="#AdjListType-100"><span class="linenos">100</span></a>        <span class="k">return</span> <span class="n">AdjListType</span><span class="p">(</span>
-</span><span id="AdjListType-101"><a href="#AdjListType-101"><span class="linenos">101</span></a>            <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">AdjListTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">),</span>
-</span><span id="AdjListType-102"><a href="#AdjListType-102"><span class="linenos">102</span></a>        <span class="p">)</span>
-</span><span id="AdjListType-103"><a href="#AdjListType-103"><span class="linenos">103</span></a>
-</span><span id="AdjListType-104"><a href="#AdjListType-104"><span class="linenos">104</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
-</span><span id="AdjListType-105"><a href="#AdjListType-105"><span class="linenos">105</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
-</span><span id="AdjListType-106"><a href="#AdjListType-106"><span class="linenos">106</span></a>
-</span><span id="AdjListType-107"><a href="#AdjListType-107"><span class="linenos">107</span></a><span class="sd">        :returns: JavaObject</span>
-</span><span id="AdjListType-108"><a href="#AdjListType-108"><span class="linenos">108</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="AdjListType-109"><a href="#AdjListType-109"><span class="linenos">109</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="AdjListType-110"><a href="#AdjListType-110"><span class="linenos">110</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">StringToAdjListType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AdjListType-85"><a href="#AdjListType-85"><span class="linenos"> 85</span></a><span class="k">class</span> <span class="nc">AdjListType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="AdjListType-86"><a href="#AdjListType-86"><span class="linenos"> 86</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Adj list type enumeration for adjacency list of graph.&quot;&quot;&quot;</span>
+</span><span id="AdjListType-87"><a href="#AdjListType-87"><span class="linenos"> 87</span></a>
+</span><span id="AdjListType-88"><a href="#AdjListType-88"><span class="linenos"> 88</span></a>    <span class="n">UNORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_source&quot;</span>
+</span><span id="AdjListType-89"><a href="#AdjListType-89"><span class="linenos"> 89</span></a>    <span class="n">UNORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;unordered_by_dest&quot;</span>
+</span><span id="AdjListType-90"><a href="#AdjListType-90"><span class="linenos"> 90</span></a>    <span class="n">ORDERED_BY_SOURCE</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_source&quot;</span>
+</span><span id="AdjListType-91"><a href="#AdjListType-91"><span class="linenos"> 91</span></a>    <span class="n">ORDERED_BY_DEST</span> <span class="o">=</span> <span class="s2">&quot;ordered_by_dest&quot;</span>
+</span><span id="AdjListType-92"><a href="#AdjListType-92"><span class="linenos"> 92</span></a>
+</span><span id="AdjListType-93"><a href="#AdjListType-93"><span class="linenos"> 93</span></a>    <span class="nd">@staticmethod</span>
+</span><span id="AdjListType-94"><a href="#AdjListType-94"><span class="linenos"> 94</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;AdjListType&quot;</span><span class="p">:</span>
+</span><span id="AdjListType-95"><a href="#AdjListType-95"><span class="linenos"> 95</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
+</span><span id="AdjListType-96"><a href="#AdjListType-96"><span class="linenos"> 96</span></a>
+</span><span id="AdjListType-97"><a href="#AdjListType-97"><span class="linenos"> 97</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
+</span><span id="AdjListType-98"><a href="#AdjListType-98"><span class="linenos"> 98</span></a><span class="sd">        :returns: instance of Python Class.</span>
+</span><span id="AdjListType-99"><a href="#AdjListType-99"><span class="linenos"> 99</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="AdjListType-100"><a href="#AdjListType-100"><span class="linenos">100</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="AdjListType-101"><a href="#AdjListType-101"><span class="linenos">101</span></a>        <span class="k">return</span> <span class="n">AdjListType</span><span class="p">(</span>
+</span><span id="AdjListType-102"><a href="#AdjListType-102"><span class="linenos">102</span></a>            <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">AdjListTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">),</span>
+</span><span id="AdjListType-103"><a href="#AdjListType-103"><span class="linenos">103</span></a>        <span class="p">)</span>
+</span><span id="AdjListType-104"><a href="#AdjListType-104"><span class="linenos">104</span></a>
+</span><span id="AdjListType-105"><a href="#AdjListType-105"><span class="linenos">105</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
+</span><span id="AdjListType-106"><a href="#AdjListType-106"><span class="linenos">106</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
+</span><span id="AdjListType-107"><a href="#AdjListType-107"><span class="linenos">107</span></a>
+</span><span id="AdjListType-108"><a href="#AdjListType-108"><span class="linenos">108</span></a><span class="sd">        :returns: JavaObject</span>
+</span><span id="AdjListType-109"><a href="#AdjListType-109"><span class="linenos">109</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="AdjListType-110"><a href="#AdjListType-110"><span class="linenos">110</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="AdjListType-111"><a href="#AdjListType-111"><span class="linenos">111</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">StringToAdjListType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -709,17 +726,17 @@
 
     </div>
     <a class="headerlink" href="#AdjListType.from_scala"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="AdjListType.from_scala-92"><a href="#AdjListType.from_scala-92"><span class="linenos"> 92</span></a>    <span class="nd">@staticmethod</span>
-</span><span id="AdjListType.from_scala-93"><a href="#AdjListType.from_scala-93"><span class="linenos"> 93</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;AdjListType&quot;</span><span class="p">:</span>
-</span><span id="AdjListType.from_scala-94"><a href="#AdjListType.from_scala-94"><span class="linenos"> 94</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
-</span><span id="AdjListType.from_scala-95"><a href="#AdjListType.from_scala-95"><span class="linenos"> 95</span></a>
-</span><span id="AdjListType.from_scala-96"><a href="#AdjListType.from_scala-96"><span class="linenos"> 96</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
-</span><span id="AdjListType.from_scala-97"><a href="#AdjListType.from_scala-97"><span class="linenos"> 97</span></a><span class="sd">        :returns: instance of Python Class.</span>
-</span><span id="AdjListType.from_scala-98"><a href="#AdjListType.from_scala-98"><span class="linenos"> 98</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="AdjListType.from_scala-99"><a href="#AdjListType.from_scala-99"><span class="linenos"> 99</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="AdjListType.from_scala-100"><a href="#AdjListType.from_scala-100"><span class="linenos">100</span></a>        <span class="k">return</span> <span class="n">AdjListType</span><span class="p">(</span>
-</span><span id="AdjListType.from_scala-101"><a href="#AdjListType.from_scala-101"><span class="linenos">101</span></a>            <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">AdjListTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">),</span>
-</span><span id="AdjListType.from_scala-102"><a href="#AdjListType.from_scala-102"><span class="linenos">102</span></a>        <span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AdjListType.from_scala-93"><a href="#AdjListType.from_scala-93"><span class="linenos"> 93</span></a>    <span class="nd">@staticmethod</span>
+</span><span id="AdjListType.from_scala-94"><a href="#AdjListType.from_scala-94"><span class="linenos"> 94</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">:</span> <span class="n">JavaObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;AdjListType&quot;</span><span class="p">:</span>
+</span><span id="AdjListType.from_scala-95"><a href="#AdjListType.from_scala-95"><span class="linenos"> 95</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from the corresponding JVM object.</span>
+</span><span id="AdjListType.from_scala-96"><a href="#AdjListType.from_scala-96"><span class="linenos"> 96</span></a>
+</span><span id="AdjListType.from_scala-97"><a href="#AdjListType.from_scala-97"><span class="linenos"> 97</span></a><span class="sd">        :param jvm_obj: scala object in JVM.</span>
+</span><span id="AdjListType.from_scala-98"><a href="#AdjListType.from_scala-98"><span class="linenos"> 98</span></a><span class="sd">        :returns: instance of Python Class.</span>
+</span><span id="AdjListType.from_scala-99"><a href="#AdjListType.from_scala-99"><span class="linenos"> 99</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="AdjListType.from_scala-100"><a href="#AdjListType.from_scala-100"><span class="linenos">100</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="AdjListType.from_scala-101"><a href="#AdjListType.from_scala-101"><span class="linenos">101</span></a>        <span class="k">return</span> <span class="n">AdjListType</span><span class="p">(</span>
+</span><span id="AdjListType.from_scala-102"><a href="#AdjListType.from_scala-102"><span class="linenos">102</span></a>            <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">AdjListTypeToString</span><span class="p">(</span><span class="n">jvm_obj</span><span class="p">),</span>
+</span><span id="AdjListType.from_scala-103"><a href="#AdjListType.from_scala-103"><span class="linenos">103</span></a>        <span class="p">)</span>
 </span></pre></div>
 
 
@@ -746,13 +763,13 @@
 
     </div>
     <a class="headerlink" href="#AdjListType.to_scala"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="AdjListType.to_scala-104"><a href="#AdjListType.to_scala-104"><span class="linenos">104</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
-</span><span id="AdjListType.to_scala-105"><a href="#AdjListType.to_scala-105"><span class="linenos">105</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
-</span><span id="AdjListType.to_scala-106"><a href="#AdjListType.to_scala-106"><span class="linenos">106</span></a>
-</span><span id="AdjListType.to_scala-107"><a href="#AdjListType.to_scala-107"><span class="linenos">107</span></a><span class="sd">        :returns: JavaObject</span>
-</span><span id="AdjListType.to_scala-108"><a href="#AdjListType.to_scala-108"><span class="linenos">108</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="AdjListType.to_scala-109"><a href="#AdjListType.to_scala-109"><span class="linenos">109</span></a>        <span class="n">_check_session</span><span class="p">()</span>
-</span><span id="AdjListType.to_scala-110"><a href="#AdjListType.to_scala-110"><span class="linenos">110</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">StringToAdjListType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AdjListType.to_scala-105"><a href="#AdjListType.to_scala-105"><span class="linenos">105</span></a>    <span class="k">def</span> <span class="nf">to_scala</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JavaObject</span><span class="p">:</span>
+</span><span id="AdjListType.to_scala-106"><a href="#AdjListType.to_scala-106"><span class="linenos">106</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform object to JVM representation.</span>
+</span><span id="AdjListType.to_scala-107"><a href="#AdjListType.to_scala-107"><span class="linenos">107</span></a>
+</span><span id="AdjListType.to_scala-108"><a href="#AdjListType.to_scala-108"><span class="linenos">108</span></a><span class="sd">        :returns: JavaObject</span>
+</span><span id="AdjListType.to_scala-109"><a href="#AdjListType.to_scala-109"><span class="linenos">109</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="AdjListType.to_scala-110"><a href="#AdjListType.to_scala-110"><span class="linenos">110</span></a>        <span class="n">_check_session</span><span class="p">()</span>
+</span><span id="AdjListType.to_scala-111"><a href="#AdjListType.to_scala-111"><span class="linenos">111</span></a>        <span class="k">return</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">AdjListType</span><span class="o">.</span><span class="n">StringToAdjListType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </span></pre></div>
 
 
