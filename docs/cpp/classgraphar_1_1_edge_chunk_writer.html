@@ -78,7 +78,7 @@ $(function() {
 <p>The writer for edge (adj list, offset and property group) chunks.  
  <a href="classgraphar_1_1_edge_chunk_writer.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="arrow__chunk__writer_8h_source.html">arrow_chunk_writer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="chunk__writer_8h_source.html">chunk_writer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -97,15 +97,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3796d4dd08e7d876281f53d039dad5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_chunk_writer.html#af3796d4dd08e7d876281f53d039dad5f">WriteVerticesNum</a> (const IdType &amp;count, ValidateLevel validate_level=ValidateLevel::default_validate) const</td></tr>
 <tr class="memdesc:af3796d4dd08e7d876281f53d039dad5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the number of vertices into the file.  <a href="classgraphar_1_1_edge_chunk_writer.html#af3796d4dd08e7d876281f53d039dad5f">More...</a><br /></td></tr>
 <tr class="separator:af3796d4dd08e7d876281f53d039dad5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5424b189097dfb70437fccbca9836c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_chunk_writer.html#aed5424b189097dfb70437fccbca9836c">WriteOffsetChunk</a> (const std::string &amp;file_name, IdType vertex_chunk_index, ValidateLevel validate_level=ValidateLevel::default_validate) const</td></tr>
-<tr class="memdesc:aed5424b189097dfb70437fccbca9836c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file as a offset chunk.  <a href="classgraphar_1_1_edge_chunk_writer.html#aed5424b189097dfb70437fccbca9836c">More...</a><br /></td></tr>
-<tr class="separator:aed5424b189097dfb70437fccbca9836c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea77e6d1bad16efd45429f3c9ce6fe26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_chunk_writer.html#aea77e6d1bad16efd45429f3c9ce6fe26">WriteAdjListChunk</a> (const std::string &amp;file_name, IdType vertex_chunk_index, IdType chunk_index, ValidateLevel validate_level=ValidateLevel::default_validate) const</td></tr>
-<tr class="memdesc:aea77e6d1bad16efd45429f3c9ce6fe26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file as an adj list chunk.  <a href="classgraphar_1_1_edge_chunk_writer.html#aea77e6d1bad16efd45429f3c9ce6fe26">More...</a><br /></td></tr>
-<tr class="separator:aea77e6d1bad16efd45429f3c9ce6fe26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4fea615937a48c2215e09f077ac7ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_chunk_writer.html#a5e4fea615937a48c2215e09f077ac7ef">WritePropertyChunk</a> (const std::string &amp;file_name, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, IdType vertex_chunk_index, IdType chunk_index, ValidateLevel validate_level=ValidateLevel::default_validate) const</td></tr>
-<tr class="memdesc:a5e4fea615937a48c2215e09f077ac7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file as an edge property group chunk.  <a href="classgraphar_1_1_edge_chunk_writer.html#a5e4fea615937a48c2215e09f077ac7ef">More...</a><br /></td></tr>
-<tr class="separator:a5e4fea615937a48c2215e09f077ac7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a9041e72a3d46e9fb8a2f1d2463489c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_chunk_writer.html#a9a9041e72a3d46e9fb8a2f1d2463489c">WriteOffsetChunk</a> (const std::shared_ptr&lt; arrow::Table &gt; &amp;input_table, IdType vertex_chunk_index, ValidateLevel validate_level=ValidateLevel::default_validate) const</td></tr>
 <tr class="memdesc:a9a9041e72a3d46e9fb8a2f1d2463489c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate and write the offset chunk for a vertex chunk.  <a href="classgraphar_1_1_edge_chunk_writer.html#a9a9041e72a3d46e9fb8a2f1d2463489c">More...</a><br /></td></tr>
 <tr class="separator:a9a9041e72a3d46e9fb8a2f1d2463489c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +154,7 @@ Static Public Member Functions</h2></td></tr>
 <p>ValidateLevel::weak_validate: to validate if the vertex/edge count or vertex/edge chunk index is non-negative, the adj_list type is valid, the property group exists and the size of input_table is not larger than the chunk size;</p>
 <p>ValidateLevel::strong_validate: besides weak_validate, also validate the schema of input_table is consistent with that of property group; for writing operations without input_table, such as writing vertices/edges number or copying file, the strong_validate is same as weak_validate. </p>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8h_source.html#l00271">271</a> of file <a class="el" href="arrow__chunk__writer_8h_source.html">arrow_chunk_writer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8h_source.html#l00257">257</a> of file <a class="el" href="chunk__writer_8h_source.html">chunk_writer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a785e601cffa83b78a9f64dd182cc0dfe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a785e601cffa83b78a9f64dd182cc0dfe">&#9670;&nbsp;</a></span>EdgeChunkWriter()</h2>
@@ -222,7 +213,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00344">344</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00333">333</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -253,7 +244,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Get the validate level. </p>
 <dl class="section return"><dt>Returns</dt><dd>The validate level of this writer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8h_source.html#l00306">306</a> of file <a class="el" href="arrow__chunk__writer_8h_source.html">arrow_chunk_writer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8h_source.html#l00292">292</a> of file <a class="el" href="chunk__writer_8h_source.html">chunk_writer.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +305,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00928">928</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00881">881</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -389,7 +380,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00940">940</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00893">893</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -425,7 +416,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8h_source.html#l00294">294</a> of file <a class="el" href="arrow__chunk__writer_8h_source.html">arrow_chunk_writer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8h_source.html#l00280">280</a> of file <a class="el" href="chunk__writer_8h_source.html">chunk_writer.h</a>.</p>
 
 </div>
 </div>
@@ -479,7 +470,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00789">789</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00742">742</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -540,7 +531,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00808">808</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00761">761</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -594,7 +585,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00820">820</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00773">773</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -648,12 +639,12 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00830">830</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00783">783</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
 <a id="abbf227f722fcfaf5a330229d92dcc7d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbf227f722fcfaf5a330229d92dcc7d0">&#9670;&nbsp;</a></span>WriteAdjListChunk() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf227f722fcfaf5a330229d92dcc7d0">&#9670;&nbsp;</a></span>WriteAdjListChunk()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -702,61 +693,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00647">647</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
-
-</div>
-</div>
-<a id="aea77e6d1bad16efd45429f3c9ce6fe26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea77e6d1bad16efd45429f3c9ce6fe26">&#9670;&nbsp;</a></span>WriteAdjListChunk() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgraphar_1_1_status.html">Status</a> graphar::EdgeChunkWriter::WriteAdjListChunk </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IdType&#160;</td>
-          <td class="paramname"><em>vertex_chunk_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IdType&#160;</td>
-          <td class="paramname"><em>chunk_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ValidateLevel&#160;</td>
-          <td class="paramname"><em>validate_level</em> = <code>ValidateLevel::default_validate</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy a file as an adj list chunk. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file_name</td><td>The file to copy. </td></tr>
-    <tr><td class="paramname">vertex_chunk_index</td><td>The index of the vertex chunk. </td></tr>
-    <tr><td class="paramname">chunk_index</td><td>The index of the edge chunk inside the vertex chunk. </td></tr>
-    <tr><td class="paramname">validate_level</td><td>The validate level for this operation, which is the writer's validate level by default. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00603">603</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00600">600</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -810,7 +747,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00730">730</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00683">683</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -864,7 +801,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00721">721</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00674">674</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -911,12 +848,12 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00574">574</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00563">563</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
 <a id="a9a9041e72a3d46e9fb8a2f1d2463489c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a9041e72a3d46e9fb8a2f1d2463489c">&#9670;&nbsp;</a></span>WriteOffsetChunk() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9041e72a3d46e9fb8a2f1d2463489c">&#9670;&nbsp;</a></span>WriteOffsetChunk()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -958,59 +895,12 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00629">629</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
-
-</div>
-</div>
-<a id="aed5424b189097dfb70437fccbca9836c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed5424b189097dfb70437fccbca9836c">&#9670;&nbsp;</a></span>WriteOffsetChunk() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgraphar_1_1_status.html">Status</a> graphar::EdgeChunkWriter::WriteOffsetChunk </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IdType&#160;</td>
-          <td class="paramname"><em>vertex_chunk_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ValidateLevel&#160;</td>
-          <td class="paramname"><em>validate_level</em> = <code>ValidateLevel::default_validate</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy a file as a offset chunk. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file_name</td><td>The file to copy. </td></tr>
-    <tr><td class="paramname">vertex_chunk_index</td><td>The index of the vertex chunk. </td></tr>
-    <tr><td class="paramname">validate_level</td><td>The validate level for this operation, which is the writer's validate level by default. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00593">593</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00582">582</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
 <a id="a2552448a395acd1e3cc10e9db45ce877"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2552448a395acd1e3cc10e9db45ce877">&#9670;&nbsp;</a></span>WritePropertyChunk() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2552448a395acd1e3cc10e9db45ce877">&#9670;&nbsp;</a></span>WritePropertyChunk() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1066,12 +956,12 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00679">679</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00632">632</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
 <a id="a48f3a7356d603416caf3aefd546d2135"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48f3a7356d603416caf3aefd546d2135">&#9670;&nbsp;</a></span>WritePropertyChunk() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f3a7356d603416caf3aefd546d2135">&#9670;&nbsp;</a></span>WritePropertyChunk() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1120,68 +1010,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00709">709</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
-
-</div>
-</div>
-<a id="a5e4fea615937a48c2215e09f077ac7ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e4fea615937a48c2215e09f077ac7ef">&#9670;&nbsp;</a></span>WritePropertyChunk() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgraphar_1_1_status.html">Status</a> graphar::EdgeChunkWriter::WritePropertyChunk </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>property_group</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IdType&#160;</td>
-          <td class="paramname"><em>vertex_chunk_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IdType&#160;</td>
-          <td class="paramname"><em>chunk_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ValidateLevel&#160;</td>
-          <td class="paramname"><em>validate_level</em> = <code>ValidateLevel::default_validate</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy a file as an edge property group chunk. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file_name</td><td>The file to copy. </td></tr>
-    <tr><td class="paramname">property_group</td><td>The property group to write. </td></tr>
-    <tr><td class="paramname">vertex_chunk_index</td><td>The index of the vertex chunk. </td></tr>
-    <tr><td class="paramname">chunk_index</td><td>The index of the edge chunk inside the vertex chunk. </td></tr>
-    <tr><td class="paramname">validate_level</td><td>The validate level for this operation, which is the writer's validate level by default. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00615">615</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00662">662</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -1242,7 +1071,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00744">744</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00697">697</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -1296,7 +1125,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00761">761</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00714">714</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1179,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00775">775</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00728">728</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
@@ -1390,13 +1219,13 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__writer_8cc_source.html#l00584">584</a> of file <a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__writer_8cc_source.html#l00573">573</a> of file <a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/graphar/writer/<a class="el" href="arrow__chunk__writer_8h_source.html">arrow_chunk_writer.h</a></li>
-<li>src/<a class="el" href="arrow__chunk__writer_8cc_source.html">arrow_chunk_writer.cc</a></li>
+<li>src/graphar/arrow/<a class="el" href="chunk__writer_8h_source.html">chunk_writer.h</a></li>
+<li>src/graphar/arrow/<a class="el" href="chunk__writer_8cc_source.html">chunk_writer.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!--

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Apache GraphAr C++ Library: src/edges_builder.cc Source File</title>
+<title>Apache GraphAr C++ Library: src/graphar/high-level/edges_builder.cc Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_360ef3ae5e4df5878fa0b8837112e0b7.html">graphar</a></li><li class="navelem"><a class="el" href="dir_37f05c718b2ac0c918080dddfde08e1d.html">high-level</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,10 +91,10 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;arrow/api.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;graphar/util/convert_to_arrow_type.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;graphar/util/general_params.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;graphar/util/result.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;graphar/writer/edges_builder.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;graphar/convert_to_arrow_type.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;graphar/general_params.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;graphar/high-level/edges_builder.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;graphar/result.h&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>graphar::builder {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <span class="keyword">auto</span> offset_table,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          getOffsetTable(vertex_chunk_index, chunk_edges.second));</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      GAR_RETURN_NOT_OK(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          writer.<a class="code" href="classgraphar_1_1_edge_chunk_writer.html#aed5424b189097dfb70437fccbca9836c">WriteOffsetChunk</a>(offset_table, vertex_chunk_index));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          writer.<a class="code" href="classgraphar_1_1_edge_chunk_writer.html#a9a9041e72a3d46e9fb8a2f1d2463489c">WriteOffsetChunk</a>(offset_table, vertex_chunk_index));</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// dump the vertex num</span></div>
@@ -421,11 +421,11 @@ $(function() {
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;}  <span class="comment">// namespace graphar::builder</span></div>
-<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html">graphar::EdgeChunkWriter</a></div><div class="ttdoc">The writer for edge (adj list, offset and property group) chunks.</div><div class="ttdef"><b>Definition:</b> <a href="arrow__chunk__writer_8h_source.html#l00271">arrow_chunk_writer.h:271</a></div></div>
-<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_abfa01f956f732e660eead056ce12f7c1"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#abfa01f956f732e660eead056ce12f7c1">graphar::EdgeChunkWriter::WriteEdgesNum</a></div><div class="ttdeci">Status WriteEdgesNum(IdType vertex_chunk_index, const IdType &amp;count, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Write the number of edges into the file.</div><div class="ttdef"><b>Definition:</b> <a href="arrow__chunk__writer_8cc_source.html#l00574">arrow_chunk_writer.cc:574</a></div></div>
-<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_adbe1029f7e8f1777da7e905ec0e0b0e4"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#adbe1029f7e8f1777da7e905ec0e0b0e4">graphar::EdgeChunkWriter::WriteTable</a></div><div class="ttdeci">Status WriteTable(const std::shared_ptr&lt; arrow::Table &gt; &amp;input_table, IdType vertex_chunk_index, IdType start_chunk_index=0, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Write chunks of the adj list and all property groups for the edges of a vertex chunk.</div><div class="ttdef"><b>Definition:</b> <a href="arrow__chunk__writer_8cc_source.html#l00775">arrow_chunk_writer.cc:775</a></div></div>
-<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_aed5424b189097dfb70437fccbca9836c"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#aed5424b189097dfb70437fccbca9836c">graphar::EdgeChunkWriter::WriteOffsetChunk</a></div><div class="ttdeci">Status WriteOffsetChunk(const std::string &amp;file_name, IdType vertex_chunk_index, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Copy a file as a offset chunk.</div><div class="ttdef"><b>Definition:</b> <a href="arrow__chunk__writer_8cc_source.html#l00593">arrow_chunk_writer.cc:593</a></div></div>
-<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_af3796d4dd08e7d876281f53d039dad5f"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#af3796d4dd08e7d876281f53d039dad5f">graphar::EdgeChunkWriter::WriteVerticesNum</a></div><div class="ttdeci">Status WriteVerticesNum(const IdType &amp;count, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Write the number of vertices into the file.</div><div class="ttdef"><b>Definition:</b> <a href="arrow__chunk__writer_8cc_source.html#l00584">arrow_chunk_writer.cc:584</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html">graphar::EdgeChunkWriter</a></div><div class="ttdoc">The writer for edge (adj list, offset and property group) chunks.</div><div class="ttdef"><b>Definition:</b> <a href="chunk__writer_8h_source.html#l00257">chunk_writer.h:257</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_a9a9041e72a3d46e9fb8a2f1d2463489c"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#a9a9041e72a3d46e9fb8a2f1d2463489c">graphar::EdgeChunkWriter::WriteOffsetChunk</a></div><div class="ttdeci">Status WriteOffsetChunk(const std::shared_ptr&lt; arrow::Table &gt; &amp;input_table, IdType vertex_chunk_index, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Validate and write the offset chunk for a vertex chunk.</div><div class="ttdef"><b>Definition:</b> <a href="chunk__writer_8cc_source.html#l00582">chunk_writer.cc:582</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_abfa01f956f732e660eead056ce12f7c1"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#abfa01f956f732e660eead056ce12f7c1">graphar::EdgeChunkWriter::WriteEdgesNum</a></div><div class="ttdeci">Status WriteEdgesNum(IdType vertex_chunk_index, const IdType &amp;count, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Write the number of edges into the file.</div><div class="ttdef"><b>Definition:</b> <a href="chunk__writer_8cc_source.html#l00563">chunk_writer.cc:563</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_adbe1029f7e8f1777da7e905ec0e0b0e4"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#adbe1029f7e8f1777da7e905ec0e0b0e4">graphar::EdgeChunkWriter::WriteTable</a></div><div class="ttdeci">Status WriteTable(const std::shared_ptr&lt; arrow::Table &gt; &amp;input_table, IdType vertex_chunk_index, IdType start_chunk_index=0, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Write chunks of the adj list and all property groups for the edges of a vertex chunk.</div><div class="ttdef"><b>Definition:</b> <a href="chunk__writer_8cc_source.html#l00728">chunk_writer.cc:728</a></div></div>
+<div class="ttc" id="aclassgraphar_1_1_edge_chunk_writer_html_af3796d4dd08e7d876281f53d039dad5f"><div class="ttname"><a href="classgraphar_1_1_edge_chunk_writer.html#af3796d4dd08e7d876281f53d039dad5f">graphar::EdgeChunkWriter::WriteVerticesNum</a></div><div class="ttdeci">Status WriteVerticesNum(const IdType &amp;count, ValidateLevel validate_level=ValidateLevel::default_validate) const</div><div class="ttdoc">Write the number of vertices into the file.</div><div class="ttdef"><b>Definition:</b> <a href="chunk__writer_8cc_source.html#l00573">chunk_writer.cc:573</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_status_html"><div class="ttname"><a href="classgraphar_1_1_status.html">graphar::Status</a></div><div class="ttdoc">Status outcome object (success or error)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00123">status.h:123</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_status_html_a3335cf4bf5cd222d5e29b01fe95e919a"><div class="ttname"><a href="classgraphar_1_1_status.html#a3335cf4bf5cd222d5e29b01fe95e919a">graphar::Status::TypeError</a></div><div class="ttdeci">static Status TypeError(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00178">status.h:178</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_status_html_a4ee4924ddadfc2c1effc055572084d71"><div class="ttname"><a href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">graphar::Status::KeyError</a></div><div class="ttdeci">static Status KeyError(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> <a href="status_8h_source.html#l00172">status.h:172</a></div></div>

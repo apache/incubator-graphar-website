@@ -79,7 +79,7 @@ $(function() {
 <p>The arrow chunk reader for adj list topology chunk.  
  <a href="classgraphar_1_1_adj_list_arrow_chunk_reader.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="arrow__chunk__reader_8h_source.html">arrow_chunk_reader.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="chunk__reader_8h_source.html">chunk_reader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2be422d83a4be97a41a696473fc18911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab318bfb7bd7ea5b7f44d82e4d3a7137a"><td class="memItemLeft" align="right" valign="top"><a id="ab318bfb7bd7ea5b7f44d82e4d3a7137a"></a>
 Result&lt; std::shared_ptr&lt; arrow::Table &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_adj_list_arrow_chunk_reader.html#ab318bfb7bd7ea5b7f44d82e4d3a7137a">GetChunk</a> ()</td></tr>
-<tr class="memdesc:ab318bfb7bd7ea5b7f44d82e4d3a7137a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current chunk of chunk position indicator as arrow::Table. <br /></td></tr>
+<tr class="memdesc:ab318bfb7bd7ea5b7f44d82e4d3a7137a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current chunk of chunk position indicator as arrow::Table, if the chunk is empty, return nullptr. <br /></td></tr>
 <tr class="separator:ab318bfb7bd7ea5b7f44d82e4d3a7137a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e9d910308128f62918fef54fe1c95f4"><td class="memItemLeft" align="right" valign="top"><a id="a9e9d910308128f62918fef54fe1c95f4"></a>
 Result&lt; IdType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_adj_list_arrow_chunk_reader.html#a9e9d910308128f62918fef54fe1c95f4">GetRowNumOfChunk</a> ()</td></tr>
@@ -132,7 +132,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The arrow chunk reader for adj list topology chunk. </p>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8h_source.html#l00158">158</a> of file <a class="el" href="arrow__chunk__reader_8h_source.html">arrow_chunk_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8h_source.html#l00158">158</a> of file <a class="el" href="chunk__reader_8h_source.html">chunk_reader.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a91731fb764a5b3ca935e15e36300fe46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91731fb764a5b3ca935e15e36300fe46">&#9670;&nbsp;</a></span>AdjListArrowChunkReader()</h2>
@@ -176,7 +176,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00249">249</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00250">250</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -231,7 +231,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00429">429</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00437">437</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00441">441</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00449">449</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -321,7 +321,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Sets chunk position indicator to next chunk. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or EndOfChunk error if the reader is at the end of current vertex chunk, or IndexError error if the reader is at the end of all vertex chunks. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00381">381</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00389">389</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -349,7 +349,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00348">348</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00349">349</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>: ok or error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00402">402</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00410">410</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00316">316</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00317">317</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -445,13 +445,13 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="arrow__chunk__reader_8cc_source.html#l00283">283</a> of file <a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00284">284</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/graphar/reader/<a class="el" href="arrow__chunk__reader_8h_source.html">arrow_chunk_reader.h</a></li>
-<li>src/<a class="el" href="arrow__chunk__reader_8cc_source.html">arrow_chunk_reader.cc</a></li>
+<li>src/graphar/arrow/<a class="el" href="chunk__reader_8h_source.html">chunk_reader.h</a></li>
+<li>src/graphar/arrow/<a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!--

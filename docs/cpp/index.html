@@ -105,53 +105,57 @@ System setup</h2>
 <div class="line">sudo apt-get install -y /tmp/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb</div>
 <div class="line">sudo apt-get update</div>
 <div class="line">sudo apt-get install -y libarrow-dev libarrow-dataset-dev libarrow-acero-dev libparquet-dev</div>
-</div><!-- fragment --><p>On macOS, you can use <a href="https://brew.sh">Homebrew</a> to install the required packages:</p>
-<p>Note: Currently, the Arrow C++ library is <a href="https://github.com/Homebrew/homebrew-core/blob/4588359b7248b07379094de5310ee7ff89afa17e/Formula/a/apache-arrow.rb#L53">disable ARROW_ORC</a> in the brew formula, so you need to install the Arrow C++ library manually.</p>
-<div class="fragment"><div class="line">git clone https:://github.com/apache/graphar.git</div>
-<div class="line">cd graphar</div>
-<div class="line">brew update &amp;&amp; brew bundle --file=cpp/Brewfile</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><p>On macOS, you can use <a href="https://brew.sh">Homebrew</a> to install the required packages: </p><div class="fragment"><div class="line">brew update &amp;&amp; brew bundle --file=cpp/Brewfile</div>
+</div><!-- fragment --> <blockquote class="doxtable">
+<p>[!NOTE] Currently, the Arrow C++ library has <a href="https://github.com/Homebrew/homebrew-core/blob/4588359b7248b07379094de5310ee7ff89afa17e/Formula/a/apache-arrow.rb#L53">disabled ARROW_ORC</a> in the brew formula, so you need to build and install the Arrow C++ library manually (with <code>-DARROW_ORC=True</code>). </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Building</h2>
 <p>All the instructions below assume that you have cloned the GraphAr git repository and navigated to the <code>cpp</code> subdirectory with:</p>
-<div class="fragment"><div class="line">$ git clone https://github.com/apache/graphar.git</div>
-<div class="line">$ cd graphar/cpp</div>
+<div class="fragment"><div class="line">git clone https://github.com/apache/graphar.git</div>
+<div class="line">cd graphar/cpp</div>
 </div><!-- fragment --><p>Release build:</p>
-<div class="fragment"><div class="line">$ mkdir build-release</div>
-<div class="line">$ cd build-release</div>
-<div class="line">$ cmake ..</div>
-<div class="line">$ make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
+<div class="fragment"><div class="line">mkdir build-release</div>
+<div class="line">cd build-release</div>
+<div class="line">cmake ..</div>
+<div class="line">make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
 </div><!-- fragment --><p>Debug build with unit tests:</p>
-<div class="fragment"><div class="line">$ mkdir build-debug</div>
-<div class="line">$ cd build-debug</div>
-<div class="line">$ cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON ..</div>
-<div class="line">$ make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
+<div class="fragment"><div class="line">mkdir build-debug</div>
+<div class="line">cd build-debug</div>
+<div class="line">cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON ..</div>
+<div class="line">make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
 </div><!-- fragment --><p>After building, you can run the unit tests with:</p>
-<div class="fragment"><div class="line">$ git clone https://github.com/apache/incubator-graphar-testing.git testing  # download the testing data</div>
-<div class="line">$ GAR_TEST_DATA=${PWD}/testing ctest</div>
+<div class="fragment"><div class="line">git clone https://github.com/apache/incubator-graphar-testing.git testing  # download the testing data</div>
+<div class="line">GAR_TEST_DATA=${PWD}/testing ctest</div>
 </div><!-- fragment --><p>Build with examples, you should build the project with <code>BUILD_EXAMPLES</code> option, then run:</p>
-<div class="fragment"><div class="line">$ make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
-<div class="line">$ GAR_TEST_DATA=${PWD}/testing ./bgl_example  # run the BGL example</div>
+<div class="fragment"><div class="line">make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
+<div class="line">GAR_TEST_DATA=${PWD}/testing ./bgl_example  # run the BGL example</div>
 </div><!-- fragment --><p>Build with benchmarks, you should build the project with <code>BUILD_BENCHMARKS</code> option, then run:</p>
-<div class="fragment"><div class="line">$ make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
-<div class="line">$ GAR_TEST_DATA=${PWD}/testing ./graph_info_benchmark  # run the graph info benchmark</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+<div class="fragment"><div class="line">make -j8       # if you have 8 CPU cores, otherwise adjust, use -j`nproc` for all cores</div>
+<div class="line">GAR_TEST_DATA=${PWD}/testing ./graph_info_benchmark  # run the graph info benchmark</div>
+</div><!-- fragment --><p>Extra Build Options:</p>
+<ol type="1">
+<li><code>-DGRAPHAR_BUILD_STATIC=ON</code>: Build GraphAr as static libraries.</li>
+<li><code>-DUSE_STATIC_ARROW=ON</code>: Link arrow static library to build GraphAr. If set this option, the option <code>GRAPHAR_BUILD_STATIC=ON</code> will be set.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md4"></a>
 Install</h2>
 <p>After the building, you can install the GraphAr C++ library with:</p>
-<div class="fragment"><div class="line">$ sudo make install       # run in directory you build, like build-release, build and so on</div>
+<div class="fragment"><div class="line">sudo make install       # run in directory you build, like build-release, build and so on</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
 Generate API document</h2>
 <p>You should build the project with <code>ENABLE_DOCS</code> option. Then run:</p>
-<div class="fragment"><div class="line">$ make docs</div>
+<div class="fragment"><div class="line">make docs</div>
 </div><!-- fragment --><p>The API document is generated in the directory <code>docs_doxygen</code>.</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 Code formatting and linting</h2>
 <p>To format and lint the code, run:</p>
-<div class="fragment"><div class="line">$ cmake ..</div>
-<div class="line">$ make graphar-clformat # format the code</div>
-<div class="line">$ make graphar-cpplint   # lint the code</div>
+<div class="fragment"><div class="line">cmake ..</div>
+<div class="line">make graphar-clformat # format the code</div>
+<div class="line">make graphar-cpplint   # lint the code</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 How to use</h1>
-<p>Please refer to our <a href="https://graphar.apache.org/docs/libraries/cpp">GraphAr C++ API Reference</a>. </p>
+<p>Please refer to our <a href="https://graphar.apache.org/docs/category/c-library">GraphAr C++ API Reference</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!--
