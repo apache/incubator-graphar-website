@@ -37,7 +37,7 @@ Hi, GraphAr PPMC,
  
  <Brief description and links of ${Candidate_Full_Name}'s contributions>
 
-I think making him a ${committer or PPMC member} will be a recognition of his outstanding work for GraphAr. So, I am happy to call VOTE to accept ${Candidate_Full_Name} as an GraphAr ${committer or PPMC member}.
+I think making him/her a ${committer or PPMC member} will be a recognition of his outstanding work for GraphAr. So, I am happy to call VOTE to accept ${Candidate_Full_Name} as an GraphAr ${committer or PPMC member}.
  
 Voting will continue for at least 72 hours or until the required number of votes is reached.
 
@@ -77,7 +77,7 @@ Thanks for everyone's support!
 ```
 
 :::caution
-If it is not passed, the result is "The vote for "${Candidate_GitHub_ID} as an GraphAr ${Committer or PPMC Member}" has FAILED and closed now."
+If it is not passed, the result is "The vote for "${Candidate_GitHub_ID} as an GraphAr committer or PPMC member" has FAILED and closed now."
 :::
 
 
