@@ -385,12 +385,23 @@ $(function() {
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordflow">return</span> std::make_shared&lt;FileSystem&gt;(arrow_fs);</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="keyword">template</span> Result&lt;IdType&gt; FileSystem::ReadFileToValue&lt;IdType&gt;(</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword">template</span> Status FileSystem::WriteValueToFile&lt;IdType&gt;(<span class="keyword">const</span> IdType&amp;,</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                                                     <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    noexcept;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}  <span class="comment">// namespace graphar</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;Status InitializeS3() {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  RETURN_NOT_ARROW_OK(</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      arrow::fs::InitializeS3(arrow::fs::S3GlobalOptions::Defaults()));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;Status FinalizeS3() {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  RETURN_NOT_ARROW_OK(arrow::fs::FinalizeS3());</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keyword">template</span> Result&lt;IdType&gt; FileSystem::ReadFileToValue&lt;IdType&gt;(</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">template</span> Status FileSystem::WriteValueToFile&lt;IdType&gt;(<span class="keyword">const</span> IdType&amp;,</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                                                     <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    noexcept;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}  <span class="comment">// namespace graphar</span></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a293c0415cb3b72795e034f2a08510524"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a293c0415cb3b72795e034f2a08510524">graphar::FileSystem::GetFileNumOfDir</a></div><div class="ttdeci">Result&lt; IdType &gt; GetFileNumOfDir(const std::string &amp;dir_path, bool recursive=false) const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00268">filesystem.cc:268</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a474b6e6ba28a0114a1d84f4eb06a211b"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a474b6e6ba28a0114a1d84f4eb06a211b">graphar::FileSystem::WriteValueToFile</a></div><div class="ttdeci">Status WriteValueToFile(const T &amp;value, const std::string &amp;path) const noexcept</div><div class="ttdoc">Write a value of type T to a file.</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00190">filesystem.cc:190</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a88ffaca40d40ca34be4eed2ef5802854"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a88ffaca40d40ca34be4eed2ef5802854">graphar::FileSystem::WriteTableToFile</a></div><div class="ttdeci">Status WriteTableToFile(const std::shared_ptr&lt; arrow::Table &gt; &amp;table, FileType file_type, const std::string &amp;path) const noexcept</div><div class="ttdoc">Write a table to a file with a specific type.</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00213">filesystem.cc:213</a></div></div>

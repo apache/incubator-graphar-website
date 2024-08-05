@@ -162,7 +162,11 @@ $(function() {
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;Result&lt;std::shared_ptr&lt;<a class="code" href="classgraphar_1_1_file_system.html#a240e8f3d8a4aab98d35a0faf6de54f25">FileSystem</a>&gt;&gt; FileSystemFromUriOrPath(</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    const std::<span class="keywordtype">string</span>&amp; uri, std::<span class="keywordtype">string</span>* out_path = <span class="keywordtype">nullptr</span>);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}  <span class="comment">// namespace graphar</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;Status InitializeS3();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;Status FinalizeS3();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}  <span class="comment">// namespace graphar</span></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html"><div class="ttname"><a href="classgraphar_1_1_file_system.html">graphar::FileSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8h_source.html#l00059">filesystem.h:59</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a240e8f3d8a4aab98d35a0faf6de54f25"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a240e8f3d8a4aab98d35a0faf6de54f25">graphar::FileSystem::FileSystem</a></div><div class="ttdeci">FileSystem(std::shared_ptr&lt; arrow::fs::FileSystem &gt; arrow_fs)</div><div class="ttdoc">Create a FileSystem instance.</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8h_source.html#l00065">filesystem.h:65</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a293c0415cb3b72795e034f2a08510524"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a293c0415cb3b72795e034f2a08510524">graphar::FileSystem::GetFileNumOfDir</a></div><div class="ttdeci">Result&lt; IdType &gt; GetFileNumOfDir(const std::string &amp;dir_path, bool recursive=false) const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00268">filesystem.cc:268</a></div></div>
