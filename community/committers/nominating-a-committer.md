@@ -80,7 +80,7 @@ Thanks for everyone's support!
 ```
 
 :::caution
-If it is not passed, the result is "The vote for "{Candidate_GitHub_ID} as an GraphAr committer or PPMC member" has FAILED and closed now."
+If it is not passed, the result is "The vote for Candidate_Full_Name as an GraphAr committer or PPMC member" has FAILED and closed now."
 :::
 
 ### Committer Invitation
