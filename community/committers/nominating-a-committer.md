@@ -11,7 +11,7 @@ The discussion email is sent to private@graphar.apache.org. The discussion will 
 The following is a template  discussion email:
 ```shell
 To: private@graphar.apache.org
-Subject: [DISCUSS] Propose ${Candidate_Full_Name} as new ${committer or PPMC member}
+Subject: [DISCUSS] Propose {Candidate_Full_Name} as new {committer or PPMC member}
 
 Hi, GraphAr PPMC,
  
@@ -19,8 +19,8 @@ I'd like to discuss the proposal to add ${Candidate_Full_Name} as a new ${commit
 
 <Brief description and links of ${Candidate_Full_Name}'s contributions>
  
-1. https://github.com/apache/incubator-graphar/issues/created_by/${Candidate_GitHub_ID} 
-2. https://github.com/apache/incubator-graphar/commits?author=${Candidate_GitHub_ID}
+1. https://github.com/apache/incubator-graphar/issues/created_by/{Candidate_GitHub_ID} 
+2. https://github.com/apache/incubator-graphar/commits?author={Candidate_GitHub_ID}
 ```
 
 :::caution
@@ -33,11 +33,11 @@ The voting email is sent to private@graphar.apache.org for at least 72 hours, an
 The following is a template  poll email: 
 ```shell
 To: private@graphar.apache.org
-Subject: [VOTE] New ${committer or PPMC member}: ${Candidate_Full_Name} 
+Subject: [VOTE] New {committer or PPMC member}: {Candidate_Full_Name} 
 
 Hi, GraphAr PPMC,
  
- <Brief description and links of ${Candidate_Full_Name}'s contributions>
+ <Brief description and links of {Candidate_Full_Name}'s contributions>
 
 I think making him/her a ${committer or PPMC member} will be a recognition of his outstanding work for GraphAr. So, I am happy to call VOTE to accept ${Candidate_Full_Name} as an GraphAr ${committer or PPMC member}.
  
@@ -49,9 +49,9 @@ Please vote accordingly:
 [ ] -1 disapprove with the reason  
   
 Here are three links to his contributions to GraphAr:
-1. Issues: https://github.com/apache/incubator-graphar/pulls?q=${Candidate_GitHub_ID}
-2. PRs   : https://github.com/apache/incubator-graphar/issues?q=${Candidate_GitHub_ID}
-3. Others:  https://xxx.com/xxx/xxx/?q=${Candidate_GitHub_ID}
+1. Issues: https://github.com/apache/incubator-graphar/pulls?q={Candidate_GitHub_ID}
+2. PRs   : https://github.com/apache/incubator-graphar/issues?q={Candidate_GitHub_ID}
+3. Others:  https://xxx.com/xxx/xxx/?q={Candidate_GitHub_ID}
 ```
 
 ## Feedback on voting results
@@ -59,7 +59,7 @@ After the voting email is over, the initiator of the vote needs to `remind the v
 The following is a template  vote summary email:
 ```shell
 To: private@graphar.apache.org
-Subject: [RESULTS][VOTE] New ${committer or PPMC member}: ${Candidate_Full_Name}
+Subject: [RESULTS][VOTE] New {committer or PPMC member}: {Candidate_Full_Name}
 
 Hi everyone,
 
@@ -80,7 +80,7 @@ Thanks for everyone's support!
 ```
 
 :::caution
-If it is not passed, the result is "The vote for "${Candidate_GitHub_ID} as an GraphAr committer or PPMC member" has FAILED and closed now."
+If it is not passed, the result is "The vote for "{Candidate_GitHub_ID} as an GraphAr committer or PPMC member" has FAILED and closed now."
 :::
 
 ### Committer Invitation
@@ -88,11 +88,11 @@ If it is not passed, the result is "The vote for "${Candidate_GitHub_ID} as an G
 This is the suggested invitation email to send to the newly elected committer, sent after a positive result from the vote for a new committer.
 
 ```shell
-To: ${Candidate_Email}
+To: {Candidate_Email}
 Cc: private@graphar.apache.org
-Subject: Invitation to become Apache GraphAr (incubating) committer: ${Candidate_Full_Name}
+Subject: Invitation to become Apache GraphAr (incubating) committer: {Candidate_Full_Name}
 
-Hello ${Candidate_Full_Name},
+Hello {Candidate_Full_Name},
 
 The GraphAr Podling Project Management Committee (PPMC)
 hereby offers you committer privileges to the project.
@@ -165,10 +165,10 @@ This is the email to announce the new committer to graphar-dev once the account 
 
 ```shell
 To: dev@graphar.apache.org
-Subject: [ANNOUNCE] New committer: ${Candidate_Full_Name}
+Subject: [ANNOUNCE] New committer: {Candidate_Full_Name}
 
 The Podling Project Management Committee (PPMC) for Apache GraphAr
-has invited ${Candidate_Full_Name} to become a committer and we are pleased
+has invited {Candidate_Full_Name} to become a committer and we are pleased
 to announce that they have accepted.
 
 ### add specific details here ###
