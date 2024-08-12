@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "下一个",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Committers": {
+    "message": "提交者",
+    "description": "The label for category Committers in sidebar docs"
+  },
+  "sidebar.docs.category.Reference": {
+    "message": "参考",
+    "description": "The label for category Reference in sidebar docs"
+  },
+  "sidebar.docs.category.Reference.link.generated-index.title": {
+    "message": "参考",
+    "description": "The generated-index page title for category Reference in sidebar docs"
+  }
+}
