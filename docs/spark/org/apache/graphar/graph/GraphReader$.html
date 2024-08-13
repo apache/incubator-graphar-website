@@ -470,9 +470,9 @@
               
         </dd></dl></div>
     </li><li name="org.apache.graphar.graph.GraphReader#read" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="read(graphInfoPath:String,spark:org.apache.spark.sql.SparkSession):Pair[Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]]]"></a><a id="read(String,SparkSession):Pair[Map[String,DataFrame],Map[(String,String,String),Map[String,DataFrame]]]"></a>
+      <a id="read(graphInfoPath:String,spark:org.apache.spark.sql.SparkSession):(Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]])"></a><a id="read(String,SparkSession):(Map[String,DataFrame],Map[(String,String,String),Map[String,DataFrame]])"></a>
       <span class="permalink">
-      <a href="../../../../org/apache/graphar/graph/GraphReader$.html#read(graphInfoPath:String,spark:org.apache.spark.sql.SparkSession):Pair[Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]]]" title="Permalink">
+      <a href="../../../../org/apache/graphar/graph/GraphReader$.html#read(graphInfoPath:String,spark:org.apache.spark.sql.SparkSession):(Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]])" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -481,7 +481,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="graphInfoPath">graphInfoPath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Pair">Pair</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>], <span class="extype" name="scala.Predef.Map">Map</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>), <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>]]]</span>
+        <span class="name">read</span><span class="params">(<span name="graphInfoPath">graphInfoPath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: (<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>], <span class="extype" name="scala.Predef.Map">Map</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>), <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>]])</span>
       </span>
       
       <p class="shortcomment cmt">Reading the graph as vertex and edge DataFrames with the graph info yaml
@@ -495,9 +495,9 @@ file.
   stored as a map of (srcLabel_edgeLabel_dstLabel -&gt; (adj_list_type_str -&gt;
   DataFrame))</p></dd></dl></div>
     </li><li name="org.apache.graphar.graph.GraphReader#readWithGraphInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="readWithGraphInfo(graphInfo:org.apache.graphar.GraphInfo,spark:org.apache.spark.sql.SparkSession):Pair[Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]]]"></a><a id="readWithGraphInfo(GraphInfo,SparkSession):Pair[Map[String,DataFrame],Map[(String,String,String),Map[String,DataFrame]]]"></a>
+      <a id="readWithGraphInfo(graphInfo:org.apache.graphar.GraphInfo,spark:org.apache.spark.sql.SparkSession):(Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]])"></a><a id="readWithGraphInfo(GraphInfo,SparkSession):(Map[String,DataFrame],Map[(String,String,String),Map[String,DataFrame]])"></a>
       <span class="permalink">
-      <a href="../../../../org/apache/graphar/graph/GraphReader$.html#readWithGraphInfo(graphInfo:org.apache.graphar.GraphInfo,spark:org.apache.spark.sql.SparkSession):Pair[Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]]]" title="Permalink">
+      <a href="../../../../org/apache/graphar/graph/GraphReader$.html#readWithGraphInfo(graphInfo:org.apache.graphar.GraphInfo,spark:org.apache.spark.sql.SparkSession):(Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]])" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -506,7 +506,7 @@ file.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readWithGraphInfo</span><span class="params">(<span name="graphInfo">graphInfo: <a href="../GraphInfo.html" class="extype" name="org.apache.graphar.GraphInfo">GraphInfo</a></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Pair">Pair</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>], <span class="extype" name="scala.Predef.Map">Map</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>), <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>]]]</span>
+        <span class="name">readWithGraphInfo</span><span class="params">(<span name="graphInfo">graphInfo: <a href="../GraphInfo.html" class="extype" name="org.apache.graphar.GraphInfo">GraphInfo</a></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: (<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>], <span class="extype" name="scala.Predef.Map">Map</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>), <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>]])</span>
       </span>
       
       <p class="shortcomment cmt">Reading the graph as vertex and edge DataFrames with the graph info object.</p><div class="fullcomment"><div class="comment cmt"><p>Reading the graph as vertex and edge DataFrames with the graph info object.
@@ -637,7 +637,7 @@ file.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version ) see corresponding Javadoc for more information.">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -648,9 +648,7 @@ file.
               
                 <span class="name">@Deprecated</span>
               
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version )</i> see corresponding Javadoc for more information.</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
     </li></ol>
             </div>
         </div>
