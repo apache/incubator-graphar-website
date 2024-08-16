@@ -20,52 +20,52 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Translate from '@docusaurus/Translate';
 
 type FeatureItem = {
-  Svg: string;
-  title: string;
+  Svg: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: JSX.Element | string;
   description: React.ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Efficient format design',
+    title: <Translate>Efficient format design</Translate>,
     Svg: require('@site/static/img/banner/design.svg').default,
     description: (
-      <>
+      <Translate>
         GraphAr is designed to be efficient for storage and retrieval of large-scale graph data with techniques such as
         chunking, columnar storage, and maintain CSR/CSC semantics.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Out-of-core queries',
+    title: <Translate>Out-of-core queries</Translate>,
     Svg: require('@site/static/img/banner/search.svg').default,
     description: (
-      <>
+      <Translate>
         Designed for out-of-core scenarios, enabling the storage and querying of large-scale graphs outside of memory,
         such as in data lakes.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Cross-language support',
+    title: <Translate>Cross-language support</Translate>,
     Svg: require('@site/static/img/banner/language.svg').default,
     description: (
-      <>
+      <Translate>
         Provides libraries in C++, Java, Scala with Spark, and Python with PySpark for generating, accessing, and
         transforming files in GraphAr format.
-      </>
+      </Translate>
     ),
   },
 ];
 
 function Feature({ title, description, Svg }: FeatureItem) {
-  console.log('icon', Svg);
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
-        <div> {<Svg role="img" className={styles.featureSvg} />}</div>
+        <Svg role="img" className={styles.featureSvg} />
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
