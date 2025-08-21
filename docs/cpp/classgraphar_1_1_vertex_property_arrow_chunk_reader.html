@@ -85,13 +85,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44be6db94a28763a095ebc0e578a9916"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a44be6db94a28763a095ebc0e578a9916">VertexPropertyArrowChunkReader</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;vertex_info, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, const std::string &amp;prefix, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a44be6db94a28763a095ebc0e578a9916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a>.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a44be6db94a28763a095ebc0e578a9916">More...</a><br /></td></tr>
 <tr class="separator:a44be6db94a28763a095ebc0e578a9916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab314e01ef83af3b4b359be31766605fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#ab314e01ef83af3b4b359be31766605fc">VertexPropertyArrowChunkReader</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;vertex_info, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, const std::vector&lt; std::string &gt; &amp;property_names, const std::string &amp;prefix, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ab314e01ef83af3b4b359be31766605fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a>.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#ab314e01ef83af3b4b359be31766605fc">More...</a><br /></td></tr>
+<tr class="separator:ab314e01ef83af3b4b359be31766605fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34726efe4d561e9d0b44c5f0d573f4fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a34726efe4d561e9d0b44c5f0d573f4fe">VertexPropertyArrowChunkReader</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;vertex_info, const std::vector&lt; std::string &gt; &amp;labels, const std::string &amp;prefix, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a34726efe4d561e9d0b44c5f0d573f4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a>.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a34726efe4d561e9d0b44c5f0d573f4fe">More...</a><br /></td></tr>
+<tr class="separator:a34726efe4d561e9d0b44c5f0d573f4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7222b8811219e285a51be607beaafaa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a7222b8811219e285a51be607beaafaa0">seek</a> (IdType id)</td></tr>
 <tr class="memdesc:a7222b8811219e285a51be607beaafaa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets chunk position indicator for reader by internal vertex id. If internal vertex id is not found, will return <a class="el" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a> error. After seeking to an invalid vertex id, the next call to GetChunk function may undefined, e.g. return an non exist path.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a7222b8811219e285a51be607beaafaa0">More...</a><br /></td></tr>
 <tr class="separator:a7222b8811219e285a51be607beaafaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ea3922fbf36ce3cf67d65a9f9b3f867"><td class="memItemLeft" align="right" valign="top"><a id="a2ea3922fbf36ce3cf67d65a9f9b3f867"></a>
-Result&lt; std::shared_ptr&lt; arrow::Table &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a2ea3922fbf36ce3cf67d65a9f9b3f867">GetChunk</a> ()</td></tr>
-<tr class="memdesc:a2ea3922fbf36ce3cf67d65a9f9b3f867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current arrow chunk table of chunk position indicator. <br /></td></tr>
-<tr class="separator:a2ea3922fbf36ce3cf67d65a9f9b3f867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cb9291c735ccf95ae110fe88b35f85"><td class="memItemLeft" align="right" valign="top"><a id="a94cb9291c735ccf95ae110fe88b35f85"></a>
+Result&lt; std::shared_ptr&lt; arrow::Table &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a94cb9291c735ccf95ae110fe88b35f85">GetChunk</a> (GetChunkVersion version=GetChunkVersion::AUTO)</td></tr>
+<tr class="memdesc:a94cb9291c735ccf95ae110fe88b35f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current arrow chunk table of chunk position indicator. <br /></td></tr>
+<tr class="separator:a94cb9291c735ccf95ae110fe88b35f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382bd12cf864d14d053d6159a54d5b11"><td class="memItemLeft" align="right" valign="top"><a id="a382bd12cf864d14d053d6159a54d5b11"></a>
+Result&lt; std::shared_ptr&lt; arrow::Table &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a382bd12cf864d14d053d6159a54d5b11">GetLabelChunk</a> ()</td></tr>
+<tr class="memdesc:a382bd12cf864d14d053d6159a54d5b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current arrow label chunk table of chunk position indicator. <br /></td></tr>
+<tr class="separator:a382bd12cf864d14d053d6159a54d5b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f55d130f24a2b1db95426a35ec36ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a59f55d130f24a2b1db95426a35ec36ea">next_chunk</a> ()</td></tr>
 <tr class="memdesc:a59f55d130f24a2b1db95426a35ec36ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets chunk position indicator to next chunk.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a59f55d130f24a2b1db95426a35ec36ea">More...</a><br /></td></tr>
 <tr class="separator:a59f55d130f24a2b1db95426a35ec36ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,20 +121,35 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad12a7b5e1fd0fd9e75b9819e3464e569"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#ad12a7b5e1fd0fd9e75b9819e3464e569">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;vertex_info, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, const std::string &amp;prefix, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ad12a7b5e1fd0fd9e75b9819e3464e569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#ad12a7b5e1fd0fd9e75b9819e3464e569">More...</a><br /></td></tr>
 <tr class="separator:ad12a7b5e1fd0fd9e75b9819e3464e569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a575efd0bdf1936664df4fa30f0293860"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a575efd0bdf1936664df4fa30f0293860">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;label, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:a575efd0bdf1936664df4fa30f0293860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info and property group.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a575efd0bdf1936664df4fa30f0293860">More...</a><br /></td></tr>
-<tr class="separator:a575efd0bdf1936664df4fa30f0293860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d001628c0edf598d1b43495dbb76b9a"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a1d001628c0edf598d1b43495dbb76b9a">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;label, const std::string &amp;property_name, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:a1d001628c0edf598d1b43495dbb76b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info and property name.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a1d001628c0edf598d1b43495dbb76b9a">More...</a><br /></td></tr>
-<tr class="separator:a1d001628c0edf598d1b43495dbb76b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693450fa3c7236b0eebb8091a7f68e81"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a693450fa3c7236b0eebb8091a7f68e81">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;vertex_info, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, const std::vector&lt; std::string &gt; &amp;property_names, const std::string &amp;prefix, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a693450fa3c7236b0eebb8091a7f68e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a693450fa3c7236b0eebb8091a7f68e81">More...</a><br /></td></tr>
+<tr class="separator:a693450fa3c7236b0eebb8091a7f68e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb95da468a30799df0b73574c301854"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#afdb95da468a30799df0b73574c301854">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;type, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;property_group, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:afdb95da468a30799df0b73574c301854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info and property group.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#afdb95da468a30799df0b73574c301854">More...</a><br /></td></tr>
+<tr class="separator:afdb95da468a30799df0b73574c301854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3642aef6259dd17398bcf48f4b07c6cc"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a3642aef6259dd17398bcf48f4b07c6cc">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;type, const std::string &amp;property_name, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a3642aef6259dd17398bcf48f4b07c6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info and property name.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a3642aef6259dd17398bcf48f4b07c6cc">More...</a><br /></td></tr>
+<tr class="separator:a3642aef6259dd17398bcf48f4b07c6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1337c521d0e8fd17053f34ed7b5191"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a1f1337c521d0e8fd17053f34ed7b5191">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;type, const std::vector&lt; std::string &gt; &amp;property_names_or_labels, const SelectType select_type, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a1f1337c521d0e8fd17053f34ed7b5191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info for labels.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a1f1337c521d0e8fd17053f34ed7b5191">More...</a><br /></td></tr>
+<tr class="separator:a1f1337c521d0e8fd17053f34ed7b5191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79a9f8407f6117928ea2e5602c0dbd8"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#ab79a9f8407f6117928ea2e5602c0dbd8">Make</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;vertex_info, const std::vector&lt; std::string &gt; &amp;labels, const std::string &amp;prefix, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ab79a9f8407f6117928ea2e5602c0dbd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info for labels.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#ab79a9f8407f6117928ea2e5602c0dbd8">More...</a><br /></td></tr>
+<tr class="separator:ab79a9f8407f6117928ea2e5602c0dbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36c5c1513f039b1beef2c624ea20b39"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#aa36c5c1513f039b1beef2c624ea20b39">MakeForProperties</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;type, const std::vector&lt; std::string &gt; &amp;property_names, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:aa36c5c1513f039b1beef2c624ea20b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info for properties.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#aa36c5c1513f039b1beef2c624ea20b39">More...</a><br /></td></tr>
+<tr class="separator:aa36c5c1513f039b1beef2c624ea20b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47723dd5327d91bcef4daac3d420133c"><td class="memItemLeft" align="right" valign="top">static Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a47723dd5327d91bcef4daac3d420133c">MakeForLabels</a> (const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;graph_info, const std::string &amp;type, const std::vector&lt; std::string &gt; &amp;labels, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a47723dd5327d91bcef4daac3d420133c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info for labels.  <a href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a47723dd5327d91bcef4daac3d420133c">More...</a><br /></td></tr>
+<tr class="separator:a47723dd5327d91bcef4daac3d420133c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The arrow chunk reader for vertex property group. </p>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8h_source.html#l00042">42</a> of file <a class="el" href="chunk__reader_8h_source.html">chunk_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8h_source.html#l00043">43</a> of file <a class="el" href="chunk__reader_8h_source.html">chunk_reader.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a44be6db94a28763a095ebc0e578a9916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44be6db94a28763a095ebc0e578a9916">&#9670;&nbsp;</a></span>VertexPropertyArrowChunkReader()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a44be6db94a28763a095ebc0e578a9916">&#9670;&nbsp;</a></span>VertexPropertyArrowChunkReader() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +196,118 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00128">128</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00154">154</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="ab314e01ef83af3b4b359be31766605fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab314e01ef83af3b4b359be31766605fc">&#9670;&nbsp;</a></span>VertexPropertyArrowChunkReader() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">graphar::VertexPropertyArrowChunkReader::VertexPropertyArrowChunkReader </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertex_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>property_group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>property_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex_info</td><td>The vertex info that describes the vertex type. </td></tr>
+    <tr><td class="paramname">property_group</td><td>The property group that describes the property group. </td></tr>
+    <tr><td class="paramname">property_names</td><td>Only these properties will be read. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00161">161</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="a34726efe4d561e9d0b44c5f0d573f4fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34726efe4d561e9d0b44c5f0d573f4fe">&#9670;&nbsp;</a></span>VertexPropertyArrowChunkReader() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">graphar::VertexPropertyArrowChunkReader::VertexPropertyArrowChunkReader </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertex_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex_info</td><td>The vertex info that describes the vertex type. </td></tr>
+    <tr><td class="paramname">labels</td><td>The labels of the vertex type. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00187">187</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -200,12 +336,12 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00201">201</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00360">360</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
-<a id="a575efd0bdf1936664df4fa30f0293860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a575efd0bdf1936664df4fa30f0293860">&#9670;&nbsp;</a></span>Make() <span class="overload">[1/3]</span></h2>
+<a id="afdb95da468a30799df0b73574c301854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb95da468a30799df0b73574c301854">&#9670;&nbsp;</a></span>Make() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +359,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -254,19 +390,19 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph_info</td><td>The graph info. </td></tr>
-    <tr><td class="paramname">label</td><td>The vertex label. </td></tr>
+    <tr><td class="paramname">type</td><td>The vertex type. </td></tr>
     <tr><td class="paramname">property_group</td><td>The property group of the vertex property. </td></tr>
     <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00219">219</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00388">388</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
-<a id="a1d001628c0edf598d1b43495dbb76b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d001628c0edf598d1b43495dbb76b9a">&#9670;&nbsp;</a></span>Make() <span class="overload">[2/3]</span></h2>
+<a id="a3642aef6259dd17398bcf48f4b07c6cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3642aef6259dd17398bcf48f4b07c6cc">&#9670;&nbsp;</a></span>Make() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +420,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -315,19 +451,87 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph_info</td><td>The graph info. </td></tr>
-    <tr><td class="paramname">label</td><td>The vertex label. </td></tr>
+    <tr><td class="paramname">type</td><td>The vertex type. </td></tr>
     <tr><td class="paramname">property_name</td><td>The name of one property in the property group you want to read. </td></tr>
     <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00233">233</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00402">402</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="a1f1337c521d0e8fd17053f34ed7b5191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1337c521d0e8fd17053f34ed7b5191">&#9670;&nbsp;</a></span>Make() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt; graphar::VertexPropertyArrowChunkReader::Make </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>property_names_or_labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SelectType&#160;</td>
+          <td class="paramname"><em>select_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info for labels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex_info</td><td>The vertex info. </td></tr>
+    <tr><td class="paramname">labels</td><td>The name of labels you want to read. </td></tr>
+    <tr><td class="paramname">select_type</td><td>The select type, properties or labels. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix of the graph. </td></tr>
+    <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00426">426</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
 <a id="ad12a7b5e1fd0fd9e75b9819e3464e569"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad12a7b5e1fd0fd9e75b9819e3464e569">&#9670;&nbsp;</a></span>Make() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12a7b5e1fd0fd9e75b9819e3464e569">&#9670;&nbsp;</a></span>Make() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +587,260 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00210">210</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00369">369</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="a693450fa3c7236b0eebb8091a7f68e81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a693450fa3c7236b0eebb8091a7f68e81">&#9670;&nbsp;</a></span>Make() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt; graphar::VertexPropertyArrowChunkReader::Make </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertex_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>property_group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>property_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex_info</td><td>The vertex info. </td></tr>
+    <tr><td class="paramname">property_group</td><td>The property group of the vertex property. </td></tr>
+    <tr><td class="paramname">property_names</td><td>is not empty, only these properties will be read. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix of the graph. </td></tr>
+    <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00378">378</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="ab79a9f8407f6117928ea2e5602c0dbd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab79a9f8407f6117928ea2e5602c0dbd8">&#9670;&nbsp;</a></span>Make() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt; graphar::VertexPropertyArrowChunkReader::Make </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_info.html">VertexInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertex_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from vertex info for labels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex_info</td><td>The vertex info. </td></tr>
+    <tr><td class="paramname">labels</td><td>The name of labels you want to read. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix of the graph. </td></tr>
+    <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00494">494</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="a47723dd5327d91bcef4daac3d420133c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47723dd5327d91bcef4daac3d420133c">&#9670;&nbsp;</a></span>MakeForLabels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt; graphar::VertexPropertyArrowChunkReader::MakeForLabels </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info for labels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph_info</td><td>The graph info. </td></tr>
+    <tr><td class="paramname">type</td><td>The vertex type. </td></tr>
+    <tr><td class="paramname">labels</td><td>The name of labels you want to read. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix of the graph. </td></tr>
+    <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00503">503</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa36c5c1513f039b1beef2c624ea20b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36c5c1513f039b1beef2c624ea20b39">&#9670;&nbsp;</a></span>MakeForProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html">VertexPropertyArrowChunkReader</a> &gt; &gt; graphar::VertexPropertyArrowChunkReader::MakeForProperties </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_graph_info.html">GraphInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>property_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html" title="The arrow chunk reader for vertex property group.">VertexPropertyArrowChunkReader</a> instance from graph info for properties. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph_info</td><td>The graph info. </td></tr>
+    <tr><td class="paramname">type</td><td>The vertex type. </td></tr>
+    <tr><td class="paramname">property_names</td><td>The name of properties you want to read. </td></tr>
+    <tr><td class="paramname">prefix</td><td>The absolute prefix of the graph. </td></tr>
+    <tr><td class="paramname">options</td><td>The filter options, default is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00440">440</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -405,7 +862,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Sets chunk position indicator to next chunk. </p>
 <p>if current chunk is the last chunk, will return <a class="el" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a> error. </p>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00189">189</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00348">348</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -433,7 +890,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00151">151</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00209">209</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>
@@ -461,7 +918,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00205">205</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk__reader_8cc_source.html#l00364">364</a> of file <a class="el" href="chunk__reader_8cc_source.html">chunk_reader.cc</a>.</p>
 
 </div>
 </div>

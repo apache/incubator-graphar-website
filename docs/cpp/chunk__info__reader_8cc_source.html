@@ -126,7 +126,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (chunk_index_ &gt;= chunk_num_) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(<span class="stringliteral">&quot;Internal vertex id &quot;</span>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                              chunk_num_ * vertex_info_-&gt;GetChunkSize(),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                              <span class="stringliteral">&quot;) of vertex &quot;</span>, vertex_info_-&gt;GetLabel());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                              <span class="stringliteral">&quot;) of vertex &quot;</span>, vertex_info_-&gt;GetType());</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">if</span> (++chunk_index_ &gt;= chunk_num_) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="stringliteral">&quot;vertex chunk index &quot;</span>, chunk_index_, <span class="stringliteral">&quot; is out-of-bounds for vertex &quot;</span>,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        vertex_info_-&gt;GetLabel(), <span class="stringliteral">&quot; chunk num &quot;</span>, chunk_num_);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        vertex_info_-&gt;GetType(), <span class="stringliteral">&quot; chunk num &quot;</span>, chunk_num_);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
@@ -156,28 +156,28 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;Result&lt;std::shared_ptr&lt;VertexPropertyChunkInfoReader&gt;&gt;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#ac490b1ff55aef0bfc22dee63cfb7a27d">   87</a></span>&#160;<a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">VertexPropertyChunkInfoReader::Make</a>(</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a421851d1cb29946bfb02335f3ab00190">   87</a></span>&#160;<a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">VertexPropertyChunkInfoReader::Make</a>(</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; type,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;PropertyGroup&gt;&amp; property_group) {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">auto</span> vertex_info = graph_info-&gt;GetVertexInfo(label);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">auto</span> vertex_info = graph_info-&gt;GetVertexInfo(type);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">if</span> (!vertex_info) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The vertex &quot;</span>, label, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The vertex &quot;</span>, type, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">Make</a>(vertex_info, property_group, graph_info-&gt;GetPrefix());</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;Result&lt;std::shared_ptr&lt;VertexPropertyChunkInfoReader&gt;&gt;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0942bc792fb3fc6629b608e50f2ce5b4">   98</a></span>&#160;<a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">VertexPropertyChunkInfoReader::Make</a>(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a2f2f3eef29764b6b9199dfbebdcd9afe">   98</a></span>&#160;<a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">VertexPropertyChunkInfoReader::Make</a>(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; type,</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> std::string&amp; property_name) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">auto</span> vertex_info = graph_info-&gt;GetVertexInfo(label);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">auto</span> vertex_info = graph_info-&gt;GetVertexInfo(type);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span> (!vertex_info) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The vertex &quot;</span>, label, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The vertex &quot;</span>, type, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">auto</span> property_group = vertex_info-&gt;GetPropertyGroup(property_name);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">if</span> (!property_group) {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The property &quot;</span>, property_name,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                            <span class="stringliteral">&quot; doesn&#39;t exist in vertex &quot;</span>, label, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                            <span class="stringliteral">&quot; doesn&#39;t exist in vertex &quot;</span>, type, <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">Make</a>(vertex_info, property_group, graph_info-&gt;GetPrefix());</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
@@ -206,7 +206,7 @@ $(function() {
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (adj_list_type_ != AdjListType::unordered_by_source &amp;&amp;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      adj_list_type_ != AdjListType::ordered_by_source) {</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a9ca4be37aae8dfea7e6ef54920e0073f">Status::Invalid</a>(<span class="stringliteral">&quot;The seek_src operation is invalid in edge &quot;</span>,</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                           edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                           edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                           AdjListTypeToString(adj_list_type_), <span class="stringliteral">&quot; type.&quot;</span>);</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  }</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="stringliteral">&quot;The source internal id &quot;</span>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        edge_info_-&gt;GetSrcChunkSize() * vertex_chunk_num_, <span class="stringliteral">&quot;) of edge &quot;</span>,</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">if</span> (vertex_chunk_index_ != new_vertex_chunk_index) {</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    vertex_chunk_index_ = new_vertex_chunk_index;</div>
@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordflow">if</span> (adj_list_type_ != AdjListType::unordered_by_dest &amp;&amp;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      adj_list_type_ != AdjListType::ordered_by_dest) {</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a9ca4be37aae8dfea7e6ef54920e0073f">Status::Invalid</a>(<span class="stringliteral">&quot;The seek_dst operation is invalid in edge &quot;</span>,</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                           edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                           edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                           AdjListTypeToString(adj_list_type_), <span class="stringliteral">&quot; type.&quot;</span>);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
@@ -248,7 +248,7 @@ $(function() {
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="stringliteral">&quot;The destination internal id &quot;</span>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        edge_info_-&gt;GetDstChunkSize() * vertex_chunk_num_, <span class="stringliteral">&quot;) of edge &quot;</span>,</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordflow">if</span> (vertex_chunk_index_ != new_vertex_chunk_index) {</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    vertex_chunk_index_ = new_vertex_chunk_index;</div>
@@ -272,7 +272,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">if</span> (chunk_index_ &gt;= chunk_num_) {</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(<span class="stringliteral">&quot;The edge offset &quot;</span>, index, <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                              edge_info_-&gt;GetChunkSize() * chunk_num_,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                              <span class="stringliteral">&quot;), edge type: &quot;</span>, edge_info_-&gt;GetEdgeLabel());</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                              <span class="stringliteral">&quot;), edge type: &quot;</span>, edge_info_-&gt;GetEdgeType());</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
@@ -307,20 +307,20 @@ $(function() {
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordflow">if</span> (!edge_info-&gt;HasAdjacentListType(adj_list_type)) {</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="stringliteral">&quot;The adjacent list type &quot;</span>, AdjListTypeToString(adj_list_type),</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, edge_info-&gt;GetEdgeLabel(), <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, edge_info-&gt;GetEdgeType(), <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">return</span> std::make_shared&lt;AdjListChunkInfoReader&gt;(edge_info, adj_list_type,</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                                                  prefix);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_chunk_info_reader.html#abe7eaa42a37ef93035aee498b4fdb969">  244</a></span>&#160;Result&lt;std::shared_ptr&lt;AdjListChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_chunk_info_reader.html#ace2293edca44be68cb861cce6e8912e0">AdjListChunkInfoReader::Make</a>(</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_label,</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">const</span> std::string&amp; edge_label, <span class="keyword">const</span> std::string&amp; dst_label,</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_chunk_info_reader.html#a9b980b6452e0d9efc6ed524a50182b2f">  244</a></span>&#160;Result&lt;std::shared_ptr&lt;AdjListChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_chunk_info_reader.html#ace2293edca44be68cb861cce6e8912e0">AdjListChunkInfoReader::Make</a>(</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    AdjListType adj_list_type) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_label, edge_label, dst_label);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_type, edge_type, dst_type);</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordflow">if</span> (!edge_info) {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_label, <span class="stringliteral">&quot; &quot;</span>, edge_label, <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                            dst_label, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_type, <span class="stringliteral">&quot; &quot;</span>, edge_type, <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                            dst_type, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  }</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_adj_list_chunk_info_reader.html#ace2293edca44be68cb861cce6e8912e0">Make</a>(edge_info, adj_list_type, graph_info-&gt;GetPrefix());</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
@@ -387,22 +387,22 @@ $(function() {
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordflow">if</span> (!edge_info-&gt;HasAdjacentListType(adj_list_type)) {</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="stringliteral">&quot;The adjacent list type &quot;</span>, AdjListTypeToString(adj_list_type),</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, edge_info-&gt;GetEdgeLabel(), <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, edge_info-&gt;GetEdgeType(), <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  }</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordflow">return</span> std::make_shared&lt;AdjListOffsetChunkInfoReader&gt;(edge_info,</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                                                        adj_list_type, prefix);</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;Result&lt;std::shared_ptr&lt;AdjListOffsetChunkInfoReader&gt;&gt;</div>
-<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#a3b490f026ff92f35d1d35e4c098a9ec0">  325</a></span>&#160;<a class="code" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#ac65413ac9d8c62404bc5518ca20f3f10">AdjListOffsetChunkInfoReader::Make</a>(<span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info,</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                   <span class="keyword">const</span> std::string&amp; src_label,</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                   <span class="keyword">const</span> std::string&amp; edge_label,</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                   <span class="keyword">const</span> std::string&amp; dst_label,</div>
+<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#a6a6e1e4add7950566de2880cd708fb49">  325</a></span>&#160;<a class="code" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#ac65413ac9d8c62404bc5518ca20f3f10">AdjListOffsetChunkInfoReader::Make</a>(<span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                   <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                   <span class="keyword">const</span> std::string&amp; edge_type,</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                   <span class="keyword">const</span> std::string&amp; dst_type,</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                                   AdjListType adj_list_type) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_label, edge_label, dst_label);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_type, edge_type, dst_type);</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="keywordflow">if</span> (!edge_info) {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_label, <span class="stringliteral">&quot; &quot;</span>, edge_label, <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                            dst_label, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_type, <span class="stringliteral">&quot; &quot;</span>, edge_type, <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                            dst_type, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  }</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#ac65413ac9d8c62404bc5518ca20f3f10">Make</a>(edge_info, adj_list_type, graph_info-&gt;GetPrefix());</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
@@ -434,7 +434,7 @@ $(function() {
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordflow">if</span> (adj_list_type_ != AdjListType::unordered_by_source &amp;&amp;</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      adj_list_type_ != AdjListType::ordered_by_source) {</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a9ca4be37aae8dfea7e6ef54920e0073f">Status::Invalid</a>(<span class="stringliteral">&quot;The seek_src operation is invalid in edge &quot;</span>,</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                           edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                           edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                           AdjListTypeToString(adj_list_type_), <span class="stringliteral">&quot; type.&quot;</span>);</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  }</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
@@ -443,7 +443,7 @@ $(function() {
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="stringliteral">&quot;The source internal id &quot;</span>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        edge_info_-&gt;GetSrcChunkSize() * vertex_chunk_num_, <span class="stringliteral">&quot;) of edge &quot;</span>,</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  }</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keywordflow">if</span> (vertex_chunk_index_ != new_vertex_chunk_index) {</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    vertex_chunk_index_ = new_vertex_chunk_index;</div>
@@ -466,7 +466,7 @@ $(function() {
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordflow">if</span> (adj_list_type_ != AdjListType::unordered_by_dest &amp;&amp;</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      adj_list_type_ != AdjListType::ordered_by_dest) {</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a9ca4be37aae8dfea7e6ef54920e0073f">Status::Invalid</a>(<span class="stringliteral">&quot;The seek_dst operation is invalid in edge &quot;</span>,</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                           edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                           edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader with &quot;</span>,</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                           AdjListTypeToString(adj_list_type_), <span class="stringliteral">&quot; type.&quot;</span>);</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  }</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
@@ -475,7 +475,7 @@ $(function() {
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="stringliteral">&quot;The destination internal id &quot;</span>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        edge_info_-&gt;GetDstChunkSize() * vertex_chunk_num_, <span class="stringliteral">&quot;) of edge &quot;</span>,</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; reader.&quot;</span>);</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  }</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <span class="keywordflow">if</span> (vertex_chunk_index_ != new_vertex_chunk_index) {</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    vertex_chunk_index_ = new_vertex_chunk_index;</div>
@@ -500,7 +500,7 @@ $(function() {
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(<span class="stringliteral">&quot;The edge offset &quot;</span>, offset,</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                              <span class="stringliteral">&quot; is out of range [0,&quot;</span>,</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                              edge_info_-&gt;GetChunkSize() * chunk_num_,</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                              <span class="stringliteral">&quot;), edge label: &quot;</span>, edge_info_-&gt;GetEdgeLabel());</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                              <span class="stringliteral">&quot;), edge type: &quot;</span>, edge_info_-&gt;GetEdgeType());</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  }</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
@@ -518,12 +518,12 @@ $(function() {
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="keywordflow">while</span> (chunk_index_ &gt;= chunk_num_) {</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    ++vertex_chunk_index_;</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">if</span> (vertex_chunk_index_ &gt;= vertex_chunk_num_) {</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;          <span class="stringliteral">&quot;vertex chunk index &quot;</span>, vertex_chunk_index_,</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;          <span class="stringliteral">&quot; is out-of-bounds for vertex chunk num &quot;</span>, vertex_chunk_num_,</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;          <span class="stringliteral">&quot; of edge &quot;</span>, edge_info_-&gt;GetEdgeLabel(), <span class="stringliteral">&quot; of adj list type &quot;</span>,</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;          AdjListTypeToString(adj_list_type_), <span class="stringliteral">&quot;, property group &quot;</span>,</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;          property_group_, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a1f9b2120c7a6b3e66f9f2e31021df67f">Status::IndexError</a>(<span class="stringliteral">&quot;vertex chunk index &quot;</span>, vertex_chunk_index_,</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                                <span class="stringliteral">&quot; is out-of-bounds for vertex chunk num &quot;</span>,</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                                vertex_chunk_num_, <span class="stringliteral">&quot; of edge &quot;</span>,</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                                edge_info_-&gt;GetEdgeType(), <span class="stringliteral">&quot; of adj list type &quot;</span>,</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                                AdjListTypeToString(adj_list_type_),</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                                <span class="stringliteral">&quot;, property group &quot;</span>, property_group_, <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    }</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    chunk_index_ = 0;</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    GAR_ASSIGN_OR_RAISE_ERROR(</div>
@@ -541,42 +541,42 @@ $(function() {
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  <span class="keywordflow">if</span> (!edge_info-&gt;HasAdjacentListType(adj_list_type)) {</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="stringliteral">&quot;The adjacent list type &quot;</span>, AdjListTypeToString(adj_list_type),</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, edge_info-&gt;GetEdgeLabel(), <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, edge_info-&gt;GetEdgeType(), <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  }</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  <span class="keywordflow">return</span> std::make_shared&lt;AdjListPropertyChunkInfoReader&gt;(</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      edge_info, property_group, adj_list_type, prefix);</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;}</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;Result&lt;std::shared_ptr&lt;AdjListPropertyChunkInfoReader&gt;&gt;</div>
-<div class="line"><a name="l00479"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a8a6f605cf7419fe54e6c878872e8726b">  479</a></span>&#160;<a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">AdjListPropertyChunkInfoReader::Make</a>(</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_label,</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keyword">const</span> std::string&amp; edge_label, <span class="keyword">const</span> std::string&amp; dst_label,</div>
+<div class="line"><a name="l00479"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a07987b8ada7f5da637dd8d0706c0a24c">  479</a></span>&#160;<a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">AdjListPropertyChunkInfoReader::Make</a>(</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;PropertyGroup&gt;&amp; property_group,</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    AdjListType adj_list_type) {</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_label, edge_label, dst_label);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_type, edge_type, dst_type);</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;  <span class="keywordflow">if</span> (!edge_info) {</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_label, <span class="stringliteral">&quot; &quot;</span>, edge_label, <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                            dst_label, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_type, <span class="stringliteral">&quot; &quot;</span>, edge_type, <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                            dst_type, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  }</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">Make</a>(edge_info, property_group, adj_list_type,</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;              graph_info-&gt;GetPrefix());</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;}</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;Result&lt;std::shared_ptr&lt;AdjListPropertyChunkInfoReader&gt;&gt;</div>
-<div class="line"><a name="l00494"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a4ac712003f791d424d8781b7680ff8af">  494</a></span>&#160;<a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">AdjListPropertyChunkInfoReader::Make</a>(</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_label,</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keyword">const</span> std::string&amp; edge_label, <span class="keyword">const</span> std::string&amp; dst_label,</div>
+<div class="line"><a name="l00494"></a><span class="lineno"><a class="line" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#aa8e0152a63c944206d62c83a068048d1">  494</a></span>&#160;<a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">AdjListPropertyChunkInfoReader::Make</a>(</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keyword">const</span> std::string&amp; property_name, AdjListType adj_list_type) {</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_label, edge_label, dst_label);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;  <span class="keyword">auto</span> edge_info = graph_info-&gt;GetEdgeInfo(src_type, edge_type, dst_type);</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  <span class="keywordflow">if</span> (!edge_info) {</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_label, <span class="stringliteral">&quot; &quot;</span>, edge_label, <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                            dst_label, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The edge &quot;</span>, src_type, <span class="stringliteral">&quot; &quot;</span>, edge_type, <span class="stringliteral">&quot; &quot;</span>,</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                            dst_type, <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span>);</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;  }</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;  <span class="keyword">auto</span> property_group = edge_info-&gt;GetPropertyGroup(property_name);</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  <span class="keywordflow">if</span> (!property_group) {</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#a4ee4924ddadfc2c1effc055572084d71">Status::KeyError</a>(<span class="stringliteral">&quot;The property &quot;</span>, property_name,</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                            <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, src_label, <span class="stringliteral">&quot; &quot;</span>,</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                            edge_label, <span class="stringliteral">&quot; &quot;</span>, dst_label, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                            <span class="stringliteral">&quot; doesn&#39;t exist in edge &quot;</span>, src_type, <span class="stringliteral">&quot; &quot;</span>, edge_type,</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                            <span class="stringliteral">&quot; &quot;</span>, dst_type, <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  }</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">Make</a>(edge_info, property_group, adj_list_type,</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;              graph_info-&gt;GetPrefix());</div>

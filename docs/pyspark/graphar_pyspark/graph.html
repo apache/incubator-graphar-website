@@ -33,19 +33,19 @@
             <h2>API Documentation</h2>
                 <ul class="memberlist">
             <li>
-                    <a class="class" href="#EdgeLabels">EdgeLabels</a>
+                    <a class="class" href="#EdgeTypes">EdgeTypes</a>
                             <ul class="memberlist">
                         <li>
-                                <a class="function" href="#EdgeLabels.__init__">EdgeLabels</a>
+                                <a class="function" href="#EdgeTypes.__init__">EdgeTypes</a>
                         </li>
                         <li>
-                                <a class="variable" href="#EdgeLabels.src_label">src_label</a>
+                                <a class="variable" href="#EdgeTypes.src_type">src_type</a>
                         </li>
                         <li>
-                                <a class="variable" href="#EdgeLabels.edge_label">edge_label</a>
+                                <a class="variable" href="#EdgeTypes.edge_type">edge_type</a>
                         </li>
                         <li>
-                                <a class="variable" href="#EdgeLabels.dst_label">dst_label</a>
+                                <a class="variable" href="#EdgeTypes.dst_type">dst_type</a>
                         </li>
                 </ul>
 
@@ -174,12 +174,12 @@
 </span><span id="L-33"><a href="#L-33"><span class="linenos"> 33</span></a>
 </span><span id="L-34"><a href="#L-34"><span class="linenos"> 34</span></a>
 </span><span id="L-35"><a href="#L-35"><span class="linenos"> 35</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="L-36"><a href="#L-36"><span class="linenos"> 36</span></a><span class="k">class</span> <span class="nc">EdgeLabels</span><span class="p">:</span>
-</span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A triplet that describe edge. Contains source, edge and dest labels. Immutable.&quot;&quot;&quot;</span>
+</span><span id="L-36"><a href="#L-36"><span class="linenos"> 36</span></a><span class="k">class</span> <span class="nc">EdgeTypes</span><span class="p">:</span>
+</span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A triplet that describe edge. Contains source, edge and dest types. Immutable.&quot;&quot;&quot;</span>
 </span><span id="L-38"><a href="#L-38"><span class="linenos"> 38</span></a>
-</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>    <span class="n">src_label</span><span class="p">:</span> <span class="nb">str</span>
-</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a>    <span class="n">edge_label</span><span class="p">:</span> <span class="nb">str</span>
-</span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a>    <span class="n">dst_label</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>    <span class="n">src_type</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a>    <span class="n">edge_type</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a>    <span class="n">dst_type</span><span class="p">:</span> <span class="nb">str</span>
 </span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a>
 </span><span id="L-43"><a href="#L-43"><span class="linenos"> 43</span></a>
 </span><span id="L-44"><a href="#L-44"><span class="linenos"> 44</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -187,7 +187,7 @@
 </span><span id="L-46"><a href="#L-46"><span class="linenos"> 46</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple immutable class, that represent results of reading a graph with GraphReader.&quot;&quot;&quot;</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos"> 47</span></a>
 </span><span id="L-48"><a href="#L-48"><span class="linenos"> 48</span></a>    <span class="n">vertex_dataframes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]</span>
-</span><span id="L-49"><a href="#L-49"><span class="linenos"> 49</span></a>    <span class="n">edge_dataframes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">EdgeLabels</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]]</span>
+</span><span id="L-49"><a href="#L-49"><span class="linenos"> 49</span></a>    <span class="n">edge_dataframes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">EdgeTypes</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]]</span>
 </span><span id="L-50"><a href="#L-50"><span class="linenos"> 50</span></a>
 </span><span id="L-51"><a href="#L-51"><span class="linenos"> 51</span></a>    <span class="nd">@staticmethod</span>
 </span><span id="L-52"><a href="#L-52"><span class="linenos"> 52</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span>
@@ -226,7 +226,7 @@
 </span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a>                    <span class="n">GraphArSession</span><span class="o">.</span><span class="n">ss</span><span class="p">,</span>
 </span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a>                <span class="p">)</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a>
-</span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>            <span class="n">second_dict</span><span class="p">[</span><span class="n">EdgeLabels</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">_1</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_2</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_3</span><span class="p">())]</span> <span class="o">=</span> <span class="n">inner_dict</span>
+</span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>            <span class="n">second_dict</span><span class="p">[</span><span class="n">EdgeTypes</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">_1</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_2</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_3</span><span class="p">())]</span> <span class="o">=</span> <span class="n">inner_dict</span>
 </span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>
 </span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>        <span class="k">return</span> <span class="n">GraphReaderResult</span><span class="p">(</span>
 </span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>            <span class="n">vertex_dataframes</span><span class="o">=</span><span class="n">first_dict</span><span class="p">,</span>
@@ -286,20 +286,20 @@
 </span><span id="L-145"><a href="#L-145"><span class="linenos">145</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from Python arguments.&quot;&quot;&quot;</span>
 </span><span id="L-146"><a href="#L-146"><span class="linenos">146</span></a>        <span class="k">return</span> <span class="n">GraphWriter</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">GraphWriter</span><span class="p">())</span>
 </span><span id="L-147"><a href="#L-147"><span class="linenos">147</span></a>
-</span><span id="L-148"><a href="#L-148"><span class="linenos">148</span></a>    <span class="k">def</span> <span class="nf">put_vertex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="L-148"><a href="#L-148"><span class="linenos">148</span></a>    <span class="k">def</span> <span class="nf">put_vertex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="L-149"><a href="#L-149"><span class="linenos">149</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Put the vertex DataFrame into writer.</span>
 </span><span id="L-150"><a href="#L-150"><span class="linenos">150</span></a>
-</span><span id="L-151"><a href="#L-151"><span class="linenos">151</span></a><span class="sd">        :param label: label of vertex.</span>
+</span><span id="L-151"><a href="#L-151"><span class="linenos">151</span></a><span class="sd">        :param type: type of vertex.</span>
 </span><span id="L-152"><a href="#L-152"><span class="linenos">152</span></a><span class="sd">        :param df: DataFrame of the vertex type.</span>
 </span><span id="L-153"><a href="#L-153"><span class="linenos">153</span></a><span class="sd">        :param primary_key: primary key of the vertex type, default is empty, which take the first property column as primary key.</span>
 </span><span id="L-154"><a href="#L-154"><span class="linenos">154</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="L-155"><a href="#L-155"><span class="linenos">155</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_writer_obj</span><span class="o">.</span><span class="n">PutVertexData</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_jdf</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
+</span><span id="L-155"><a href="#L-155"><span class="linenos">155</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_writer_obj</span><span class="o">.</span><span class="n">PutVertexData</span><span class="p">(</span><span class="n">vertex_type</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_jdf</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
 </span><span id="L-156"><a href="#L-156"><span class="linenos">156</span></a>
 </span><span id="L-157"><a href="#L-157"><span class="linenos">157</span></a>    <span class="k">def</span> <span class="nf">put_edge_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="L-158"><a href="#L-158"><span class="linenos">158</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Put the egde datafrme into writer.</span>
 </span><span id="L-159"><a href="#L-159"><span class="linenos">159</span></a>
-</span><span id="L-160"><a href="#L-160"><span class="linenos">160</span></a><span class="sd">        :param relation: 3-Tuple (source label, edge label, target label) to indicate edge type.</span>
-</span><span id="L-161"><a href="#L-161"><span class="linenos">161</span></a><span class="sd">        :param df: data frame of edge type.</span>
+</span><span id="L-160"><a href="#L-160"><span class="linenos">160</span></a><span class="sd">        :param relation: 3-Tuple (source type, edge type, target type) to indicate edge relation.</span>
+</span><span id="L-161"><a href="#L-161"><span class="linenos">161</span></a><span class="sd">        :param df: data frame of edge relation.</span>
 </span><span id="L-162"><a href="#L-162"><span class="linenos">162</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-163"><a href="#L-163"><span class="linenos">163</span></a>        <span class="n">relation_jvm</span> <span class="o">=</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">jvm</span><span class="o">.</span><span class="n">scala</span><span class="o">.</span><span class="n">Tuple3</span><span class="p">(</span>
 </span><span id="L-164"><a href="#L-164"><span class="linenos">164</span></a>            <span class="n">relation</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">relation</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">relation</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
@@ -407,73 +407,73 @@
 
 
             </section>
-                <section id="EdgeLabels">
-                            <input id="EdgeLabels-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="EdgeTypes">
+                            <input id="EdgeTypes-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr class">
                     <div class="decorator">@dataclass(frozen=True)</div>
 
     <span class="def">class</span>
-    <span class="name">EdgeLabels</span>:
+    <span class="name">EdgeTypes</span>:
 
-                <label class="view-source-button" for="EdgeLabels-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="EdgeTypes-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#EdgeLabels"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="EdgeLabels-36"><a href="#EdgeLabels-36"><span class="linenos">36</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="EdgeLabels-37"><a href="#EdgeLabels-37"><span class="linenos">37</span></a><span class="k">class</span> <span class="nc">EdgeLabels</span><span class="p">:</span>
-</span><span id="EdgeLabels-38"><a href="#EdgeLabels-38"><span class="linenos">38</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A triplet that describe edge. Contains source, edge and dest labels. Immutable.&quot;&quot;&quot;</span>
-</span><span id="EdgeLabels-39"><a href="#EdgeLabels-39"><span class="linenos">39</span></a>
-</span><span id="EdgeLabels-40"><a href="#EdgeLabels-40"><span class="linenos">40</span></a>    <span class="n">src_label</span><span class="p">:</span> <span class="nb">str</span>
-</span><span id="EdgeLabels-41"><a href="#EdgeLabels-41"><span class="linenos">41</span></a>    <span class="n">edge_label</span><span class="p">:</span> <span class="nb">str</span>
-</span><span id="EdgeLabels-42"><a href="#EdgeLabels-42"><span class="linenos">42</span></a>    <span class="n">dst_label</span><span class="p">:</span> <span class="nb">str</span>
+    <a class="headerlink" href="#EdgeTypes"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="EdgeTypes-36"><a href="#EdgeTypes-36"><span class="linenos">36</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="EdgeTypes-37"><a href="#EdgeTypes-37"><span class="linenos">37</span></a><span class="k">class</span> <span class="nc">EdgeTypes</span><span class="p">:</span>
+</span><span id="EdgeTypes-38"><a href="#EdgeTypes-38"><span class="linenos">38</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A triplet that describe edge. Contains source, edge and dest types. Immutable.&quot;&quot;&quot;</span>
+</span><span id="EdgeTypes-39"><a href="#EdgeTypes-39"><span class="linenos">39</span></a>
+</span><span id="EdgeTypes-40"><a href="#EdgeTypes-40"><span class="linenos">40</span></a>    <span class="n">src_type</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="EdgeTypes-41"><a href="#EdgeTypes-41"><span class="linenos">41</span></a>    <span class="n">edge_type</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="EdgeTypes-42"><a href="#EdgeTypes-42"><span class="linenos">42</span></a>    <span class="n">dst_type</span><span class="p">:</span> <span class="nb">str</span>
 </span></pre></div>
 
 
-            <div class="docstring"><p>A triplet that describe edge. Contains source, edge and dest labels. Immutable.</p>
+            <div class="docstring"><p>A triplet that describe edge. Contains source, edge and dest types. Immutable.</p>
 </div>
 
 
-                            <div id="EdgeLabels.__init__" class="classattr">
+                            <div id="EdgeTypes.__init__" class="classattr">
                                 <div class="attr function">
             
-        <span class="name">EdgeLabels</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">src_label</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">edge_label</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">dst_label</span><span class="p">:</span> <span class="nb">str</span></span>)</span>
+        <span class="name">EdgeTypes</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">src_type</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">edge_type</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">dst_type</span><span class="p">:</span> <span class="nb">str</span></span>)</span>
 
         
     </div>
-    <a class="headerlink" href="#EdgeLabels.__init__"></a>
+    <a class="headerlink" href="#EdgeTypes.__init__"></a>
     
     
 
                             </div>
-                            <div id="EdgeLabels.src_label" class="classattr">
+                            <div id="EdgeTypes.src_type" class="classattr">
                                 <div class="attr variable">
-            <span class="name">src_label</span><span class="annotation">: str</span>
+            <span class="name">src_type</span><span class="annotation">: str</span>
 
         
     </div>
-    <a class="headerlink" href="#EdgeLabels.src_label"></a>
+    <a class="headerlink" href="#EdgeTypes.src_type"></a>
     
     
 
                             </div>
-                            <div id="EdgeLabels.edge_label" class="classattr">
+                            <div id="EdgeTypes.edge_type" class="classattr">
                                 <div class="attr variable">
-            <span class="name">edge_label</span><span class="annotation">: str</span>
+            <span class="name">edge_type</span><span class="annotation">: str</span>
 
         
     </div>
-    <a class="headerlink" href="#EdgeLabels.edge_label"></a>
+    <a class="headerlink" href="#EdgeTypes.edge_type"></a>
     
     
 
                             </div>
-                            <div id="EdgeLabels.dst_label" class="classattr">
+                            <div id="EdgeTypes.dst_type" class="classattr">
                                 <div class="attr variable">
-            <span class="name">dst_label</span><span class="annotation">: str</span>
+            <span class="name">dst_type</span><span class="annotation">: str</span>
 
         
     </div>
-    <a class="headerlink" href="#EdgeLabels.dst_label"></a>
+    <a class="headerlink" href="#EdgeTypes.dst_type"></a>
     
     
 
@@ -496,7 +496,7 @@
 </span><span id="GraphReaderResult-47"><a href="#GraphReaderResult-47"><span class="linenos">47</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple immutable class, that represent results of reading a graph with GraphReader.&quot;&quot;&quot;</span>
 </span><span id="GraphReaderResult-48"><a href="#GraphReaderResult-48"><span class="linenos">48</span></a>
 </span><span id="GraphReaderResult-49"><a href="#GraphReaderResult-49"><span class="linenos">49</span></a>    <span class="n">vertex_dataframes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]</span>
-</span><span id="GraphReaderResult-50"><a href="#GraphReaderResult-50"><span class="linenos">50</span></a>    <span class="n">edge_dataframes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">EdgeLabels</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]]</span>
+</span><span id="GraphReaderResult-50"><a href="#GraphReaderResult-50"><span class="linenos">50</span></a>    <span class="n">edge_dataframes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">EdgeTypes</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]]</span>
 </span><span id="GraphReaderResult-51"><a href="#GraphReaderResult-51"><span class="linenos">51</span></a>
 </span><span id="GraphReaderResult-52"><a href="#GraphReaderResult-52"><span class="linenos">52</span></a>    <span class="nd">@staticmethod</span>
 </span><span id="GraphReaderResult-53"><a href="#GraphReaderResult-53"><span class="linenos">53</span></a>    <span class="k">def</span> <span class="nf">from_scala</span><span class="p">(</span>
@@ -535,7 +535,7 @@
 </span><span id="GraphReaderResult-86"><a href="#GraphReaderResult-86"><span class="linenos">86</span></a>                    <span class="n">GraphArSession</span><span class="o">.</span><span class="n">ss</span><span class="p">,</span>
 </span><span id="GraphReaderResult-87"><a href="#GraphReaderResult-87"><span class="linenos">87</span></a>                <span class="p">)</span>
 </span><span id="GraphReaderResult-88"><a href="#GraphReaderResult-88"><span class="linenos">88</span></a>
-</span><span id="GraphReaderResult-89"><a href="#GraphReaderResult-89"><span class="linenos">89</span></a>            <span class="n">second_dict</span><span class="p">[</span><span class="n">EdgeLabels</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">_1</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_2</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_3</span><span class="p">())]</span> <span class="o">=</span> <span class="n">inner_dict</span>
+</span><span id="GraphReaderResult-89"><a href="#GraphReaderResult-89"><span class="linenos">89</span></a>            <span class="n">second_dict</span><span class="p">[</span><span class="n">EdgeTypes</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">_1</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_2</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_3</span><span class="p">())]</span> <span class="o">=</span> <span class="n">inner_dict</span>
 </span><span id="GraphReaderResult-90"><a href="#GraphReaderResult-90"><span class="linenos">90</span></a>
 </span><span id="GraphReaderResult-91"><a href="#GraphReaderResult-91"><span class="linenos">91</span></a>        <span class="k">return</span> <span class="n">GraphReaderResult</span><span class="p">(</span>
 </span><span id="GraphReaderResult-92"><a href="#GraphReaderResult-92"><span class="linenos">92</span></a>            <span class="n">vertex_dataframes</span><span class="o">=</span><span class="n">first_dict</span><span class="p">,</span>
@@ -551,7 +551,7 @@
                             <div id="GraphReaderResult.__init__" class="classattr">
                                 <div class="attr function">
             
-        <span class="name">GraphReaderResult</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">vertex_dataframes</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">dataframe</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span>,</span><span class="param">	<span class="n">edge_dataframes</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">[</span><span class="n"><a href="#EdgeLabels">EdgeLabels</a></span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">dataframe</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]]</span></span>)</span>
+        <span class="name">GraphReaderResult</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">vertex_dataframes</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">dataframe</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span>,</span><span class="param">	<span class="n">edge_dataframes</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">[</span><span class="n"><a href="#EdgeTypes">EdgeTypes</a></span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">dataframe</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]]</span></span>)</span>
 
         
     </div>
@@ -573,7 +573,7 @@
                             </div>
                             <div id="GraphReaderResult.edge_dataframes" class="classattr">
                                 <div class="attr variable">
-            <span class="name">edge_dataframes</span><span class="annotation">: collections.abc.Mapping[<a href="#EdgeLabels">EdgeLabels</a>, collections.abc.Mapping[str, pyspark.sql.dataframe.DataFrame]]</span>
+            <span class="name">edge_dataframes</span><span class="annotation">: collections.abc.Mapping[<a href="#EdgeTypes">EdgeTypes</a>, collections.abc.Mapping[str, pyspark.sql.dataframe.DataFrame]]</span>
 
         
     </div>
@@ -631,7 +631,7 @@
 </span><span id="GraphReaderResult.from_scala-86"><a href="#GraphReaderResult.from_scala-86"><span class="linenos">86</span></a>                    <span class="n">GraphArSession</span><span class="o">.</span><span class="n">ss</span><span class="p">,</span>
 </span><span id="GraphReaderResult.from_scala-87"><a href="#GraphReaderResult.from_scala-87"><span class="linenos">87</span></a>                <span class="p">)</span>
 </span><span id="GraphReaderResult.from_scala-88"><a href="#GraphReaderResult.from_scala-88"><span class="linenos">88</span></a>
-</span><span id="GraphReaderResult.from_scala-89"><a href="#GraphReaderResult.from_scala-89"><span class="linenos">89</span></a>            <span class="n">second_dict</span><span class="p">[</span><span class="n">EdgeLabels</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">_1</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_2</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_3</span><span class="p">())]</span> <span class="o">=</span> <span class="n">inner_dict</span>
+</span><span id="GraphReaderResult.from_scala-89"><a href="#GraphReaderResult.from_scala-89"><span class="linenos">89</span></a>            <span class="n">second_dict</span><span class="p">[</span><span class="n">EdgeTypes</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">_1</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_2</span><span class="p">(),</span> <span class="n">k</span><span class="o">.</span><span class="n">_3</span><span class="p">())]</span> <span class="o">=</span> <span class="n">inner_dict</span>
 </span><span id="GraphReaderResult.from_scala-90"><a href="#GraphReaderResult.from_scala-90"><span class="linenos">90</span></a>
 </span><span id="GraphReaderResult.from_scala-91"><a href="#GraphReaderResult.from_scala-91"><span class="linenos">91</span></a>        <span class="k">return</span> <span class="n">GraphReaderResult</span><span class="p">(</span>
 </span><span id="GraphReaderResult.from_scala-92"><a href="#GraphReaderResult.from_scala-92"><span class="linenos">92</span></a>            <span class="n">vertex_dataframes</span><span class="o">=</span><span class="n">first_dict</span><span class="p">,</span>
@@ -778,20 +778,20 @@
 </span><span id="GraphWriter-146"><a href="#GraphWriter-146"><span class="linenos">146</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an instance of the Class from Python arguments.&quot;&quot;&quot;</span>
 </span><span id="GraphWriter-147"><a href="#GraphWriter-147"><span class="linenos">147</span></a>        <span class="k">return</span> <span class="n">GraphWriter</span><span class="p">(</span><span class="n">GraphArSession</span><span class="o">.</span><span class="n">graphar</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">GraphWriter</span><span class="p">())</span>
 </span><span id="GraphWriter-148"><a href="#GraphWriter-148"><span class="linenos">148</span></a>
-</span><span id="GraphWriter-149"><a href="#GraphWriter-149"><span class="linenos">149</span></a>    <span class="k">def</span> <span class="nf">put_vertex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="GraphWriter-149"><a href="#GraphWriter-149"><span class="linenos">149</span></a>    <span class="k">def</span> <span class="nf">put_vertex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="GraphWriter-150"><a href="#GraphWriter-150"><span class="linenos">150</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Put the vertex DataFrame into writer.</span>
 </span><span id="GraphWriter-151"><a href="#GraphWriter-151"><span class="linenos">151</span></a>
-</span><span id="GraphWriter-152"><a href="#GraphWriter-152"><span class="linenos">152</span></a><span class="sd">        :param label: label of vertex.</span>
+</span><span id="GraphWriter-152"><a href="#GraphWriter-152"><span class="linenos">152</span></a><span class="sd">        :param type: type of vertex.</span>
 </span><span id="GraphWriter-153"><a href="#GraphWriter-153"><span class="linenos">153</span></a><span class="sd">        :param df: DataFrame of the vertex type.</span>
 </span><span id="GraphWriter-154"><a href="#GraphWriter-154"><span class="linenos">154</span></a><span class="sd">        :param primary_key: primary key of the vertex type, default is empty, which take the first property column as primary key.</span>
 </span><span id="GraphWriter-155"><a href="#GraphWriter-155"><span class="linenos">155</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="GraphWriter-156"><a href="#GraphWriter-156"><span class="linenos">156</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_writer_obj</span><span class="o">.</span><span class="n">PutVertexData</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_jdf</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
+</span><span id="GraphWriter-156"><a href="#GraphWriter-156"><span class="linenos">156</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_writer_obj</span><span class="o">.</span><span class="n">PutVertexData</span><span class="p">(</span><span class="n">vertex_type</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_jdf</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
 </span><span id="GraphWriter-157"><a href="#GraphWriter-157"><span class="linenos">157</span></a>
 </span><span id="GraphWriter-158"><a href="#GraphWriter-158"><span class="linenos">158</span></a>    <span class="k">def</span> <span class="nf">put_edge_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="GraphWriter-159"><a href="#GraphWriter-159"><span class="linenos">159</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Put the egde datafrme into writer.</span>
 </span><span id="GraphWriter-160"><a href="#GraphWriter-160"><span class="linenos">160</span></a>
-</span><span id="GraphWriter-161"><a href="#GraphWriter-161"><span class="linenos">161</span></a><span class="sd">        :param relation: 3-Tuple (source label, edge label, target label) to indicate edge type.</span>
-</span><span id="GraphWriter-162"><a href="#GraphWriter-162"><span class="linenos">162</span></a><span class="sd">        :param df: data frame of edge type.</span>
+</span><span id="GraphWriter-161"><a href="#GraphWriter-161"><span class="linenos">161</span></a><span class="sd">        :param relation: 3-Tuple (source type, edge type, target type) to indicate edge relation.</span>
+</span><span id="GraphWriter-162"><a href="#GraphWriter-162"><span class="linenos">162</span></a><span class="sd">        :param df: data frame of edge relation.</span>
 </span><span id="GraphWriter-163"><a href="#GraphWriter-163"><span class="linenos">163</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphWriter-164"><a href="#GraphWriter-164"><span class="linenos">164</span></a>        <span class="n">relation_jvm</span> <span class="o">=</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">jvm</span><span class="o">.</span><span class="n">scala</span><span class="o">.</span><span class="n">Tuple3</span><span class="p">(</span>
 </span><span id="GraphWriter-165"><a href="#GraphWriter-165"><span class="linenos">165</span></a>            <span class="n">relation</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">relation</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">relation</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
@@ -977,20 +977,20 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">put_vertex_data</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span>,</span><span class="param">	<span class="n">label</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">df</span><span class="p">:</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">dataframe</span><span class="o">.</span><span class="n">DataFrame</span>,</span><span class="param">	<span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">) -> <span class="kc">None</span>:</span></span>
+        <span class="name">put_vertex_data</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span>,</span><span class="param">	<span class="n">vertex_type</span><span class="p">:</span> <span class="nb">str</span>,</span><span class="param">	<span class="n">df</span><span class="p">:</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">dataframe</span><span class="o">.</span><span class="n">DataFrame</span>,</span><span class="param">	<span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">) -> <span class="kc">None</span>:</span></span>
 
                 <label class="view-source-button" for="GraphWriter.put_vertex_data-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#GraphWriter.put_vertex_data"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="GraphWriter.put_vertex_data-149"><a href="#GraphWriter.put_vertex_data-149"><span class="linenos">149</span></a>    <span class="k">def</span> <span class="nf">put_vertex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="GraphWriter.put_vertex_data-149"><a href="#GraphWriter.put_vertex_data-149"><span class="linenos">149</span></a>    <span class="k">def</span> <span class="nf">put_vertex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="GraphWriter.put_vertex_data-150"><a href="#GraphWriter.put_vertex_data-150"><span class="linenos">150</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Put the vertex DataFrame into writer.</span>
 </span><span id="GraphWriter.put_vertex_data-151"><a href="#GraphWriter.put_vertex_data-151"><span class="linenos">151</span></a>
-</span><span id="GraphWriter.put_vertex_data-152"><a href="#GraphWriter.put_vertex_data-152"><span class="linenos">152</span></a><span class="sd">        :param label: label of vertex.</span>
+</span><span id="GraphWriter.put_vertex_data-152"><a href="#GraphWriter.put_vertex_data-152"><span class="linenos">152</span></a><span class="sd">        :param type: type of vertex.</span>
 </span><span id="GraphWriter.put_vertex_data-153"><a href="#GraphWriter.put_vertex_data-153"><span class="linenos">153</span></a><span class="sd">        :param df: DataFrame of the vertex type.</span>
 </span><span id="GraphWriter.put_vertex_data-154"><a href="#GraphWriter.put_vertex_data-154"><span class="linenos">154</span></a><span class="sd">        :param primary_key: primary key of the vertex type, default is empty, which take the first property column as primary key.</span>
 </span><span id="GraphWriter.put_vertex_data-155"><a href="#GraphWriter.put_vertex_data-155"><span class="linenos">155</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="GraphWriter.put_vertex_data-156"><a href="#GraphWriter.put_vertex_data-156"><span class="linenos">156</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_writer_obj</span><span class="o">.</span><span class="n">PutVertexData</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_jdf</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
+</span><span id="GraphWriter.put_vertex_data-156"><a href="#GraphWriter.put_vertex_data-156"><span class="linenos">156</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_jvm_graph_writer_obj</span><span class="o">.</span><span class="n">PutVertexData</span><span class="p">(</span><span class="n">vertex_type</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_jdf</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -999,7 +999,7 @@
 <h6 id="parameters">Parameters</h6>
 
 <ul>
-<li><strong>label</strong>:  label of vertex.</li>
+<li><strong>type</strong>:  type of vertex.</li>
 <li><strong>df</strong>:  DataFrame of the vertex type.</li>
 <li><strong>primary_key</strong>:  primary key of the vertex type, default is empty, which take the first property column as primary key.</li>
 </ul>
@@ -1021,8 +1021,8 @@
             <div class="pdoc-code codehilite"><pre><span></span><span id="GraphWriter.put_edge_data-158"><a href="#GraphWriter.put_edge_data-158"><span class="linenos">158</span></a>    <span class="k">def</span> <span class="nf">put_edge_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="GraphWriter.put_edge_data-159"><a href="#GraphWriter.put_edge_data-159"><span class="linenos">159</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Put the egde datafrme into writer.</span>
 </span><span id="GraphWriter.put_edge_data-160"><a href="#GraphWriter.put_edge_data-160"><span class="linenos">160</span></a>
-</span><span id="GraphWriter.put_edge_data-161"><a href="#GraphWriter.put_edge_data-161"><span class="linenos">161</span></a><span class="sd">        :param relation: 3-Tuple (source label, edge label, target label) to indicate edge type.</span>
-</span><span id="GraphWriter.put_edge_data-162"><a href="#GraphWriter.put_edge_data-162"><span class="linenos">162</span></a><span class="sd">        :param df: data frame of edge type.</span>
+</span><span id="GraphWriter.put_edge_data-161"><a href="#GraphWriter.put_edge_data-161"><span class="linenos">161</span></a><span class="sd">        :param relation: 3-Tuple (source type, edge type, target type) to indicate edge relation.</span>
+</span><span id="GraphWriter.put_edge_data-162"><a href="#GraphWriter.put_edge_data-162"><span class="linenos">162</span></a><span class="sd">        :param df: data frame of edge relation.</span>
 </span><span id="GraphWriter.put_edge_data-163"><a href="#GraphWriter.put_edge_data-163"><span class="linenos">163</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="GraphWriter.put_edge_data-164"><a href="#GraphWriter.put_edge_data-164"><span class="linenos">164</span></a>        <span class="n">relation_jvm</span> <span class="o">=</span> <span class="n">GraphArSession</span><span class="o">.</span><span class="n">jvm</span><span class="o">.</span><span class="n">scala</span><span class="o">.</span><span class="n">Tuple3</span><span class="p">(</span>
 </span><span id="GraphWriter.put_edge_data-165"><a href="#GraphWriter.put_edge_data-165"><span class="linenos">165</span></a>            <span class="n">relation</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">relation</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">relation</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
@@ -1036,8 +1036,8 @@
 <h6 id="parameters">Parameters</h6>
 
 <ul>
-<li><strong>relation</strong>:  3-Tuple (source label, edge label, target label) to indicate edge type.</li>
-<li><strong>df</strong>:  data frame of edge type.</li>
+<li><strong>relation</strong>:  3-Tuple (source type, edge type, target type) to indicate edge relation.</li>
+<li><strong>df</strong>:  data frame of edge relation.</li>
 </ul>
 </div>
 

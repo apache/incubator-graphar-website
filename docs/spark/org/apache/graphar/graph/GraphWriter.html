@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>graphar-commons 0.12.0-SNAPSHOT API  - org.apache.graphar.graph.GraphWriter</title>
-          <meta name="description" content="graphar - commons 0.12.0 - SNAPSHOT API - org.apache.graphar.graph.GraphWriter" />
-          <meta name="keywords" content="graphar commons 0.12.0 SNAPSHOT API org.apache.graphar.graph.GraphWriter" />
+          <title>graphar-commons 0.13.0-SNAPSHOT API  - org.apache.graphar.graph.GraphWriter</title>
+          <meta name="description" content="graphar - commons 0.13.0 - SNAPSHOT API - org.apache.graphar.graph.GraphWriter" />
+          <meta name="keywords" content="graphar commons 0.13.0 SNAPSHOT API org.apache.graphar.graph.GraphWriter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">graphar-commons 0.12.0-SNAPSHOT API<span id="doc-version"></span></span>
+        <span id="doc-title">graphar-commons 0.13.0-SNAPSHOT API<span id="doc-version"></span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -313,12 +313,12 @@
       </span>
       
       <p class="shortcomment cmt">Put the edge dataframe into writer.</p><div class="fullcomment"><div class="comment cmt"><p>Put the edge dataframe into writer.</p></div><dl class="paramcmts block"><dt class="param">relation</dt><dd class="cmt"><p>
-  3-Tuple (source label, edge label, target label) to indicate edge type.</p></dd><dt class="param">df</dt><dd class="cmt"><p>
+  3-Tuple (source type, edge type, target type) to indicate edge relation.</p></dd><dt class="param">df</dt><dd class="cmt"><p>
   data frame of edge type.</p></dd></dl></div>
     </li><li name="org.apache.graphar.graph.GraphWriter#PutVertexData" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="PutVertexData(label:String,df:org.apache.spark.sql.DataFrame,primaryKey:String):Unit"></a><a id="PutVertexData(String,DataFrame,String):Unit"></a>
+      <a id="PutVertexData(vertexType:String,df:org.apache.spark.sql.DataFrame,primaryKey:String):Unit"></a><a id="PutVertexData(String,DataFrame,String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/apache/graphar/graph/GraphWriter.html#PutVertexData(label:String,df:org.apache.spark.sql.DataFrame,primaryKey:String):Unit" title="Permalink">
+      <a href="../../../../org/apache/graphar/graph/GraphWriter.html#PutVertexData(vertexType:String,df:org.apache.spark.sql.DataFrame,primaryKey:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -327,12 +327,11 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">PutVertexData</span><span class="params">(<span name="label">label: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="primaryKey">primaryKey: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">PutVertexData</span><span class="params">(<span name="vertexType">vertexType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="primaryKey">primaryKey: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Put the vertex DataFrame into writer.</p><div class="fullcomment"><div class="comment cmt"><p>Put the vertex DataFrame into writer.
-</p></div><dl class="paramcmts block"><dt class="param">label</dt><dd class="cmt"><p>
-  label of vertex.</p></dd><dt class="param">df</dt><dd class="cmt"><p>
+</p></div><dl class="paramcmts block"><dt class="param">df</dt><dd class="cmt"><p>
   DataFrame of the vertex type.</p></dd><dt class="param">primaryKey</dt><dd class="cmt"><p>
   primary key of the vertex type, default is empty, which take the first
   property column as primary key.</p></dd></dl></div>
@@ -709,7 +708,7 @@
 </p></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>
   the directory to write.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
   the spark session for the writing.</p></dd><dt class="param">name</dt><dd class="cmt"><p>
-  the name of graph, default is 'grpah'</p></dd><dt class="param">vertex_chunk_size</dt><dd class="cmt"><p>
+  the name of graph, default is 'graph'</p></dd><dt class="param">vertex_chunk_size</dt><dd class="cmt"><p>
   the chunk size for vertices, default is 2^18</p></dd><dt class="param">edge_chunk_size</dt><dd class="cmt"><p>
   the chunk size for edges, default is 2^22</p></dd><dt class="param">file_type</dt><dd class="cmt"><p>
   the file type for data payload file, support [parquet, orc, csv], default

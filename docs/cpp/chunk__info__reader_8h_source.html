@@ -122,11 +122,11 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">const</span> std::string&amp; prefix);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;VertexPropertyChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">Make</a>(</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; type,</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;PropertyGroup&gt;&amp; property_group);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;VertexPropertyChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a0d50059eebe22a9a95e4cfe1e09029ac">Make</a>(</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; type,</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keyword">const</span> std::string&amp; property_name);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="keyword">private</span>:</div>
@@ -160,9 +160,9 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="keyword">const</span> std::string&amp; prefix);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;AdjListChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_chunk_info_reader.html#ace2293edca44be68cb861cce6e8912e0">Make</a>(</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info,</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keyword">const</span> std::string&amp; src_label, <span class="keyword">const</span> std::string&amp; edge_label,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keyword">const</span> std::string&amp; dst_label, AdjListType adj_list_type);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      AdjListType adj_list_type);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  std::shared_ptr&lt;EdgeInfo&gt; edge_info_;</div>
@@ -193,9 +193,9 @@ $(function() {
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keyword">const</span> std::string&amp; prefix);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;AdjListOffsetChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#ac65413ac9d8c62404bc5518ca20f3f10">Make</a>(</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="keyword">const</span> std::string&amp; src_label, <span class="keyword">const</span> std::string&amp; edge_label,</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <span class="keyword">const</span> std::string&amp; dst_label, AdjListType adj_list_type);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      AdjListType adj_list_type);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  std::shared_ptr&lt;EdgeInfo&gt; edge_info_;</div>
@@ -229,29 +229,27 @@ $(function() {
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      AdjListType adj_list_type, <span class="keyword">const</span> std::string&amp; prefix);</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;AdjListPropertyChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">Make</a>(</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info,</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="keyword">const</span> std::string&amp; src_label, <span class="keyword">const</span> std::string&amp; edge_label,</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="keyword">const</span> std::string&amp; dst_label,</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;PropertyGroup&gt;&amp; property_group,</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      AdjListType adj_list_type);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;AdjListPropertyChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">Make</a>(</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info,</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      <span class="keyword">const</span> std::string&amp; src_label, <span class="keyword">const</span> std::string&amp; edge_label,</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      <span class="keyword">const</span> std::string&amp; dst_label, <span class="keyword">const</span> std::string&amp; property_name,</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      AdjListType adj_list_type);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  std::shared_ptr&lt;EdgeInfo&gt; edge_info_;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  std::shared_ptr&lt;PropertyGroup&gt; property_group_;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  AdjListType adj_list_type_;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  std::string prefix_;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  IdType vertex_chunk_index_, chunk_index_;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  IdType vertex_chunk_num_, chunk_num_;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  std::string base_dir_;  <span class="comment">// the chunk files base dir</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  std::shared_ptr&lt;FileSystem&gt; fs_;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;};</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}  <span class="comment">// namespace graphar</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;PropertyGroup&gt;&amp; property_group,</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      AdjListType adj_list_type);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="keyword">static</span> Result&lt;std::shared_ptr&lt;AdjListPropertyChunkInfoReader&gt;&gt; <a class="code" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a43796382855c5819514bb75b7c91e8a9">Make</a>(</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keyword">const</span> std::shared_ptr&lt;GraphInfo&gt;&amp; graph_info, <span class="keyword">const</span> std::string&amp; src_type,</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <span class="keyword">const</span> std::string&amp; edge_type, <span class="keyword">const</span> std::string&amp; dst_type,</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      <span class="keyword">const</span> std::string&amp; property_name, AdjListType adj_list_type);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  std::shared_ptr&lt;EdgeInfo&gt; edge_info_;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  std::shared_ptr&lt;PropertyGroup&gt; property_group_;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  AdjListType adj_list_type_;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  std::string prefix_;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  IdType vertex_chunk_index_, chunk_index_;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  IdType vertex_chunk_num_, chunk_num_;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  std::string base_dir_;  <span class="comment">// the chunk files base dir</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  std::shared_ptr&lt;FileSystem&gt; fs_;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;};</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}  <span class="comment">// namespace graphar</span></div>
 <div class="ttc" id="aclassgraphar_1_1_adj_list_chunk_info_reader_html"><div class="ttname"><a href="classgraphar_1_1_adj_list_chunk_info_reader.html">graphar::AdjListChunkInfoReader</a></div><div class="ttdef"><b>Definition:</b> <a href="chunk__info__reader_8h_source.html#l00119">chunk_info_reader.h:119</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_adj_list_chunk_info_reader_html_a031d114f5f7de849902168ae3a25ae59"><div class="ttname"><a href="classgraphar_1_1_adj_list_chunk_info_reader.html#a031d114f5f7de849902168ae3a25ae59">graphar::AdjListChunkInfoReader::seek_dst</a></div><div class="ttdeci">Status seek_dst(IdType id)</div><div class="ttdoc">Sets chunk position indicator for reader by destination internal vertex id.</div><div class="ttdef"><b>Definition:</b> <a href="chunk__info__reader_8cc_source.html#l00166">chunk_info_reader.cc:166</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_adj_list_chunk_info_reader_html_a129d66a098cc56f83dcb190a1bbc83b0"><div class="ttname"><a href="classgraphar_1_1_adj_list_chunk_info_reader.html#a129d66a098cc56f83dcb190a1bbc83b0">graphar::AdjListChunkInfoReader::next_chunk</a></div><div class="ttdeci">Status next_chunk()</div><div class="ttdef"><b>Definition:</b> <a href="chunk__info__reader_8cc_source.html#l00215">chunk_info_reader.cc:215</a></div></div>

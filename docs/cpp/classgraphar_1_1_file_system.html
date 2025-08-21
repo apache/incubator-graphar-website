@@ -84,6 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfd1a7452cf5d89826ac119b90949956"><td class="memItemLeft" align="right" valign="top">Result&lt; std::shared_ptr&lt; arrow::Table &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#acfd1a7452cf5d89826ac119b90949956">ReadFileToTable</a> (const std::string &amp;path, FileType file_type, const <a class="el" href="structgraphar_1_1util_1_1_filter_options.html">util::FilterOptions</a> &amp;options={}) const noexcept</td></tr>
 <tr class="memdesc:acfd1a7452cf5d89826ac119b90949956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and filter a file as an arrow::Table.  <a href="classgraphar_1_1_file_system.html#acfd1a7452cf5d89826ac119b90949956">More...</a><br /></td></tr>
 <tr class="separator:acfd1a7452cf5d89826ac119b90949956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ce156f6f6a16bedbcf65bccf6b4528"><td class="memItemLeft" align="right" valign="top"><a id="a13ce156f6f6a16bedbcf65bccf6b4528"></a>
+Result&lt; std::shared_ptr&lt; arrow::Table &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ReadFileToTable</b> (const std::string &amp;path, FileType file_type, const std::vector&lt; int &gt; &amp;column_indices) const noexcept</td></tr>
+<tr class="separator:a13ce156f6f6a16bedbcf65bccf6b4528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa014a28119399836283a573c9abd97b7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa014a28119399836283a573c9abd97b7"><td class="memTemplItemLeft" align="right" valign="top">Result&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#aa014a28119399836283a573c9abd97b7">ReadFileToValue</a> (const std::string &amp;path) const noexcept</td></tr>
 <tr class="memdesc:aa014a28119399836283a573c9abd97b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a file and convert its bytes to a value of type T.  <a href="classgraphar_1_1_file_system.html#aa014a28119399836283a573c9abd97b7">More...</a><br /></td></tr>
@@ -92,9 +95,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a474b6e6ba28a0114a1d84f4eb06a211b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#a474b6e6ba28a0114a1d84f4eb06a211b">WriteValueToFile</a> (const T &amp;value, const std::string &amp;path) const noexcept</td></tr>
 <tr class="memdesc:a474b6e6ba28a0114a1d84f4eb06a211b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value of type T to a file.  <a href="classgraphar_1_1_file_system.html#a474b6e6ba28a0114a1d84f4eb06a211b">More...</a><br /></td></tr>
 <tr class="separator:a474b6e6ba28a0114a1d84f4eb06a211b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88ffaca40d40ca34be4eed2ef5802854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#a88ffaca40d40ca34be4eed2ef5802854">WriteTableToFile</a> (const std::shared_ptr&lt; arrow::Table &gt; &amp;table, FileType file_type, const std::string &amp;path) const noexcept</td></tr>
-<tr class="memdesc:a88ffaca40d40ca34be4eed2ef5802854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a table to a file with a specific type.  <a href="classgraphar_1_1_file_system.html#a88ffaca40d40ca34be4eed2ef5802854">More...</a><br /></td></tr>
-<tr class="separator:a88ffaca40d40ca34be4eed2ef5802854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c15ca6b858f7df89eea3e77319decf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#af5c15ca6b858f7df89eea3e77319decf">WriteTableToFile</a> (const std::shared_ptr&lt; arrow::Table &gt; &amp;table, FileType file_type, const std::string &amp;path, const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_writer_options.html">WriterOptions</a> &gt; &amp;options) const noexcept</td></tr>
+<tr class="memdesc:af5c15ca6b858f7df89eea3e77319decf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a table to a file with a specific type.  <a href="classgraphar_1_1_file_system.html#af5c15ca6b858f7df89eea3e77319decf">More...</a><br /></td></tr>
+<tr class="separator:af5c15ca6b858f7df89eea3e77319decf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48927d2fd542cc737cb16b7e529c0b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#ad48927d2fd542cc737cb16b7e529c0b6">WriteLabelTableToFile</a> (const std::shared_ptr&lt; arrow::Table &gt; &amp;table, const std::string &amp;path) const noexcept</td></tr>
+<tr class="memdesc:ad48927d2fd542cc737cb16b7e529c0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a label table to a file with parquet type.  <a href="classgraphar_1_1_file_system.html#ad48927d2fd542cc737cb16b7e529c0b6">More...</a><br /></td></tr>
+<tr class="separator:ad48927d2fd542cc737cb16b7e529c0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab2ff41d0c13cf27b24ec1612817b110"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#aab2ff41d0c13cf27b24ec1612817b110">CopyFile</a> (const std::string &amp;src_path, const std::string &amp;dst_path) const noexcept</td></tr>
 <tr class="separator:aab2ff41d0c13cf27b24ec1612817b110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a293c0415cb3b72795e034f2a08510524"><td class="memItemLeft" align="right" valign="top">Result&lt; IdType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_file_system.html#a293c0415cb3b72795e034f2a08510524">GetFileNumOfDir</a> (const std::string &amp;dir_path, bool recursive=false) const noexcept</td></tr>
@@ -186,7 +192,7 @@ template&lt;&gt; </td></tr>
 <p>Copy a file.</p>
 <p>If the destination exists and is a directory, an <a class="el" href="classgraphar_1_1_status.html#a521553014a9f2a6d44f5d71a91a3cb72">Status::ArrowError</a> is returned. Otherwise, it is replaced. </p>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00259">259</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00309">309</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
 
 </div>
 </div>
@@ -226,7 +232,7 @@ template&lt;&gt; </td></tr>
 <p>Get the number of file of a directory.</p>
 <p>the file is not pure file, it can be a directory or other type of file. </p>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00268">268</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00318">318</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
 
 </div>
 </div>
@@ -281,7 +287,7 @@ template&lt;&gt; </td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result containing a std::shared_ptr to an arrow::Table if successful, or an error <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> if unsuccessful. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00105">105</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00140">140</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
 
 </div>
 </div>
@@ -326,12 +332,60 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result containing the value if successful, or an error <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> if unsuccessful. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00168">168</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00203">203</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
 
 </div>
 </div>
-<a id="a88ffaca40d40ca34be4eed2ef5802854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88ffaca40d40ca34be4eed2ef5802854">&#9670;&nbsp;</a></span>WriteTableToFile()</h2>
+<a id="ad48927d2fd542cc737cb16b7e529c0b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48927d2fd542cc737cb16b7e529c0b6">&#9670;&nbsp;</a></span>WriteLabelTableToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgraphar_1_1_status.html">Status</a> graphar::FileSystem::WriteLabelTableToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; arrow::Table &gt; &amp;&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write a label table to a file with parquet type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_table</td><td>The label table to write. </td></tr>
+    <tr><td class="paramname">path</td><td>The path of the output file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> indicating OK if successful, or an error if unsuccessful. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00291">291</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+
+</div>
+</div>
+<a id="af5c15ca6b858f7df89eea3e77319decf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c15ca6b858f7df89eea3e77319decf">&#9670;&nbsp;</a></span>WriteTableToFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +409,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_writer_options.html">WriterOptions</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -376,12 +436,13 @@ template&lt;typename T &gt; </div>
     <tr><td class="paramname">input_table</td><td>The table to write. </td></tr>
     <tr><td class="paramname">file_type</td><td>The type of the output file. </td></tr>
     <tr><td class="paramname">path</td><td>The path of the output file. </td></tr>
+    <tr><td class="paramname">options</td><td>Options for writing the table, such as compression. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> indicating OK if successful, or an error if unsuccessful. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00213">213</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00248">248</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
 
 </div>
 </div>
@@ -437,7 +498,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> indicating OK if successful, or an error if unsuccessful. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00190">190</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filesystem_8cc_source.html#l00225">225</a> of file <a class="el" href="filesystem_8cc_source.html">filesystem.cc</a>.</p>
 
 </div>
 </div>

@@ -77,9 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afdf1d574ac6a2d69ec0df87df1a6b40a"><td class="memItemLeft" align="right" valign="top"><a id="afdf1d574ac6a2d69ec0df87df1a6b40a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b> (const std::string &amp;graph_name, VertexInfoVector vertex_infos, EdgeInfoVector edge_infos, const std::string &amp;prefix, std::shared_ptr&lt; const <a class="el" href="classgraphar_1_1_info_version.html">InfoVersion</a> &gt; <a class="el" href="classgraphar_1_1_graph_info.html#aeb68a7550c63365d8093136601a3aeee">version</a>, const std::unordered_map&lt; std::string, std::string &gt; &amp;extra_info)</td></tr>
-<tr class="separator:afdf1d574ac6a2d69ec0df87df1a6b40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59019b12332e9f159f80a8b9625f529"><td class="memItemLeft" align="right" valign="top"><a id="ab59019b12332e9f159f80a8b9625f529"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b> (const std::string &amp;graph_name, VertexInfoVector vertex_infos, EdgeInfoVector edge_infos, const std::vector&lt; std::string &gt; &amp;labels, const std::string &amp;prefix, std::shared_ptr&lt; const <a class="el" href="classgraphar_1_1_info_version.html">InfoVersion</a> &gt; <a class="el" href="classgraphar_1_1_graph_info.html#aeb68a7550c63365d8093136601a3aeee">version</a>, const std::unordered_map&lt; std::string, std::string &gt; &amp;extra_info)</td></tr>
+<tr class="separator:ab59019b12332e9f159f80a8b9625f529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad277a1ed26d820a0eaee98c22366948a"><td class="memItemLeft" align="right" valign="top"><a id="ad277a1ed26d820a0eaee98c22366948a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_validated</b> () const noexcept</td></tr>
 <tr class="separator:ad277a1ed26d820a0eaee98c22366948a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -95,6 +95,9 @@ VertexInfoVector&#160;</td><td class="memItemRight" valign="bottom"><b>vertex_in
 <tr class="memitem:a387af371455d0afb0fb8c93d869db602"><td class="memItemLeft" align="right" valign="top"><a id="a387af371455d0afb0fb8c93d869db602"></a>
 EdgeInfoVector&#160;</td><td class="memItemRight" valign="bottom"><b>edge_infos_</b></td></tr>
 <tr class="separator:a387af371455d0afb0fb8c93d869db602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df28cb6ff75a925d9a5e3c8cf2abdf7"><td class="memItemLeft" align="right" valign="top"><a id="a9df28cb6ff75a925d9a5e3c8cf2abdf7"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>labels_</b></td></tr>
+<tr class="separator:a9df28cb6ff75a925d9a5e3c8cf2abdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af431db22635467d23210ff507613dbbe"><td class="memItemLeft" align="right" valign="top"><a id="af431db22635467d23210ff507613dbbe"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>prefix_</b></td></tr>
 <tr class="separator:af431db22635467d23210ff507613dbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,16 +107,16 @@ std::shared_ptr&lt; const <a class="el" href="classgraphar_1_1_info_version.html
 <tr class="memitem:a3cde56d8cfaaf0a2bd7665ba4285897b"><td class="memItemLeft" align="right" valign="top"><a id="a3cde56d8cfaaf0a2bd7665ba4285897b"></a>
 std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>extra_info_</b></td></tr>
 <tr class="separator:a3cde56d8cfaaf0a2bd7665ba4285897b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd04772e469fc4ed94e9c74ac6f92f0d"><td class="memItemLeft" align="right" valign="top"><a id="acd04772e469fc4ed94e9c74ac6f92f0d"></a>
-std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vlabel_to_index_</b></td></tr>
-<tr class="separator:acd04772e469fc4ed94e9c74ac6f92f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afda4cd84b2610c719c171a137f06179c"><td class="memItemLeft" align="right" valign="top"><a id="afda4cd84b2610c719c171a137f06179c"></a>
-std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elabel_to_index_</b></td></tr>
-<tr class="separator:afda4cd84b2610c719c171a137f06179c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e44f170772a6603d5b3e5f0e0a16476"><td class="memItemLeft" align="right" valign="top"><a id="a6e44f170772a6603d5b3e5f0e0a16476"></a>
+std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vtype_to_index_</b></td></tr>
+<tr class="separator:a6e44f170772a6603d5b3e5f0e0a16476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8d8c0f1c8b8b072843d8019fbc20f8"><td class="memItemLeft" align="right" valign="top"><a id="aac8d8c0f1c8b8b072843d8019fbc20f8"></a>
+std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>etype_to_index_</b></td></tr>
+<tr class="separator:aac8d8c0f1c8b8b072843d8019fbc20f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l01053">1053</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l01124">1124</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/graphar/<a class="el" href="graph__info_8cc_source.html">graph_info.cc</a></li>
 </ul>

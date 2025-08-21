@@ -96,6 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32f5e971b9d675f3f1b8154189994226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1builder_1_1_vertex.html#a32f5e971b9d675f3f1b8154189994226">AddProperty</a> (const std::string &amp;name, const std::any &amp;val)</td></tr>
 <tr class="memdesc:a32f5e971b9d675f3f1b8154189994226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a property to the vertex.  <a href="classgraphar_1_1builder_1_1_vertex.html#a32f5e971b9d675f3f1b8154189994226">More...</a><br /></td></tr>
 <tr class="separator:a32f5e971b9d675f3f1b8154189994226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604ead4364b1cec58d80b54a86699f32"><td class="memItemLeft" align="right" valign="top"><a id="a604ead4364b1cec58d80b54a86699f32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddProperty</b> (const Cardinality cardinality, const std::string &amp;name, const std::any &amp;val)</td></tr>
+<tr class="separator:a604ead4364b1cec58d80b54a86699f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25721d8da028bae7459aef802f0964ed"><td class="memItemLeft" align="right" valign="top">const std::any &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1builder_1_1_vertex.html#a25721d8da028bae7459aef802f0964ed">GetProperty</a> (const std::string &amp;property) const</td></tr>
 <tr class="memdesc:a25721d8da028bae7459aef802f0964ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a property of the vertex.  <a href="classgraphar_1_1builder_1_1_vertex.html#a25721d8da028bae7459aef802f0964ed">More...</a><br /></td></tr>
 <tr class="separator:a25721d8da028bae7459aef802f0964ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,11 +108,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa5a0b6642af081eea1faebe3f87d4170"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1builder_1_1_vertex.html#aa5a0b6642af081eea1faebe3f87d4170">ContainProperty</a> (const std::string &amp;property)</td></tr>
 <tr class="memdesc:aa5a0b6642af081eea1faebe3f87d4170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the vertex contains a property.  <a href="classgraphar_1_1builder_1_1_vertex.html#aa5a0b6642af081eea1faebe3f87d4170">More...</a><br /></td></tr>
 <tr class="separator:aa5a0b6642af081eea1faebe3f87d4170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384e08d6b74f28b3a4940bd888eb9be7"><td class="memItemLeft" align="right" valign="top"><a id="a384e08d6b74f28b3a4940bd888eb9be7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsMultiProperty</b> (const std::string &amp;property) const</td></tr>
+<tr class="separator:a384e08d6b74f28b3a4940bd888eb9be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375a826a1cd52cfe1631e9c56f857962"><td class="memTemplParams" colspan="2"><a id="a375a826a1cd52cfe1631e9c56f857962"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a375a826a1cd52cfe1631e9c56f857962"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ValidatePropertyType</b> (const std::string &amp;property, const Cardinality cardinality) const</td></tr>
+<tr class="separator:a375a826a1cd52cfe1631e9c56f857962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99474b6c77f6d9203bf4cbdf5c342090"><td class="memTemplParams" colspan="2"><a id="a99474b6c77f6d9203bf4cbdf5c342090"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a99474b6c77f6d9203bf4cbdf5c342090"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ValidateMultiProperty</b> (const std::string &amp;property) const</td></tr>
+<tr class="separator:a99474b6c77f6d9203bf4cbdf5c342090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fabdb61e645ea25e82857607dbf7ca"><td class="memTemplParams" colspan="2"><a id="a41fabdb61e645ea25e82857607dbf7ca"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a41fabdb61e645ea25e82857607dbf7ca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classgraphar_1_1_status.html">Status</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ValidateMultiPropertySet</b> (const std::string &amp;property) const</td></tr>
+<tr class="separator:a41fabdb61e645ea25e82857607dbf7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classgraphar_1_1builder_1_1_vertex.html" title="Vertex is designed for constructing vertices builder.">Vertex</a> is designed for constructing vertices builder. </p>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00045">45</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00052">52</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4b0c92a74322ce0be53523fd254382f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4b0c92a74322ce0be53523fd254382f">&#9670;&nbsp;</a></span>Vertex()</h2>
@@ -143,7 +161,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00054">54</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00061">61</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -191,7 +209,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00084">84</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00091">91</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +246,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true/false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00115">115</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00144">144</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -258,7 +276,7 @@ Public Member Functions</h2></td></tr>
 <p>Check if the vertex is empty. </p>
 <dl class="section return"><dt>Returns</dt><dd>true/false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00075">75</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00082">82</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +306,7 @@ Public Member Functions</h2></td></tr>
 <p>Get id of the vertex. </p>
 <dl class="section return"><dt>Returns</dt><dd>The id of the vertex. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00061">61</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00068">68</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +336,7 @@ Public Member Functions</h2></td></tr>
 <p>Get all properties of the vertex. </p>
 <dl class="section return"><dt>Returns</dt><dd>The map containing all properties of the vertex. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00104">104</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00133">133</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +373,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value of the property. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00095">95</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00124">124</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +409,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00068">68</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vertices__builder_8h_source.html#l00075">75</a> of file <a class="el" href="vertices__builder_8h_source.html">vertices_builder.h</a>.</p>
 
 </div>
 </div>

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>graphar-commons 0.12.0-SNAPSHOT API  - org.apache.graphar.graph.GraphReader</title>
-          <meta name="description" content="graphar - commons 0.12.0 - SNAPSHOT API - org.apache.graphar.graph.GraphReader" />
-          <meta name="keywords" content="graphar commons 0.12.0 SNAPSHOT API org.apache.graphar.graph.GraphReader" />
+          <title>graphar-commons 0.13.0-SNAPSHOT API  - org.apache.graphar.graph.GraphReader</title>
+          <meta name="description" content="graphar - commons 0.13.0 - SNAPSHOT API - org.apache.graphar.graph.GraphReader" />
+          <meta name="keywords" content="graphar commons 0.13.0 SNAPSHOT API org.apache.graphar.graph.GraphReader" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">graphar-commons 0.12.0-SNAPSHOT API<span id="doc-version"></span></span>
+        <span id="doc-title">graphar-commons 0.13.0-SNAPSHOT API<span id="doc-version"></span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -491,9 +491,29 @@ file.
   The path of the graph info yaml.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
   The Spark session for the loading.</p></dd><dt>returns</dt><dd class="cmt"><p>
   Pair of vertex DataFrames and edge DataFrames, the vertex DataFrames are
-  stored as the map of (vertex_label -&gt; DataFrame) the edge DataFrames are
-  stored as a map of (srcLabel_edgeLabel_dstLabel -&gt; (adj_list_type_str -&gt;
+  stored as the map of (vertex_type -&gt; DataFrame) the edge DataFrames are
+  stored as a map of (srcType_edgeType_dstType -&gt; (adj_list_type_str -&gt;
   DataFrame))</p></dd></dl></div>
+    </li><li name="org.apache.graphar.graph.GraphReader#readVertexWithLabels" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="readVertexWithLabels(prefix:String,vertexInfo:org.apache.graphar.VertexInfo,spark:org.apache.spark.sql.SparkSession):org.apache.spark.sql.DataFrame"></a><a id="readVertexWithLabels(String,VertexInfo,SparkSession):DataFrame"></a>
+      <span class="permalink">
+      <a href="../../../../org/apache/graphar/graph/GraphReader$.html#readVertexWithLabels(prefix:String,vertexInfo:org.apache.graphar.VertexInfo,spark:org.apache.spark.sql.SparkSession):org.apache.spark.sql.DataFrame" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readVertexWithLabels</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="vertexInfo">vertexInfo: <a href="../VertexInfo.html" class="extype" name="org.apache.graphar.VertexInfo">VertexInfo</a></span>, <span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Loads the vertex chunks as DataFrame with the vertex infos.</p><div class="fullcomment"><div class="comment cmt"><p>Loads the vertex chunks as DataFrame with the vertex infos.
+</p></div><dl class="paramcmts block"><dt class="param">prefix</dt><dd class="cmt"><p>
+  The absolute prefix.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
+  The Spark session for the reading.</p></dd><dt>returns</dt><dd class="cmt"><p>
+  The map of (vertex type -&gt; DataFrame)</p></dd></dl></div>
     </li><li name="org.apache.graphar.graph.GraphReader#readWithGraphInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="readWithGraphInfo(graphInfo:org.apache.graphar.GraphInfo,spark:org.apache.spark.sql.SparkSession):(Map[String,org.apache.spark.sql.DataFrame],Map[(String,String,String),Map[String,org.apache.spark.sql.DataFrame]])"></a><a id="readWithGraphInfo(GraphInfo,SparkSession):(Map[String,DataFrame],Map[(String,String,String),Map[String,DataFrame]])"></a>
       <span class="permalink">
@@ -514,8 +534,8 @@ file.
   The info object for the graph.</p></dd><dt class="param">spark</dt><dd class="cmt"><p>
   The Spark session for the loading.</p></dd><dt>returns</dt><dd class="cmt"><p>
   Pair of vertex DataFrames and edge DataFrames, the vertex DataFrames are
-  stored as the map of (vertex_label -&gt; DataFrame) the edge DataFrames are
-  stored as a map of ((srcLabel, edgeLabel, dstLabel) -&gt; (adj_list_type_str
+  stored as the map of (vertex_type -&gt; DataFrame) the edge DataFrames are
+  stored as a map of ((srcType, edgeType, dstType) -&gt; (adj_list_type_str
 -&gt; DataFrame))</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>

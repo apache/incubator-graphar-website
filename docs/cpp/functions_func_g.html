@@ -81,7 +81,7 @@ $(function() {
 , <a class="el" href="classgraphar_1_1_adj_list_offset_chunk_info_reader.html#a866bfde2e4305acc831419aac69f8a42">graphar::AdjListOffsetChunkInfoReader</a>
 , <a class="el" href="classgraphar_1_1_adj_list_property_arrow_chunk_reader.html#a5f7a1597be255fbb0843168e7a86bbbf">graphar::AdjListPropertyArrowChunkReader</a>
 , <a class="el" href="classgraphar_1_1_adj_list_property_chunk_info_reader.html#a7cf6e34cd64f586952b77e6646a49121">graphar::AdjListPropertyChunkInfoReader</a>
-, <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a2ea3922fbf36ce3cf67d65a9f9b3f867">graphar::VertexPropertyArrowChunkReader</a>
+, <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a94cb9291c735ccf95ae110fe88b35f85">graphar::VertexPropertyArrowChunkReader</a>
 , <a class="el" href="classgraphar_1_1_vertex_property_chunk_info_reader.html#a97f74b38df8d7a400837e7db8349f5a7">graphar::VertexPropertyChunkInfoReader</a>
 </li>
 <li>GetChunkIndex()
@@ -101,26 +101,26 @@ $(function() {
 <li>GetDstChunkSize()
 : <a class="el" href="classgraphar_1_1_edge_info.html#abe0fc6672a3fbb5fbd0b5e8775cb8dac">graphar::EdgeInfo</a>
 </li>
-<li>GetDstLabel()
-: <a class="el" href="classgraphar_1_1_edge_info.html#adbe6033ef1bb9e434f365667820fc1e6">graphar::EdgeInfo</a>
+<li>GetDstType()
+: <a class="el" href="classgraphar_1_1_edge_info.html#ac03180737adf29c79196bbe729b3c929">graphar::EdgeInfo</a>
 </li>
 <li>GetEdgeInfo()
-: <a class="el" href="classgraphar_1_1_graph_info.html#a328ba831c296a9181ba2934aa7eb2793">graphar::GraphInfo</a>
+: <a class="el" href="classgraphar_1_1_graph_info.html#a7e660710d2e1bd244b5d28bdc68aeab2">graphar::GraphInfo</a>
 </li>
 <li>GetEdgeInfoByIndex()
 : <a class="el" href="classgraphar_1_1_graph_info.html#afd61923bd9ff1f5329b1c93ebbcd0278">graphar::GraphInfo</a>
 </li>
 <li>GetEdgeInfoIndex()
-: <a class="el" href="classgraphar_1_1_graph_info.html#a6c38f79f5825b12cb6ed412a7afbe035">graphar::GraphInfo</a>
+: <a class="el" href="classgraphar_1_1_graph_info.html#aa2ca1614d499facc76927b5de733b503">graphar::GraphInfo</a>
 </li>
 <li>GetEdgeInfos()
 : <a class="el" href="classgraphar_1_1_graph_info.html#a14dbabaec827198ee822070c1077a570">graphar::GraphInfo</a>
 </li>
-<li>GetEdgeLabel()
-: <a class="el" href="classgraphar_1_1_edge_info.html#af703571fba2a146a32138eac2871d8f0">graphar::EdgeInfo</a>
-</li>
 <li>GetEdgesNumFilePath()
 : <a class="el" href="classgraphar_1_1_edge_info.html#a4f2c7fedc68dce8f1c7fb90eede9906f">graphar::EdgeInfo</a>
+</li>
+<li>GetEdgeType()
+: <a class="el" href="classgraphar_1_1_edge_info.html#a03c9b4f4b0edcf47f2e5746e8f9f6db0">graphar::EdgeInfo</a>
 </li>
 <li>GetExtraInfo()
 : <a class="el" href="classgraphar_1_1_graph_info.html#aa0856ec7ecc8d8d1aac2f7cd51cfe136">graphar::GraphInfo</a>
@@ -138,8 +138,15 @@ $(function() {
 <li>GetId()
 : <a class="el" href="classgraphar_1_1builder_1_1_vertex.html#a2779cc7a62e888d2d768edcfd04e75bb">graphar::builder::Vertex</a>
 </li>
-<li>GetLabel()
-: <a class="el" href="classgraphar_1_1_vertex_info.html#a95e69e5aa52f8c587773f7ce9b9b672a">graphar::VertexInfo</a>
+<li>GetLabelChunk()
+: <a class="el" href="classgraphar_1_1_vertex_property_arrow_chunk_reader.html#a382bd12cf864d14d053d6159a54d5b11">graphar::VertexPropertyArrowChunkReader</a>
+</li>
+<li>GetLabels()
+: <a class="el" href="classgraphar_1_1_graph_info.html#a8b057bb6c3cfd897b0fb31ecceea40c9">graphar::GraphInfo</a>
+, <a class="el" href="classgraphar_1_1_vertex_info.html#a34a49ce4905632889db3f969986cbe75">graphar::VertexInfo</a>
+</li>
+<li>GetLabelTable()
+: <a class="el" href="classgraphar_1_1_vertex_property_writer.html#a66aaa3cb378175cd0addee461191c180">graphar::VertexPropertyWriter</a>
 </li>
 <li>GetName()
 : <a class="el" href="classgraphar_1_1_graph_info.html#ab10cb1ceaa01a74d44c1076c43c2fcce">graphar::GraphInfo</a>
@@ -201,11 +208,12 @@ $(function() {
 <li>GetSrcChunkSize()
 : <a class="el" href="classgraphar_1_1_edge_info.html#ac07ad975e8ecbdb779038388e3def59e">graphar::EdgeInfo</a>
 </li>
-<li>GetSrcLabel()
-: <a class="el" href="classgraphar_1_1_edge_info.html#aca715a7d7109c7acd76b26b57d263d7f">graphar::EdgeInfo</a>
+<li>GetSrcType()
+: <a class="el" href="classgraphar_1_1_edge_info.html#a994023f50f2f952cc1361b0f9928dec4">graphar::EdgeInfo</a>
 </li>
 <li>GetType()
 : <a class="el" href="classgraphar_1_1_adjacent_list.html#a3d4b038f759cceb75cd38c30414c444b">graphar::AdjacentList</a>
+, <a class="el" href="classgraphar_1_1_vertex_info.html#a2364ef208346bbd4d468ee78cfc6a1a3">graphar::VertexInfo</a>
 </li>
 <li>GetValidateLevel()
 : <a class="el" href="classgraphar_1_1builder_1_1_edges_builder.html#a865a2585b6bbf41f1f3ebf7f64932db9">graphar::builder::EdgesBuilder</a>
@@ -214,13 +222,13 @@ $(function() {
 , <a class="el" href="classgraphar_1_1_vertex_property_writer.html#a1f4a62c950ac2d71204a1e0ecf4b4787">graphar::VertexPropertyWriter</a>
 </li>
 <li>GetVertexInfo()
-: <a class="el" href="classgraphar_1_1_graph_info.html#aebde9b2b1b1b638d2ee45a5f466c2a23">graphar::GraphInfo</a>
+: <a class="el" href="classgraphar_1_1_graph_info.html#a8799b4b1a2163507a9ddd8f910d4a9d3">graphar::GraphInfo</a>
 </li>
 <li>GetVertexInfoByIndex()
 : <a class="el" href="classgraphar_1_1_graph_info.html#a3a94e3d0f64a1b4d1b672676940c389f">graphar::GraphInfo</a>
 </li>
 <li>GetVertexInfoIndex()
-: <a class="el" href="classgraphar_1_1_graph_info.html#a13ede9ba5cc6a4a53b57e7c9bcf8a09f">graphar::GraphInfo</a>
+: <a class="el" href="classgraphar_1_1_graph_info.html#a0f03270a6ee9c084dab10421cdf69cd5">graphar::GraphInfo</a>
 </li>
 <li>GetVertexInfos()
 : <a class="el" href="classgraphar_1_1_graph_info.html#a9393d2797ff5d77f66691f84f15007c4">graphar::GraphInfo</a>
@@ -229,11 +237,15 @@ $(function() {
 : <a class="el" href="classgraphar_1_1_edge_info.html#aec1a622c83b14d62b26e7143850a3cf1">graphar::EdgeInfo</a>
 , <a class="el" href="classgraphar_1_1_vertex_info.html#aad61b0a40a4bef344fad93cb1332d97d">graphar::VertexInfo</a>
 </li>
+<li>GetWriterOptions()
+: <a class="el" href="classgraphar_1_1builder_1_1_edges_builder.html#a4b167ea0366c84cc6057ad0ae7f53cde">graphar::builder::EdgesBuilder</a>
+, <a class="el" href="classgraphar_1_1builder_1_1_vertices_builder.html#ac53141acf10d53d62cb29ddde271c37a">graphar::builder::VerticesBuilder</a>
+</li>
 <li>global_chunk_index()
 : <a class="el" href="classgraphar_1_1_edge_iter.html#a8c49318f5a8d5484463cb3a2a58d861a">graphar::EdgeIter</a>
 </li>
 <li>GraphInfo()
-: <a class="el" href="classgraphar_1_1_graph_info.html#ab5e1abfc9b0c44550931d0ae2b2fc8b9">graphar::GraphInfo</a>
+: <a class="el" href="classgraphar_1_1_graph_info.html#a1b473deea923f7b2a57c339dc7e51192">graphar::GraphInfo</a>
 </li>
 </ul>
 </div><!-- contents -->
