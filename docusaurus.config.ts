@@ -112,11 +112,14 @@ const config: Config = {
               label: 'C++ Library',
               to: 'pathname:///docs/cpp/index.html'
             },
-            // TODO: Add Java library when it is available
-            // {
-            //   label: 'Java Library',
-            //  to: 'pathname:///docs/java/'
-            // },
+            {
+              label: 'Java-FFI Library',
+             to: 'pathname:///docs/java-ffi'
+            },
+            {
+              label: 'Java-info Library',
+             to: 'pathname:///docs/java-info'
+            },
             {
               label: 'Spark Library',
               to: 'pathname:///docs/spark/org/apache/graphar/index.html'
