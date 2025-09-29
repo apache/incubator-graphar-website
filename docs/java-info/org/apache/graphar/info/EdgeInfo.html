@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10};
+var data = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -264,19 +264,19 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dump(java.io.Writer)">dump</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Writer.html?is-external=true" title="class or interface in java.io" class="externalLink">Writer</a>&nbsp;output)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="AdjacentList.html" title="class in org.apache.graphar.info">AdjacentList</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdjacentList(org.apache.graphar.info.type.AdjListType)">getAdjacentList</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdjacentListChunkPath(org.apache.graphar.info.type.AdjListType,long)">getAdjacentListChunkPath</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
-                        long&nbsp;vertexChunkIndex)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdjacentListPrefix(org.apache.graphar.info.type.AdjListType)">getAdjacentListPrefix</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdjacentListChunkUri(org.apache.graphar.info.type.AdjListType,long)">getAdjacentListChunkUri</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
+                       long&nbsp;vertexChunkIndex)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
@@ -286,75 +286,75 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBaseUri()">getBaseUri</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAdjacentListUri(org.apache.graphar.info.type.AdjListType)">getAdjacentListUri</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBaseUri()">getBaseUri</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChunkSize()">getChunkSize</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getConcat()">getConcat</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDstChunkSize()">getDstChunkSize</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDstType()">getDstType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEdgesNumFilePath(org.apache.graphar.info.type.AdjListType,long)">getEdgesNumFilePath</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
-                   long&nbsp;vertexChunkIndex)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEdgesNumFileUri(org.apache.graphar.info.type.AdjListType,long)">getEdgesNumFileUri</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
+                  long&nbsp;vertexChunkIndex)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEdgeType()">getEdgeType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOffsetChunkPath(org.apache.graphar.info.type.AdjListType,long)">getOffsetChunkPath</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
-                  long&nbsp;vertexChunkIndex)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOffsetPrefix(org.apache.graphar.info.type.AdjListType)">getOffsetPrefix</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOffsetChunkUri(org.apache.graphar.info.type.AdjListType,long)">getOffsetChunkUri</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
+                 long&nbsp;vertexChunkIndex)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOffsetUri(org.apache.graphar.info.type.AdjListType)">getOffsetUri</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPrefix()">getPrefix</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroup(java.lang.String)">getPropertyGroup</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;property)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroupChunkPath(org.apache.graphar.info.PropertyGroup,long)">getPropertyGroupChunkPath</a></span>&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup,
-                         long&nbsp;chunkIndex)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr id="i21" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroupNum()">getPropertyGroupNum</a></span>()</code></th>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroupChunkUri(org.apache.graphar.info.PropertyGroup,long)">getPropertyGroupChunkUri</a></span>&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup,
+                        long&nbsp;chunkIndex)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroupPrefix(org.apache.graphar.info.PropertyGroup)">getPropertyGroupPrefix</a></span>&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup)</code></th>
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroupNum()">getPropertyGroupNum</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
@@ -363,58 +363,68 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyGroupUri(org.apache.graphar.info.PropertyGroup)">getPropertyGroupUri</a></span>&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="type/DataType.html" title="enum in org.apache.graphar.info.type">DataType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPropertyType(java.lang.String)">getPropertyType</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSrcChunkSize()">getSrcChunkSize</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSrcType()">getSrcType</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="VersionInfo.html" title="class in org.apache.graphar.info">VersionInfo</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVersion()">getVersion</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i28" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVerticesNumFilePath(org.apache.graphar.info.type.AdjListType)">getVerticesNumFilePath</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr id="i29" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasAdjListType(org.apache.graphar.info.type.AdjListType)">hasAdjListType</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVerticesNumFileUri(org.apache.graphar.info.type.AdjListType)">getVerticesNumFileUri</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasProperty(java.lang.String)">hasProperty</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasAdjListType(org.apache.graphar.info.type.AdjListType)">hasAdjListType</a></span>&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasPropertyGroup(org.apache.graphar.info.PropertyGroup)">hasPropertyGroup</a></span>&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasProperty(java.lang.String)">hasProperty</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDirected()">isDirected</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasPropertyGroup(org.apache.graphar.info.PropertyGroup)">hasPropertyGroup</a></span>&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNullableKey(java.lang.String)">isNullableKey</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDirected()">isDirected</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNullableKey(java.lang.String)">isNullableKey</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i35" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPrimaryKey(java.lang.String)">isPrimaryKey</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i36" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isValidated()">isValidated</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -564,6 +574,33 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasProperty&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
 </li>
 </ul>
+<a id="getPropertyType(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPropertyType</h4>
+<pre class="methodSignature">public&nbsp;<a href="type/DataType.html" title="enum in org.apache.graphar.info.type">DataType</a>&nbsp;getPropertyType&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
+</li>
+</ul>
+<a id="isPrimaryKey(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isPrimaryKey</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isPrimaryKey&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
+</li>
+</ul>
+<a id="isNullableKey(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isNullableKey</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isNullableKey&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
+</li>
+</ul>
 <a id="hasPropertyGroup(org.apache.graphar.info.PropertyGroup)">
 <!--   -->
 </a>
@@ -600,107 +637,89 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;getPropertyGroup&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;property)</pre>
 </li>
 </ul>
-<a id="getPropertyGroupPrefix(org.apache.graphar.info.PropertyGroup)">
+<a id="getPropertyGroupUri(org.apache.graphar.info.PropertyGroup)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getPropertyGroupPrefix</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getPropertyGroupPrefix&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup)</pre>
+<h4>getPropertyGroupUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getPropertyGroupUri&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup)</pre>
 </li>
 </ul>
-<a id="getPropertyGroupChunkPath(org.apache.graphar.info.PropertyGroup,long)">
+<a id="getPropertyGroupChunkUri(org.apache.graphar.info.PropertyGroup,long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getPropertyGroupChunkPath</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getPropertyGroupChunkPath&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup,
-                                     long&nbsp;chunkIndex)</pre>
+<h4>getPropertyGroupChunkUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getPropertyGroupChunkUri&#8203;(<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&nbsp;propertyGroup,
+                                    long&nbsp;chunkIndex)</pre>
 </li>
 </ul>
-<a id="getAdjacentListPrefix(org.apache.graphar.info.type.AdjListType)">
+<a id="getAdjacentListUri(org.apache.graphar.info.type.AdjListType)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getAdjacentListPrefix</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getAdjacentListPrefix&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</pre>
+<h4>getAdjacentListUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getAdjacentListUri&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</pre>
 </li>
 </ul>
-<a id="getAdjacentListChunkPath(org.apache.graphar.info.type.AdjListType,long)">
+<a id="getAdjacentListChunkUri(org.apache.graphar.info.type.AdjListType,long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getAdjacentListChunkPath</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getAdjacentListChunkPath&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
-                                    long&nbsp;vertexChunkIndex)</pre>
+<h4>getAdjacentListChunkUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getAdjacentListChunkUri&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
+                                   long&nbsp;vertexChunkIndex)</pre>
 </li>
 </ul>
-<a id="getOffsetPrefix(org.apache.graphar.info.type.AdjListType)">
+<a id="getOffsetUri(org.apache.graphar.info.type.AdjListType)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getOffsetPrefix</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getOffsetPrefix&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</pre>
+<h4>getOffsetUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getOffsetUri&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</pre>
 </li>
 </ul>
-<a id="getOffsetChunkPath(org.apache.graphar.info.type.AdjListType,long)">
+<a id="getOffsetChunkUri(org.apache.graphar.info.type.AdjListType,long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getOffsetChunkPath</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getOffsetChunkPath&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
+<h4>getOffsetChunkUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getOffsetChunkUri&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
+                             long&nbsp;vertexChunkIndex)</pre>
+</li>
+</ul>
+<a id="getVerticesNumFileUri(org.apache.graphar.info.type.AdjListType)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVerticesNumFileUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getVerticesNumFileUri&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</pre>
+</li>
+</ul>
+<a id="getEdgesNumFileUri(org.apache.graphar.info.type.AdjListType,long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEdgesNumFileUri</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getEdgesNumFileUri&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
                               long&nbsp;vertexChunkIndex)</pre>
 </li>
 </ul>
-<a id="getVerticesNumFilePath(org.apache.graphar.info.type.AdjListType)">
+<a id="dump(java.io.Writer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getVerticesNumFilePath</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getVerticesNumFilePath&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType)</pre>
-</li>
-</ul>
-<a id="getEdgesNumFilePath(org.apache.graphar.info.type.AdjListType,long)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getEdgesNumFilePath</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;getEdgesNumFilePath&#8203;(<a href="type/AdjListType.html" title="enum in org.apache.graphar.info.type">AdjListType</a>&nbsp;adjListType,
-                               long&nbsp;vertexChunkIndex)</pre>
-</li>
-</ul>
-<a id="getPropertyType(java.lang.String)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPropertyType</h4>
-<pre class="methodSignature">public&nbsp;<a href="type/DataType.html" title="enum in org.apache.graphar.info.type">DataType</a>&nbsp;getPropertyType&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
-</li>
-</ul>
-<a id="isPrimaryKey(java.lang.String)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isPrimaryKey</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isPrimaryKey&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
-</li>
-</ul>
-<a id="isNullableKey(java.lang.String)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isNullableKey</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isNullableKey&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
+<h4>dump</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;dump&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Writer.html?is-external=true" title="class or interface in java.io" class="externalLink">Writer</a>&nbsp;output)</pre>
 </li>
 </ul>
 <a id="dump()">
@@ -823,10 +842,19 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <a id="getPropertyGroups()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getPropertyGroups</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="PropertyGroup.html" title="class in org.apache.graphar.info">PropertyGroup</a>&gt;&nbsp;getPropertyGroups()</pre>
+</li>
+</ul>
+<a id="isValidated()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isValidated</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isValidated()</pre>
 </li>
 </ul>
 </li>

@@ -115,6 +115,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<th class="colFirst" scope="row"><a href="#org.apache.graphar.info.saver">org.apache.graphar.info.saver</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="#org.apache.graphar.info.yaml">org.apache.graphar.info.yaml</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -188,6 +192,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfo.</span><code><span class="memberNameLink"><a href="../GraphInfo.html#addEdgeAsNew(org.apache.graphar.info.EdgeInfo)">addEdgeAsNew</a></span>&#8203;(<a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;edgeInfo)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfo.</span><code><span class="memberNameLink"><a href="../GraphInfo.html#getStoreUri(org.apache.graphar.info.EdgeInfo)">getStoreUri</a></span>&#8203;(<a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;edgeInfo)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfo.</span><code><span class="memberNameLink"><a href="../GraphInfo.html#setStoreUri(org.apache.graphar.info.EdgeInfo,java.net.URI)">setStoreUri</a></span>&#8203;(<a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;edgeInfo,
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;storeUri)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -206,8 +221,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a></code></td>
-<th class="colSecond" scope="row"><span class="typeNameLabel">BaseGraphInfoLoader.</span><code><span class="memberNameLink"><a href="../loader/BaseGraphInfoLoader.html#buildEdgeInfoFromGraphYaml(org.apache.graphar.info.yaml.EdgeYaml)">buildEdgeInfoFromGraphYaml</a></span>&#8203;(<a href="../yaml/EdgeYaml.html" title="class in org.apache.graphar.info.yaml">EdgeYaml</a>&nbsp;edgeYaml)</code></th>
+<td class="colFirst"><code>protected <a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">BaseGraphInfoLoader.</span><code><span class="memberNameLink"><a href="../loader/BaseGraphInfoLoader.html#buildEdgeInfoFromEdgeYaml(org.apache.graphar.info.yaml.EdgeYaml)">buildEdgeInfoFromEdgeYaml</a></span>&#8203;(<a href="../yaml/EdgeYaml.html" title="class in org.apache.graphar.info.yaml">EdgeYaml</a>&nbsp;edgeYaml)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -233,6 +248,35 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">StringGraphInfoLoader.</span><code><span class="memberNameLink"><a href="../loader/StringGraphInfoLoader.html#loadEdgeInfo(java.net.URI)">loadEdgeInfo</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;edgeYamlUri)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</section>
+</li>
+<li class="blockList">
+<section><a id="org.apache.graphar.info.saver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a> in <a href="../saver/package-summary.html">org.apache.graphar.info.saver</a></h3>
+<table class="useSummary">
+<caption><span>Methods in <a href="../saver/package-summary.html">org.apache.graphar.info.saver</a> with parameters of type <a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">BaseGraphInfoSaver.</span><code><span class="memberNameLink"><a href="../saver/BaseGraphInfoSaver.html#save(java.net.URI,org.apache.graphar.info.EdgeInfo)">save</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;edgeInfoUri,
+    <a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;edgeInfo)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfoSaver.</span><code><span class="memberNameLink"><a href="../saver/GraphInfoSaver.html#save(java.net.URI,org.apache.graphar.info.EdgeInfo)">save</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;edgeInfoUri,
+    <a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;edgeInfo)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>

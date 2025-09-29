@@ -185,19 +185,19 @@ implements <a href="GraphInfoLoader.html" title="interface in org.apache.graphar
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildEdgeInfoFromGraphYaml(org.apache.graphar.info.yaml.EdgeYaml)">buildEdgeInfoFromGraphYaml</a></span>&#8203;(<a href="../yaml/EdgeYaml.html" title="class in org.apache.graphar.info.yaml">EdgeYaml</a>&nbsp;edgeYaml)</code></th>
+<td class="colFirst"><code>protected <a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildEdgeInfoFromEdgeYaml(org.apache.graphar.info.yaml.EdgeYaml)">buildEdgeInfoFromEdgeYaml</a></span>&#8203;(<a href="../yaml/EdgeYaml.html" title="class in org.apache.graphar.info.yaml">EdgeYaml</a>&nbsp;edgeYaml)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../GraphInfo.html" title="class in org.apache.graphar.info">GraphInfo</a></code></td>
+<td class="colFirst"><code>protected <a href="../GraphInfo.html" title="class in org.apache.graphar.info">GraphInfo</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildGraphInfoFromGraphYaml(java.net.URI,org.apache.graphar.info.yaml.GraphYaml)">buildGraphInfoFromGraphYaml</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;baseUri,
                            <a href="../yaml/GraphYaml.html" title="class in org.apache.graphar.info.yaml">GraphYaml</a>&nbsp;graphYaml)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildVertexInfoFromGraphYaml(org.apache.graphar.info.yaml.VertexYaml)">buildVertexInfoFromGraphYaml</a></span>&#8203;(<a href="../yaml/VertexYaml.html" title="class in org.apache.graphar.info.yaml">VertexYaml</a>&nbsp;vertexYaml)</code></th>
+<td class="colFirst"><code>protected <a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#buildVertexInfoFromVertexYaml(org.apache.graphar.info.yaml.VertexYaml)">buildVertexInfoFromVertexYaml</a></span>&#8203;(<a href="../yaml/VertexYaml.html" title="class in org.apache.graphar.info.yaml">VertexYaml</a>&nbsp;vertexYaml)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -312,31 +312,31 @@ implements <a href="GraphInfoLoader.html" title="interface in org.apache.graphar
 <ul class="blockList">
 <li class="blockList">
 <h4>buildGraphInfoFromGraphYaml</h4>
-<pre class="methodSignature">public&nbsp;<a href="../GraphInfo.html" title="class in org.apache.graphar.info">GraphInfo</a>&nbsp;buildGraphInfoFromGraphYaml&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;baseUri,
-                                             <a href="../yaml/GraphYaml.html" title="class in org.apache.graphar.info.yaml">GraphYaml</a>&nbsp;graphYaml)
-                                      throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<pre class="methodSignature">protected&nbsp;<a href="../GraphInfo.html" title="class in org.apache.graphar.info">GraphInfo</a>&nbsp;buildGraphInfoFromGraphYaml&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;baseUri,
+                                                <a href="../yaml/GraphYaml.html" title="class in org.apache.graphar.info.yaml">GraphYaml</a>&nbsp;graphYaml)
+                                         throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a id="buildVertexInfoFromGraphYaml(org.apache.graphar.info.yaml.VertexYaml)">
+<a id="buildVertexInfoFromVertexYaml(org.apache.graphar.info.yaml.VertexYaml)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>buildVertexInfoFromGraphYaml</h4>
-<pre class="methodSignature">public&nbsp;<a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;buildVertexInfoFromGraphYaml&#8203;(<a href="../yaml/VertexYaml.html" title="class in org.apache.graphar.info.yaml">VertexYaml</a>&nbsp;vertexYaml)</pre>
+<h4>buildVertexInfoFromVertexYaml</h4>
+<pre class="methodSignature">protected&nbsp;<a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;buildVertexInfoFromVertexYaml&#8203;(<a href="../yaml/VertexYaml.html" title="class in org.apache.graphar.info.yaml">VertexYaml</a>&nbsp;vertexYaml)</pre>
 </li>
 </ul>
-<a id="buildEdgeInfoFromGraphYaml(org.apache.graphar.info.yaml.EdgeYaml)">
+<a id="buildEdgeInfoFromEdgeYaml(org.apache.graphar.info.yaml.EdgeYaml)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>buildEdgeInfoFromGraphYaml</h4>
-<pre class="methodSignature">public&nbsp;<a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;buildEdgeInfoFromGraphYaml&#8203;(<a href="../yaml/EdgeYaml.html" title="class in org.apache.graphar.info.yaml">EdgeYaml</a>&nbsp;edgeYaml)</pre>
+<h4>buildEdgeInfoFromEdgeYaml</h4>
+<pre class="methodSignature">protected&nbsp;<a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&nbsp;buildEdgeInfoFromEdgeYaml&#8203;(<a href="../yaml/EdgeYaml.html" title="class in org.apache.graphar.info.yaml">EdgeYaml</a>&nbsp;edgeYaml)</pre>
 </li>
 </ul>
 </li>

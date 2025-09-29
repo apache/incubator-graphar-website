@@ -115,6 +115,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<th class="colFirst" scope="row"><a href="#org.apache.graphar.info.saver">org.apache.graphar.info.saver</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="#org.apache.graphar.info.yaml">org.apache.graphar.info.yaml</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -176,6 +180,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfo.</span><code><span class="memberNameLink"><a href="../GraphInfo.html#addVertexAsNew(org.apache.graphar.info.VertexInfo)">addVertexAsNew</a></span>&#8203;(<a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;vertexInfo)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfo.</span><code><span class="memberNameLink"><a href="../GraphInfo.html#getStoreUri(org.apache.graphar.info.VertexInfo)">getStoreUri</a></span>&#8203;(<a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;vertexInfo)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfo.</span><code><span class="memberNameLink"><a href="../GraphInfo.html#setStoreUri(org.apache.graphar.info.VertexInfo,java.net.URI)">setStoreUri</a></span>&#8203;(<a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;vertexInfo,
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;storeUri)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary">
@@ -201,6 +216,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;version)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="../GraphInfo.html#%3Cinit%3E(java.lang.String,java.util.Map,java.util.Map,java.net.URI,java.lang.String)">GraphInfo</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>,&#8203;<a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&gt;&nbsp;vertexInfos,
+         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>,&#8203;<a href="../EdgeInfo.html" title="class in org.apache.graphar.info">EdgeInfo</a>&gt;&nbsp;edgeInfos,
+         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;uri,
+         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;version)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -219,8 +242,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a></code></td>
-<th class="colSecond" scope="row"><span class="typeNameLabel">BaseGraphInfoLoader.</span><code><span class="memberNameLink"><a href="../loader/BaseGraphInfoLoader.html#buildVertexInfoFromGraphYaml(org.apache.graphar.info.yaml.VertexYaml)">buildVertexInfoFromGraphYaml</a></span>&#8203;(<a href="../yaml/VertexYaml.html" title="class in org.apache.graphar.info.yaml">VertexYaml</a>&nbsp;vertexYaml)</code></th>
+<td class="colFirst"><code>protected <a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">BaseGraphInfoLoader.</span><code><span class="memberNameLink"><a href="../loader/BaseGraphInfoLoader.html#buildVertexInfoFromVertexYaml(org.apache.graphar.info.yaml.VertexYaml)">buildVertexInfoFromVertexYaml</a></span>&#8203;(<a href="../yaml/VertexYaml.html" title="class in org.apache.graphar.info.yaml">VertexYaml</a>&nbsp;vertexYaml)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -246,6 +269,35 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a></code></td>
 <th class="colSecond" scope="row"><span class="typeNameLabel">StringGraphInfoLoader.</span><code><span class="memberNameLink"><a href="../loader/StringGraphInfoLoader.html#loadVertexInfo(java.net.URI)">loadVertexInfo</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;vertexYamlUri)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</section>
+</li>
+<li class="blockList">
+<section><a id="org.apache.graphar.info.saver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a> in <a href="../saver/package-summary.html">org.apache.graphar.info.saver</a></h3>
+<table class="useSummary">
+<caption><span>Methods in <a href="../saver/package-summary.html">org.apache.graphar.info.saver</a> with parameters of type <a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">BaseGraphInfoSaver.</span><code><span class="memberNameLink"><a href="../saver/BaseGraphInfoSaver.html#save(java.net.URI,org.apache.graphar.info.VertexInfo)">save</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;vertexInfoUri,
+    <a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;vertexInfo)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">GraphInfoSaver.</span><code><span class="memberNameLink"><a href="../saver/GraphInfoSaver.html#save(java.net.URI,org.apache.graphar.info.VertexInfo)">save</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html?is-external=true" title="class or interface in java.net" class="externalLink">URI</a>&nbsp;vertexInfoUri,
+    <a href="../VertexInfo.html" title="class in org.apache.graphar.info">VertexInfo</a>&nbsp;vertexInfo)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>

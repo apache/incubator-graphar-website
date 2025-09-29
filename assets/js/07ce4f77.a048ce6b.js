@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapache_website_template=self.webpackChunkapache_website_template||[]).push([[212],{6712:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/lakehouse","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
