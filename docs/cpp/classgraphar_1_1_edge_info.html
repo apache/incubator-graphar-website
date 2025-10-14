@@ -93,8 +93,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3c32f3112dcf08304676eeb95545b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5b4fdc98d8399564396fb63955c62a"><td class="memItemLeft" align="right" valign="top">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_edge_info.html">EdgeInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_info.html#a6e5b4fdc98d8399564396fb63955c62a">AddAdjacentList</a> (std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_adjacent_list.html">AdjacentList</a> &gt; adj_list) const</td></tr>
 <tr class="separator:a6e5b4fdc98d8399564396fb63955c62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db36496a4cf0eb517b463de5caa125f"><td class="memItemLeft" align="right" valign="top">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_edge_info.html">EdgeInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_info.html#a7db36496a4cf0eb517b463de5caa125f">RemoveAdjacentList</a> (std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_adjacent_list.html">AdjacentList</a> &gt; adj_list) const</td></tr>
+<tr class="memdesc:a7db36496a4cf0eb517b463de5caa125f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an adjacency list from the <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> instance and returns a new <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a>.  <a href="classgraphar_1_1_edge_info.html#a7db36496a4cf0eb517b463de5caa125f">More...</a><br /></td></tr>
+<tr class="separator:a7db36496a4cf0eb517b463de5caa125f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9620f838addfdcb892b30e80e2cc4239"><td class="memItemLeft" align="right" valign="top">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_edge_info.html">EdgeInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_info.html#a9620f838addfdcb892b30e80e2cc4239">AddPropertyGroup</a> (std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; property_group) const</td></tr>
 <tr class="separator:a9620f838addfdcb892b30e80e2cc4239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264853429b84060bbe36c671d5bc8963"><td class="memItemLeft" align="right" valign="top">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_edge_info.html">EdgeInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_info.html#a264853429b84060bbe36c671d5bc8963">RemovePropertyGroup</a> (std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt; property_group) const</td></tr>
+<tr class="memdesc:a264853429b84060bbe36c671d5bc8963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a property group from the <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> instance and returns a new <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a>.  <a href="classgraphar_1_1_edge_info.html#a264853429b84060bbe36c671d5bc8963">More...</a><br /></td></tr>
+<tr class="separator:a264853429b84060bbe36c671d5bc8963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a994023f50f2f952cc1361b0f9928dec4"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_info.html#a994023f50f2f952cc1361b0f9928dec4">GetSrcType</a> () const</td></tr>
 <tr class="separator:a994023f50f2f952cc1361b0f9928dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03c9b4f4b0edcf47f2e5746e8f9f6db0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphar_1_1_edge_info.html#a03c9b4f4b0edcf47f2e5746e8f9f6db0">GetEdgeType</a> () const</td></tr>
@@ -183,7 +189,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> is a class to describe the edge information, including the source vertex type, edge type, destination vertex type, chunk size, adjacent list property groups, and prefix. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8h_source.html#l00398">398</a> of file <a class="el" href="graph__info_8h_source.html">graph_info.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8h_source.html#l00408">408</a> of file <a class="el" href="graph__info_8h_source.html">graph_info.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab3c32f3112dcf08304676eeb95545b55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3c32f3112dcf08304676eeb95545b55">&#9670;&nbsp;</a></span>EdgeInfo()</h2>
@@ -291,7 +297,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00643">643</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00679">679</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -319,7 +325,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00832">832</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00868">868</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -346,7 +352,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00848">848</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00906">906</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -375,7 +381,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the edge info as a YAML formatted string.</p>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the YAML string, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00972">972</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l01052">1052</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -421,7 +427,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00746">746</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00782">782</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -460,7 +466,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00764">764</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00800">800</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -489,7 +495,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the directory, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00756">756</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00792">792</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -509,7 +515,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of edges in each edge chunk. </p><dl class="section return"><dt>Returns</dt><dd>The number of edges in each edge chunk. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00662">662</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00698">698</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -529,7 +535,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of destination vertices in each vertex chunk. </p><dl class="section return"><dt>Returns</dt><dd>The number of destination vertices in each vertex chunk. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00666">666</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00702">702</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -549,7 +555,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the type of the destination vertex. </p><dl class="section return"><dt>Returns</dt><dd>The type of the destination vertex. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00660">660</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00696">696</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -588,7 +594,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the file path for the number of edges, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00738">738</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00774">774</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -608,7 +614,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the type of the edge. </p><dl class="section return"><dt>Returns</dt><dd>The type of the edge. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00658">658</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00694">694</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -635,7 +641,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the path prefix, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00772">772</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00808">808</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -655,7 +661,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the path prefix of the edge. </p><dl class="section return"><dt>Returns</dt><dd>The path prefix of the edge. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00668">668</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00704">704</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -708,7 +714,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00780">780</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00816">816</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -737,7 +743,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_property.html">Property</a> group may be nullptr if the property is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00716">716</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00752">752</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -766,7 +772,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgraphar_1_1_property.html">Property</a> group may be nullptr if the index is out of range. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00722">722</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00758">758</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -804,7 +810,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the path prefix, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00795">795</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00831">831</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -832,7 +838,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the data type of the property, or a KeyError <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object if the property is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00807">807</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00843">843</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -852,7 +858,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of source vertices in each vertex chunk. </p><dl class="section return"><dt>Returns</dt><dd>The number of source vertices in each vertex chunk. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00664">664</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00700">700</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -872,7 +878,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the type of the source vertex. </p><dl class="section return"><dt>Returns</dt><dd>The type of the source vertex. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00656">656</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00692">692</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -901,7 +907,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the file path for the number of edges, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00730">730</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00766">766</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -929,7 +935,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the edge info contains the adjacency list information, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00676">676</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00712">712</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -958,7 +964,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the edge info contains the property, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00681">681</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00717">717</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -978,7 +984,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns whether the edge is directed. </p><dl class="section return"><dt>Returns</dt><dd>True if the edge is directed, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00670">670</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00706">706</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1006,7 +1012,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the property is a nullable key, False otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00824">824</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00860">860</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1040,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the property is a primary key, False otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00816">816</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00852">852</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1061,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns whether the edge info is validated.</p>
 <dl class="section return"><dt>Returns</dt><dd>True if the edge info is valid, False otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00867">867</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00947">947</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1097,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result object containing the <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> object, or a <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00967">967</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l01047">1047</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1126,65 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Loads the yaml as an <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00886">886</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00966">966</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+
+</div>
+</div>
+<a id="a7db36496a4cf0eb517b463de5caa125f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db36496a4cf0eb517b463de5caa125f">&#9670;&nbsp;</a></span>RemoveAdjacentList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_edge_info.html">EdgeInfo</a> &gt; &gt; graphar::EdgeInfo::RemoveAdjacentList </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_adjacent_list.html">AdjacentList</a> &gt;&#160;</td>
+          <td class="paramname"><em>adj_list</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes an adjacency list from the <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> instance and returns a new <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adj_list</td><td>The adjacency list to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating the success or failure of the operation. Returns InvalidOperation if the adjacency list is not contained. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00884">884</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+
+</div>
+</div>
+<a id="a264853429b84060bbe36c671d5bc8963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264853429b84060bbe36c671d5bc8963">&#9670;&nbsp;</a></span>RemovePropertyGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Result&lt; std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_edge_info.html">EdgeInfo</a> &gt; &gt; graphar::EdgeInfo::RemovePropertyGroup </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgraphar_1_1_property_group.html">PropertyGroup</a> &gt;&#160;</td>
+          <td class="paramname"><em>property_group</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a property group from the <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a> instance and returns a new <a class="el" href="classgraphar_1_1_edge_info.html" title="EdgeInfo is a class to describe the edge information, including the source vertex type,...">EdgeInfo</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">property_group</td><td>The property group to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating the success or failure of the operation. Returns InvalidOperation if the property group is not contained. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00925">925</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1148,7 +1212,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classgraphar_1_1_status.html" title="Status outcome object (success or error)">Status</a> object indicating success or failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l01027">1027</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l01107">1107</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
@@ -1168,7 +1232,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the version info of the edge. </p><dl class="section return"><dt>Returns</dt><dd>The version info of the edge. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00672">672</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__info_8cc_source.html#l00708">708</a> of file <a class="el" href="graph__info_8cc_source.html">graph_info.cc</a>.</p>
 
 </div>
 </div>
