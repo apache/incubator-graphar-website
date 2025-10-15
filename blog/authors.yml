@@ -19,10 +19,11 @@ acezen:
   name: Weibin Zeng 
   title: Maintainer of GraphAr
   url: https://github.com/acezen
-  image_url: https://github.com/acezen.png
+  image_url: /img/authors/acezen.png
 
 ssinchenko:
   name: Sem Sinchenko
   title: Maintainer of GraphAr
   url: https://semyonsinchenko.github.io/ssinchenko/
-  image_url: https://avatars.githubusercontent.com/u/29755009
+  image_url: /img/authors/semyonsinchenko.png
+
