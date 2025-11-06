@@ -144,6 +144,32 @@ jobs:
           name: pyspark-docs
           path: ./pyspark/docs
 
+  build-python-docs:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: apache/incubator-graphar
+          ref: main
+
+      - name: Install Poetry
+        working-directory: python
+        run: |
+          yes | sudo python3 -m pip install poetry --quiet
+          poetry env use python3
+
+      - name: Build python Docs
+        working-directory: python
+        run: |
+          make install_docs
+          make docs
+
+      - name: Upload docs
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-docs
+          path: ./python/docs
+
   deploy:
     runs-on: ubuntu-22.04
     needs:
@@ -151,6 +177,7 @@ jobs:
       - build-java-doc
       - build-spark-docs
       - build-pyspark-docs
+      - build-python-docs
     steps:
       - uses: actions/checkout@v4
 
@@ -204,6 +231,12 @@ jobs:
         with:
           name: pyspark-docs
           path: ./static/docs/pyspark
+
+      - name: Download python docs
+        uses: actions/download-artifact@v4
+        with:
+          name: python-docs
+          path: ./static/docs/python
 
       - name: Install dependencies
         run: pnpm install
