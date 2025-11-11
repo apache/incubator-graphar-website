@@ -144,6 +144,43 @@ jobs:
           name: pyspark-docs
           path: ./pyspark/docs
 
+  build-python-docs:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: apache/incubator-graphar
+          ref: main
+      - name: Install dependencies
+        run: |
+          # install the latest arrow deb to test arrow
+          wget -c https://apache.jfrog.io/artifactory/arrow/"$(lsb_release --id --short | tr 'A-Z' 'a-z')"/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb \
+              -P /tmp/
+          sudo apt-get install -y /tmp/apache-arrow-apt-source-latest-"$(lsb_release --codename --short)".deb
+          sudo apt-get update -y
+          sudo apt install -y libarrow-dev=17.0.0-1 \
+                              libarrow-dataset-dev=17.0.0-1 \
+                              libarrow-acero-dev=17.0.0-1 \
+                              libparquet-dev=17.0.0-1
+          sudo apt-get install -y ccache libcurl4-openssl-dev
+      - name: Install Poetry
+        working-directory: python
+        run: |
+          yes | sudo python3 -m pip install poetry --quiet
+          poetry env use python3
+
+      - name: Build python Docs
+        working-directory: python
+        run: |
+          make install_docs
+          make docs
+
+      - name: Upload docs
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-docs
+          path: ./python/docs
+
   deploy:
     runs-on: ubuntu-22.04
     needs:
@@ -151,6 +188,7 @@ jobs:
       - build-java-doc
       - build-spark-docs
       - build-pyspark-docs
+      - build-python-docs
     steps:
       - uses: actions/checkout@v4
 
@@ -204,6 +242,12 @@ jobs:
         with:
           name: pyspark-docs
           path: ./static/docs/pyspark
+
+      - name: Download python docs
+        uses: actions/download-artifact@v4
+        with:
+          name: python-docs
+          path: ./static/docs/python
 
       - name: Install dependencies
         run: pnpm install
