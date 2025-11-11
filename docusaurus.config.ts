@@ -113,6 +113,10 @@ const config: Config = {
               to: 'pathname:///docs/cpp/index.html'
             },
             {
+              label: 'Python Library',
+              to: 'pathname:///docs/python/index.html'
+            },
+            {
               label: 'Java-FFI Library',
               to: 'pathname:///docs/java-ffi'
             },
