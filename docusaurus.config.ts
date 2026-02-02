@@ -81,6 +81,7 @@ const config: Config = {
     // TODO: Replace with your project's social card
     image: 'img/social-card.png',
     navbar: {
+      title:'Apache GraphAr',
       logo: {
         alt: 'Logo',
         src: 'img/logo.svg',
