@@ -442,30 +442,36 @@ $(function() {
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">// arrow::fs::InitializeS3 and arrow::fs::FinalizeS3 need arrow_version &gt;= 15</span></div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;Status InitializeS3() {</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">#if defined(ARROW_VERSION) &amp;&amp; ARROW_VERSION &gt; 14000000</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  <span class="keyword">auto</span> options = arrow::fs::S3GlobalOptions::Defaults();</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  arrow::fs::S3GlobalOptions options;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  options.log_level = arrow::fs::S3LogLevel::Fatal;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#if defined(ARROW_VERSION) &amp;&amp; ARROW_VERSION &gt;= 15000000</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  RETURN_NOT_ARROW_OK(arrow::fs::InitializeS3(options));</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;Status FinalizeS3() {</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">#if defined(ARROW_VERSION) &amp;&amp; ARROW_VERSION &gt;= 15000000</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  RETURN_NOT_ARROW_OK(arrow::fs::FinalizeS3());</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="keyword">template</span> Result&lt;IdType&gt; FileSystem::ReadFileToValue&lt;IdType&gt;(</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keyword">template</span> Status FileSystem::WriteValueToFile&lt;IdType&gt;(<span class="keyword">const</span> IdType&amp;,</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                                                     <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    noexcept;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}  <span class="comment">// namespace graphar</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor">#if defined(ARROW_S3)</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keyword">auto</span> options = arrow::fs::S3GlobalOptions::Defaults();</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  arrow::fs::S3GlobalOptions options;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  options.log_level = arrow::fs::S3LogLevel::Fatal;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">#if defined(ARROW_VERSION) &amp;&amp; ARROW_VERSION &gt;= 15000000</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">#if defined(ARROW_S3)</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  RETURN_NOT_ARROW_OK(arrow::fs::InitializeS3(options));</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;Status FinalizeS3() {</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">#if defined(ARROW_VERSION) &amp;&amp; ARROW_VERSION &gt;= 15000000</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#if defined(ARROW_S3)</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  RETURN_NOT_ARROW_OK(arrow::fs::FinalizeS3());</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classgraphar_1_1_status.html#ad92f5c41a661d4f468390e39da90f881">Status::OK</a>();</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="keyword">template</span> Result&lt;IdType&gt; FileSystem::ReadFileToValue&lt;IdType&gt;(</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="keyword">template</span> Status FileSystem::WriteValueToFile&lt;IdType&gt;(<span class="keyword">const</span> IdType&amp;,</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                                                     <span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    noexcept;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;}  <span class="comment">// namespace graphar</span></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a293c0415cb3b72795e034f2a08510524"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a293c0415cb3b72795e034f2a08510524">graphar::FileSystem::GetFileNumOfDir</a></div><div class="ttdeci">Result&lt; IdType &gt; GetFileNumOfDir(const std::string &amp;dir_path, bool recursive=false) const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00322">filesystem.cc:322</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_a474b6e6ba28a0114a1d84f4eb06a211b"><div class="ttname"><a href="classgraphar_1_1_file_system.html#a474b6e6ba28a0114a1d84f4eb06a211b">graphar::FileSystem::WriteValueToFile</a></div><div class="ttdeci">Status WriteValueToFile(const T &amp;value, const std::string &amp;path) const noexcept</div><div class="ttdoc">Write a value of type T to a file.</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00229">filesystem.cc:229</a></div></div>
 <div class="ttc" id="aclassgraphar_1_1_file_system_html_aa014a28119399836283a573c9abd97b7"><div class="ttname"><a href="classgraphar_1_1_file_system.html#aa014a28119399836283a573c9abd97b7">graphar::FileSystem::ReadFileToValue</a></div><div class="ttdeci">Result&lt; T &gt; ReadFileToValue(const std::string &amp;path) const noexcept</div><div class="ttdoc">Read a file and convert its bytes to a value of type T.</div><div class="ttdef"><b>Definition:</b> <a href="filesystem_8cc_source.html#l00207">filesystem.cc:207</a></div></div>
