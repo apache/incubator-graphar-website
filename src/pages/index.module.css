@@ -39,4 +39,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .buttons :global(.button) {
+    width: 100%;
+    margin: 0;
+  }
 }
