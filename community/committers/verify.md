@@ -141,7 +141,7 @@ When IPMC votes in the general@incubator.apache.org incubator community. Please 
 If you have already voted on dev@graphar.apache.org, you can take it directly to the incubator community when you reply to the vote, such as:
 
 ```html
-//Incubator community voting, only IPMC members have binding binding，PPMC needs to be aware of binding changes
+//Incubator community voting, only IPMC members have binding binding, PPMC needs to be aware of binding changes
 Forward my +1 from dev@listgrapharnkis (non-binding)
 Copy my +1 from graphar DEV ML (non-binding)
 ````

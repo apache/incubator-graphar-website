@@ -403,7 +403,7 @@ Hi Incubator PMC,
 The vote to release Apache GraphAr(incubating) ${release_version} has passed with
 4 +1 binding and 3 +1 non-binding votes, no +0 or -1 votes.
 
-Binding votes：
+Binding votes:
 
 - xxx
 - yyy
